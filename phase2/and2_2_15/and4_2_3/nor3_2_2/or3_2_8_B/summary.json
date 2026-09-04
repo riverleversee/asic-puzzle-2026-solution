@@ -1,0 +1,259 @@
+{
+  "folder": "or3_2_8_B",
+  "parent": "nor3_2_2",
+  "and4_pin_path": "D \u2190 nor3.C \u2190 or3_2_8.B",
+  "flop": "dfrtp_2_26",
+  "q_net": "or3_2_8__B",
+  "out_net": "o21a_2_11__X",
+  "gate": "o21a_2_11",
+  "formula": "Y = (A1 \u2228 A2) \u2227 B1",
+  "sink": "dfrtp_2_26.D \u2192 or3_2_8.B \u2192 or3_2_8.X \u2192 nor3.C",
+  "pins": [
+    {
+      "pin": "A1",
+      "net": "or3_2_8__B",
+      "net_full": "sky130_fd_sc_hd__or3_2_8__B",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 49,
+      "flops": 12,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    },
+    {
+      "pin": "B1",
+      "net": "xnor2_2_11__B",
+      "net_full": "sky130_fd_sc_hd__xnor2_2_11__B",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 49,
+      "flops": 13,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    },
+    {
+      "pin": "A2",
+      "net": "and3_2_11__X",
+      "net_full": "sky130_fd_sc_hd__and3_2_11__X",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 45,
+      "flops": 12,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    }
+  ],
+  "nodes_behind": 49,
+  "flops": 13,
+  "primaries": [
+    "I",
+    "enable"
+  ],
+  "q_nodes_behind": 49,
+  "q_flops": 12,
+  "figures": [
+    "o21a_2_11__X_fanin_depth5.png"
+  ],
+  "protocol": "only_i",
+  "depth": 5,
+  "pin_rule": "1_hop_to_I",
+  "allowed_watches": [
+    {
+      "net": "I",
+      "net_full": "I",
+      "reaches_I": true,
+      "parent": "inv_2_10__A",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "a21o_2_10__X",
+      "net_full": "sky130_fd_sc_hd__a21o_2_10__X",
+      "reaches_I": true,
+      "parent": "dfrtp_2_25__D",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "a32o_2_2__X",
+      "net_full": "sky130_fd_sc_hd__a32o_2_2__X",
+      "reaches_I": true,
+      "parent": "and4_2_3__A",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "and3_2_10__B",
+      "net_full": "sky130_fd_sc_hd__and3_2_10__B",
+      "reaches_I": true,
+      "parent": "a32o_2_2__X",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "and3_2_11__X",
+      "net_full": "sky130_fd_sc_hd__and3_2_11__X",
+      "reaches_I": true,
+      "parent": "o21a_2_11__X",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "and4_2_3__A",
+      "net_full": "sky130_fd_sc_hd__and4_2_3__A",
+      "reaches_I": true,
+      "parent": "and3_2_11__X",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "and4_2_3__B",
+      "net_full": "sky130_fd_sc_hd__and4_2_3__B",
+      "reaches_I": true,
+      "parent": "and3_2_11__X",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "and4_2_4__D",
+      "net_full": "sky130_fd_sc_hd__and4_2_4__D",
+      "reaches_I": true,
+      "parent": "xnor2_2_11__B",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "dfrtp_2_25__D",
+      "net_full": "sky130_fd_sc_hd__dfrtp_2_25__D",
+      "reaches_I": true,
+      "parent": "and4_2_3__B",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "inv_2_10__A",
+      "net_full": "sky130_fd_sc_hd__inv_2_10__A",
+      "reaches_I": true,
+      "parent": "xnor2_2_11__B",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "inv_2_10__Y",
+      "net_full": "sky130_fd_sc_hd__inv_2_10__Y",
+      "reaches_I": true,
+      "parent": "a32o_2_2__X",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "inv_2_7__A",
+      "net_full": "sky130_fd_sc_hd__inv_2_7__A",
+      "reaches_I": false,
+      "parent": "inv_2_10__A",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "feeds_I_parent"
+    },
+    {
+      "net": "nor2_2_30__B",
+      "net_full": "sky130_fd_sc_hd__nor2_2_30__B",
+      "reaches_I": true,
+      "parent": "nor2_2_30__Y",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "nor2_2_30__Y",
+      "net_full": "sky130_fd_sc_hd__nor2_2_30__Y",
+      "reaches_I": true,
+      "parent": "or3_2_8__A",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "o21a_2_11__X",
+      "net_full": "sky130_fd_sc_hd__o21a_2_11__X",
+      "reaches_I": true,
+      "parent": null,
+      "parent_reaches_I": false,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "or3_2_8__A",
+      "net_full": "sky130_fd_sc_hd__or3_2_8__A",
+      "reaches_I": true,
+      "parent": "inv_2_10__A",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "or3_2_8__B",
+      "net_full": "sky130_fd_sc_hd__or3_2_8__B",
+      "reaches_I": true,
+      "parent": "o21a_2_11__X",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    },
+    {
+      "net": "xnor2_2_11__B",
+      "net_full": "sky130_fd_sc_hd__xnor2_2_11__B",
+      "reaches_I": true,
+      "parent": "o21a_2_11__X",
+      "parent_reaches_I": true,
+      "allowed": true,
+      "why": "reaches_I"
+    }
+  ],
+  "rejected_watches": [
+    {
+      "net": "a31o_2_13__X",
+      "net_full": "sky130_fd_sc_hd__a31o_2_13__X",
+      "reaches_I": false,
+      "parent": "or2_2_11__A",
+      "parent_reaches_I": false,
+      "allowed": false,
+      "why": "deeper_non_I"
+    },
+    {
+      "net": "enable",
+      "net_full": "enable",
+      "reaches_I": false,
+      "parent": "inv_2_7__A",
+      "parent_reaches_I": false,
+      "allowed": false,
+      "why": "deeper_non_I"
+    },
+    {
+      "net": "or2_2_11__A",
+      "net_full": "sky130_fd_sc_hd__or2_2_11__A",
+      "reaches_I": false,
+      "parent": "inv_2_7__A",
+      "parent_reaches_I": false,
+      "allowed": false,
+      "why": "deeper_non_I"
+    }
+  ]
+}

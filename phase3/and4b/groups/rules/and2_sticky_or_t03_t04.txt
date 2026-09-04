@@ -1,0 +1,43 @@
+# Rules — and2 sticky_or groups t03, t04
+# Source: phase3 k-ones + two/three-ones gap sweeps (A / B / Y) on FA opens.
+# Artifacts:
+#   phase3/and4b/groups/t0{3,4}_*/k_ones_flops.*
+#   phase3/and4b/groups/t0{3,4}_*/two_ones_gaps.*
+#   phase3/and4b/groups/t0{3,4}_*/three_ones_gaps.*
+#   phase3/and4b/groups/t0{3,4}_*/two_ones_late.*
+
+SCOPE
+  hasI and2 sticky leaves (kind sticky_or):
+    t03  deep and2    (4): and3.B, slot.0.A, slot.1.B, slot.0.D
+    t04  shallow and2 (4): a6.A, a6.D, a5.B, a12.B
+
+OPEN WINDOWS
+  Deep (t03): open_net is usually or4.__C (see open_log / FA_open_timeline).
+  Shallow (t04): open iff or4_2_4 == leaf phase (open_net may be null).
+  Open cycles = opens_all0 from opens_exact_shift1 (same lists used in k-ones).
+  I is only effective on those open cycles.
+
+RULE (hard)
+  For each leaf in t03, t04:
+    Count of I=1 on that leaf's FA open windows must be EXACTLY 2.
+
+  Evidence — k-ones (first k opens):
+    k=1  → Y never rises
+    k=2  → Y sticks through end (PASS)
+    k≥3  → Y rises then dies (B clears; FAIL)
+
+  Evidence — spacing / which opens (does NOT relax exactly-2):
+    Two ones on opens[0] & opens[1+g], g=0..4
+      → always PASS (open-window gaps between the two ones do not matter)
+    Two ones on opens[s] & opens[s+1+g], s=1..3, g=0..4
+      → always PASS (first one need not be the first open)
+    Three ones on opens[0], opens[step], opens[2*step], step=1+g, g=0..4
+      → always FAIL (third open-window one kills; spacing does not save it)
+
+  Gate: Y = A ∧ B
+
+NOTES
+  Same per-leaf exactly-2 count as set_once (t01/t02/t05); kill mechanism differs
+  (here B drops on the 3rd hit; set_once re-arms via A_N).
+  Ones outside that leaf's open windows do not count toward its k.
+  FA open decode / phase schedule is I-independent on all0.

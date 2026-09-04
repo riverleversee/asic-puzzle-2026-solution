@@ -1,0 +1,34 @@
+# Rules — watch-pin eligibility (1-hop to I)
+# Applies under and4_2_3 pin expands / I timelines
+# Helper: phase2/and2_2_15/and4_2_3/pin_i_hop_rule.py
+# First use: phase2/.../nor3_2_2/or3_2_8_B/
+
+SCOPE
+  Selecting which nets to probe / plot on fan-in timelines.
+
+RULE (hard)
+  Do **not** place a watch pin on a net that sits more than **one node
+  back** from something that reaches primary `I`.
+
+  Equivalently, for a candidate net N with fan-in parent P (toward the
+  expand root — the gate N feeds into):
+
+    - If N reaches I            → allowed
+    - If N does NOT reach I     → allowed only if P reaches I
+                                  (N is an immediate input of an
+                                   I-reaching gate)
+    - Deeper non-I nets         → rejected
+
+  Clock / reset nets are excluded from watch lists.
+
+WHY
+  Keeps plots on the I-relevant frontier. Deep FA / enable stubs that
+  never touch I are shown only when they are the *direct* feed into an
+  I-reaching cell — not entire stub cones.
+
+STATUS
+  Working rule starting at or3_2_8_B; apply to future and4 pin watches.
+
+RELATED
+  phase2/and2_2_15/and4_2_3/pin_i_hop_rule.py
+  phase2/and2_2_15/and4_2_3/nor3_2_2/or3_2_8_B/

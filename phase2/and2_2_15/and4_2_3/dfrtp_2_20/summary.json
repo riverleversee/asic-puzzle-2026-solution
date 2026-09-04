@@ -1,0 +1,52 @@
+{
+  "folder": "dfrtp_2_20",
+  "and4_pin": "C",
+  "flop": "dfrtp_2_20",
+  "parent": "and4_2_3",
+  "out_net": "xnor2_2_11__Y",
+  "q_net": "and4_2_3__C",
+  "gate": "xnor2_2_11",
+  "formula": "Y = \u00ac(A \u2295 B)",
+  "sink": "dfrtp_2_20.D \u2192 and4_2_3.C",
+  "pins": [
+    {
+      "pin": "A",
+      "net": "and4_2_3__C",
+      "net_full": "sky130_fd_sc_hd__and4_2_3__C",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 51,
+      "flops": 13,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    },
+    {
+      "pin": "B",
+      "net": "xnor2_2_11__B",
+      "net_full": "sky130_fd_sc_hd__xnor2_2_11__B",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 49,
+      "flops": 13,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    }
+  ],
+  "nodes_behind": 51,
+  "flops": 14,
+  "primaries": [
+    "I",
+    "enable"
+  ],
+  "q_nodes_behind": 51,
+  "q_flops": 13,
+  "figures": [
+    "xnor2_2_11__Y_fanin_depth5.png"
+  ],
+  "protocol": "only_i",
+  "depth": 5
+}

@@ -1,0 +1,34 @@
+{
+  "target_instance": "nand2b_2_23",
+  "target_out_net": "a32o_2_4__B2",
+  "cell": "nand2b_2",
+  "pins": {
+    "B": "sky130_fd_sc_hd__or2_2_11__A",
+    "A_N": "sky130_fd_sc_hd__or2_2_11__B"
+  },
+  "rhs": "A_N=sky130_fd_sc_hd__or2_2_11__B, B=sky130_fd_sc_hd__or2_2_11__A",
+  "formula": "Y = \u00ac((\u00acA_N) \u2227 B) = A_N \u2228 \u00acB   \u2192  Y=1 when A_N=1 or B=0",
+  "fanin_primaries": [
+    "enable"
+  ],
+  "reaches_I": false,
+  "reaches_enable": true,
+  "fa_hit_count": 5,
+  "fa_hits": [
+    "a21o_2_9__X",
+    "a21oi_2_13__Y",
+    "a31o_2_8__X",
+    "nor2_2_31__B",
+    "xor2_2_9__X"
+  ],
+  "undriven_leaves": [],
+  "structural": {
+    "source": "netlist/puzzle_structural.v",
+    "trusted": "rework/netlist/puzzle_structural.v from puzzle_gates.spice",
+    "instances_parsed": 722,
+    "driven_nets": 722,
+    "multi_output_cells": 0,
+    "has_success": true
+  },
+  "pass_no_I": true
+}

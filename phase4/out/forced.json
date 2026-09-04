@@ -1,0 +1,298 @@
+{
+  "schema": 2,
+  "method": "phase4_forcer",
+  "opens_src": "sim/opens_exact_shift1.json",
+  "rules": [
+    "leaf_sigma2",
+    "period11_exact2",
+    "a221o_hot_offset_allowed_windows",
+    "d_hold"
+  ],
+  "sweeps": {
+    "solo": 5,
+    "pairs": 1
+  },
+  "force_1": [
+    7,
+    9,
+    11,
+    16,
+    29,
+    31,
+    33,
+    35,
+    48,
+    50,
+    57,
+    63,
+    70,
+    76,
+    78,
+    83,
+    91,
+    98,
+    104,
+    107,
+    111,
+    113
+  ],
+  "force_0": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    32,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    58,
+    59,
+    60,
+    61,
+    62,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    71,
+    72,
+    73,
+    74,
+    75,
+    77,
+    79,
+    80,
+    81,
+    82,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    99,
+    100,
+    101,
+    102,
+    103,
+    105,
+    106,
+    108,
+    109,
+    110,
+    112,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "unidentified": [],
+  "period_ones": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "n_force_1": 22,
+  "n_force_0": 99,
+  "n_unidentified": 0,
+  "leaf_sigma": [
+    {
+      "name": "slot.0.A",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "slot.0.B",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 8
+    },
+    {
+      "name": "slot.0.C",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 4
+    },
+    {
+      "name": "slot.0.D",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 9
+    },
+    {
+      "name": "slot.1.A",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 7
+    },
+    {
+      "name": "slot.1.B",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 5
+    },
+    {
+      "name": "slot.1.C",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 8
+    },
+    {
+      "name": "slot.1.D",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 13
+    },
+    {
+      "name": "and3.A",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 27
+    },
+    {
+      "name": "and3.B",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 21
+    },
+    {
+      "name": "and3.C",
+      "bank": "main",
+      "sigma": 2,
+      "n_opens": 6
+    },
+    {
+      "name": "a5.A",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a5.B",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a5.C",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a5.D",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a6.A",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a6.B",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 10
+    },
+    {
+      "name": "a6.C",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a6.D",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a12.A",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a12.B",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 11
+    },
+    {
+      "name": "a12.C",
+      "bank": "and4b_D",
+      "sigma": 2,
+      "n_opens": 10
+    }
+  ],
+  "vs_cpsat_exact": {
+    "cpsat_n": 22,
+    "match_force1": true,
+    "missing_from_forcer": [],
+    "extra_in_forcer": [],
+    "cpsat_covered": true
+  }
+}

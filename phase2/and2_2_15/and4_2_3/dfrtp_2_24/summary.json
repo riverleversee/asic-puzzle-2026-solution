@@ -1,0 +1,89 @@
+{
+  "folder": "dfrtp_2_24",
+  "and4_pin": "A",
+  "flop": "dfrtp_2_24",
+  "parent": "and4_2_3",
+  "out_net": "a32o_2_2__X",
+  "q_net": "and4_2_3__A",
+  "gate": "a32o_2_2",
+  "formula": "Y = (A1 \u2227 A2 \u2227 A3) \u2228 (B1 \u2227 B2)",
+  "sink": "dfrtp_2_24.D \u2192 and4_2_3.A",
+  "pins": [
+    {
+      "pin": "A1",
+      "net": "I",
+      "net_full": "I",
+      "kind": "primary",
+      "reaches_I": true,
+      "nodes_behind": 0,
+      "flops": 0,
+      "primaries": [
+        "I"
+      ]
+    },
+    {
+      "pin": "A2",
+      "net": "inv_2_7__A",
+      "net_full": "sky130_fd_sc_hd__inv_2_7__A",
+      "kind": "stub",
+      "reaches_I": false,
+      "nodes_behind": 33,
+      "flops": 9,
+      "primaries": [
+        "enable"
+      ]
+    },
+    {
+      "pin": "A3",
+      "net": "and3_2_10__B",
+      "net_full": "sky130_fd_sc_hd__and3_2_10__B",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 41,
+      "flops": 11,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    },
+    {
+      "pin": "B1",
+      "net": "inv_2_10__Y",
+      "net_full": "sky130_fd_sc_hd__inv_2_10__Y",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 38,
+      "flops": 10,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    },
+    {
+      "pin": "B2",
+      "net": "and4_2_3__A",
+      "net_full": "sky130_fd_sc_hd__and4_2_3__A",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 41,
+      "flops": 10,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    }
+  ],
+  "nodes_behind": 41,
+  "flops": 11,
+  "primaries": [
+    "I",
+    "enable"
+  ],
+  "q_nodes_behind": 41,
+  "q_flops": 10,
+  "figures": [
+    "a32o_2_2__X_fanin_depth5.png"
+  ],
+  "protocol": "only_i",
+  "depth": 5
+}

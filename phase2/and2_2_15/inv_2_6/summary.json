@@ -1,0 +1,85 @@
+{
+  "arm": "inv_2_6",
+  "role": "A-arm of and2_2_15 (sticky a31o_2_11)",
+  "a31o": {
+    "out_net": "a31o_2_11__X",
+    "formula": "Y = (A1 \u2227 A2 \u2227 A3) \u2228 B1",
+    "pins": [
+      {
+        "pin": "A1",
+        "net": "inv_2_9__A",
+        "net_full": "sky130_fd_sc_hd__inv_2_9__A",
+        "kind": "stub",
+        "reaches_I": false,
+        "nodes_behind": 33,
+        "flops": 9,
+        "primaries": [
+          "enable"
+        ]
+      },
+      {
+        "pin": "A2",
+        "net": "inv_2_7__A",
+        "net_full": "sky130_fd_sc_hd__inv_2_7__A",
+        "kind": "stub",
+        "reaches_I": false,
+        "nodes_behind": 33,
+        "flops": 9,
+        "primaries": [
+          "enable"
+        ]
+      },
+      {
+        "pin": "A3",
+        "net": "mux2_1_7__X",
+        "net_full": "sky130_fd_sc_hd__mux2_1_7__X",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 45,
+        "flops": 11,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      },
+      {
+        "pin": "B1",
+        "net": "inv_2_6__A",
+        "net_full": "sky130_fd_sc_hd__inv_2_6__A",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 47,
+        "flops": 11,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      }
+    ],
+    "nodes_behind": 47,
+    "flops": 12,
+    "primaries": [
+      "I",
+      "enable"
+    ]
+  },
+  "inv_2_6__A": {
+    "nodes_behind": 47,
+    "flops": 11,
+    "primaries": [
+      "I",
+      "enable"
+    ]
+  },
+  "inv_2_6__Y": {
+    "nodes_behind": 48,
+    "flops": 12,
+    "primaries": [
+      "I",
+      "enable"
+    ]
+  },
+  "figures": [
+    "a31o_2_11__X_fanin_depth5.png"
+  ]
+}

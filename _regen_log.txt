@@ -1,0 +1,773 @@
+=== netlist ===
+Wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/netlist/puzzle_structural.v (728 instances, 66 cell types)
+=== phase1 match ===
+match_complex_operators source: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+COMPLEX OPERATOR MATCH — CORE GROUPINGS
+================================================================
+Operator DB entries: 13
+Groupings scored:    14
+OG stubs treated as black-box inputs (not expanded).
+
+RANKING (best operator match per group/combo)
+----------------------------------------------------------------
+  1.000  G_hold_B2                     n= 37  → Serial bit gather + parallel check
+         motifs=['and_reduce', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.27 xor=0.08 and=0.27 aoi=0.24 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.985  G_set_inv                     n= 66  → Shift register / serial-in parallel-out
+         motifs=['carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xor_pair']
+         flop=0.33 xor=0.04 and=0.14 aoi=0.18 mux=0.20
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=3)
+  0.959  G_status_A                    n= 34  → LFSR / CRC / linear feedback
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.27 xor=0.09 and=0.27 aoi=0.27 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.942  G_status_B                    n= 36  → LFSR / CRC / linear feedback
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.28 xor=0.08 and=0.25 aoi=0.25 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.942  C_status_A_plus_B             n= 36  → LFSR / CRC / linear feedback
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.28 xor=0.08 and=0.25 aoi=0.25 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.937  G_set_and2                    n= 82  → Serial bit gather + parallel check
+         motifs=['and_reduce', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.24 xor=0.06 and=0.27 aoi=0.24 mux=0.04
+         width: arith ~2-bit via fa_pairs (FA=2, xor=3, xnor=2, carry_len=2); AND-reduce width≈5 (flops=4, stubs=0)
+  0.876  G_main_check                  n=281  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.11 xor=0.08 and=0.28 aoi=0.29 mux=0.02
+         width: arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+  0.876  C_and4b_all_inputs            n=283  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.11 xor=0.08 and=0.28 aoi=0.29 mux=0.02
+         width: arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+  0.876  C_main_plus_statusA           n=281  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.11 xor=0.08 and=0.28 aoi=0.29 mux=0.02
+         width: arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+  0.842  G_and4b_join                  n=384  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.14 xor=0.06 and=0.31 aoi=0.27 mux=0.02
+         width: arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+  0.834  G_success_glue                n=466  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.28 aoi=0.26 mux=0.04
+         width: arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)
+  0.834  C_full_set_path               n=464  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.28 aoi=0.25 mux=0.04
+         width: arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+  0.834  C_set_plus_hold               n=465  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.29 aoi=0.25 mux=0.04
+         width: arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+  0.834  C_entire_a32o                 n=466  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.28 aoi=0.26 mux=0.04
+         width: arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)
+
+GRANULAR STRUCTURE (≥0.55 score)
+----------------------------------------------------------------
+
+### G_hold_B2 → Serial bit gather + parallel check (1.000)
+    counts: {'flop': 10, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 10}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+    AND-reduce: leaves=2 (flops=2, stubs=0) and_nodes=1
+      leaves: or2_2_11__A, or2_2_11__B
+
+### G_set_inv → Shift register / serial-in parallel-out (0.985)
+    counts: {'flop': 22, 'mux': 13, 'xor': 2, 'xnor': 1, 'aoi': 12, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=12 carry_chain=3
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+    AND-reduce: leaves=1 (flops=1, stubs=0) and_nodes=0
+      leaves: inv_2_11__A
+
+### G_status_A → LFSR / CRC / linear feedback (0.959)
+    counts: {'flop': 9, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+    AND-reduce: leaves=1 (flops=0, stubs=0) and_nodes=0
+      leaves: a31o_2_13__X
+
+### G_status_B → LFSR / CRC / linear feedback (0.942)
+    counts: {'flop': 10, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+    AND-reduce: leaves=1 (flops=0, stubs=0) and_nodes=0
+      leaves: or2_2_11__X
+
+### C_status_A_plus_B → LFSR / CRC / linear feedback (0.942)
+    counts: {'flop': 10, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+    AND-reduce: leaves=1 (flops=0, stubs=0) and_nodes=0
+      leaves: a31o_2_13__X
+
+### G_set_and2 → Serial bit gather + parallel check (0.937)
+    counts: {'flop': 20, 'mux': 3, 'xor': 3, 'xnor': 2, 'aoi': 20, 'and_nand': 22}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=3 xnor=2 aoi=20 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+    AND-reduce: leaves=5 (flops=4, stubs=0) and_nodes=2
+      leaves: and4_2_3__A, and4_2_3__B, and4_2_3__C, inv_2_6__A, nor3_2_2__Y
+
+### G_main_check → Binary adder (ripple / FA chain) (0.876)
+    counts: {'flop': 31, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 82, 'and_nand': 79}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=11 xnor=11 aoi=82 carry_chain=5
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA xor2_2_0__X + o211a_2_0__X[o211a_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA and3_2_2__C + a31o_2_7__X[a31o_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+    AND-reduce: leaves=22 (flops=22, stubs=0) and_nodes=15
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_1__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, o21a_2_16__A1, o21a_2_18__A1, o21a_2_30__A1, o21a_2_4__A1, o21a_2_5__A1, o21a_2_8__A1, or4_2_1__A, or4_2_2__A, or4_2_3__A, or4_2_5__A
+
+### C_and4b_all_inputs → Binary adder (ripple / FA chain) (0.876)
+    counts: {'flop': 32, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 82, 'and_nand': 79}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=11 xnor=11 aoi=82 carry_chain=5
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA and3_2_2__C + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=22 (flops=22, stubs=0) and_nodes=15
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_1__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, o21a_2_16__A1, o21a_2_18__A1, o21a_2_30__A1, o21a_2_4__A1, o21a_2_5__A1, o21a_2_8__A1, or4_2_1__A, or4_2_2__A, or4_2_3__A, or4_2_5__A
+
+### C_main_plus_statusA → Binary adder (ripple / FA chain) (0.876)
+    counts: {'flop': 31, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 82, 'and_nand': 79}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=11 xnor=11 aoi=82 carry_chain=5
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA and3_2_2__C + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=22 (flops=22, stubs=0) and_nodes=15
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_1__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, o21a_2_16__A1, o21a_2_18__A1, o21a_2_30__A1, o21a_2_4__A1, o21a_2_5__A1, o21a_2_8__A1, or4_2_1__A, or4_2_2__A, or4_2_3__A, or4_2_5__A
+
+### G_and4b_join → Binary adder (ripple / FA chain) (0.842)
+    counts: {'flop': 54, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 104, 'and_nand': 119}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=11 xnor=11 aoi=104 carry_chain=5
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA and3_2_2__C + o211a_2_0__X[o211a_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+    AND-reduce: leaves=46 (flops=46, stubs=0) and_nodes=31
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, nand4_2_7__C, nand4_2_8__C, nand4_2_9__C, o21a_2_16__A1
+
+### G_success_glue → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 119, 'and_nand': 133}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=12 xnor=12 aoi=119 carry_chain=5
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA and3_2_2__C + o211a_2_0__X[o211a_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+    AND-reduce: leaves=53 (flops=51, stubs=0) and_nodes=34
+      leaves: and2b_2_3__B, and4_2_3__A, and4_2_3__B, and4_2_3__C, inv_2_11__A, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, inv_2_6__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C
+
+### C_full_set_path → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 118, 'and_nand': 132}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=12 xnor=12 aoi=118 carry_chain=5
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA and3_2_2__C + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=46 (flops=46, stubs=0) and_nodes=31
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, nand4_2_7__C, nand4_2_8__C, nand4_2_9__C, o21a_2_16__A1
+
+### C_set_plus_hold → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 118, 'and_nand': 133}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=12 xnor=12 aoi=118 carry_chain=5
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA and3_2_2__C + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=46 (flops=46, stubs=0) and_nodes=31
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, nand4_2_7__C, nand4_2_8__C, nand4_2_9__C, o21a_2_16__A1
+
+### C_entire_a32o → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 119, 'and_nand': 133}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈6-bit (fa_pairs)  FA_pairs=6 xor=12 xnor=12 aoi=119 carry_chain=5
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA and3_2_2__C + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=53 (flops=51, stubs=0) and_nodes=34
+      leaves: and2b_2_3__B, and4_2_3__A, and4_2_3__B, and4_2_3__C, inv_2_11__A, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, inv_2_6__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C
+
+SUMMARY
+  Strong matches (≥0.55): 14
+    - G_hold_B2: Serial bit gather + parallel check (1.000)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - G_set_inv: Shift register / serial-in parallel-out (0.985)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=3)
+    - G_status_A: LFSR / CRC / linear feedback (0.959)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - G_status_B: LFSR / CRC / linear feedback (0.942)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - C_status_A_plus_B: LFSR / CRC / linear feedback (0.942)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - G_set_and2: Serial bit gather + parallel check (0.937)
+        arith ~2-bit via fa_pairs (FA=2, xor=3, xnor=2, carry_len=2); AND-reduce width≈5 (flops=4, stubs=0)
+    - G_main_check: Binary adder (ripple / FA chain) (0.876)
+        arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+    - C_and4b_all_inputs: Binary adder (ripple / FA chain) (0.876)
+        arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+    - C_main_plus_statusA: Binary adder (ripple / FA chain) (0.876)
+        arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+    - G_and4b_join: Binary adder (ripple / FA chain) (0.842)
+        arith ~6-bit via fa_pairs (FA=6, xor=11, xnor=11, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+    - G_success_glue: Binary adder (ripple / FA chain) (0.834)
+        arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)
+    - C_full_set_path: Binary adder (ripple / FA chain) (0.834)
+        arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+    - C_set_plus_hold: Binary adder (ripple / FA chain) (0.834)
+        arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+    - C_entire_a32o: Binary adder (ripple / FA chain) (0.834)
+        arith ~6-bit via fa_pairs (FA=6, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)
+
+Wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase1/complex_operators_db.json
+Wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase1/operator_matches.json
+Wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase1/operator_matches.md
+=== phase1 figures ===
+wrote 01_chip_overview.png
+wrote 02_operator_matches.png
+wrote 03_status_ab.png
+wrote 04_die_hotspots.png
+wrote die_maps_technical/G_hold_B2_serial_deserializer.png
+wrote die_maps_plain/G_hold_B2_serial_deserializer.png
+wrote die_maps_technical/G_set_inv_shift_register.png
+wrote die_maps_plain/G_set_inv_shift_register.png
+wrote die_maps_technical/G_status_A_lfsr_crc.png
+wrote die_maps_plain/G_status_A_lfsr_crc.png
+wrote die_maps_technical/G_status_B_lfsr_crc.png
+wrote die_maps_plain/G_status_B_lfsr_crc.png
+wrote die_maps_technical/C_status_A_plus_B_lfsr_crc.png
+wrote die_maps_plain/C_status_A_plus_B_lfsr_crc.png
+wrote die_maps_technical/G_set_and2_serial_deserializer.png
+wrote die_maps_plain/G_set_and2_serial_deserializer.png
+wrote die_maps_technical/G_main_check_ripple_adder.png
+wrote die_maps_plain/G_main_check_ripple_adder.png
+wrote die_maps_technical/C_and4b_all_inputs_ripple_adder.png
+wrote die_maps_plain/C_and4b_all_inputs_ripple_adder.png
+wrote die_maps_technical/C_main_plus_statusA_ripple_adder.png
+wrote die_maps_plain/C_main_plus_statusA_ripple_adder.png
+wrote die_maps_technical/G_and4b_join_ripple_adder.png
+wrote die_maps_plain/G_and4b_join_ripple_adder.png
+wrote die_maps_technical/G_success_glue_ripple_adder.png
+wrote die_maps_plain/G_success_glue_ripple_adder.png
+wrote die_maps_technical/C_full_set_path_ripple_adder.png
+wrote die_maps_plain/C_full_set_path_ripple_adder.png
+wrote die_maps_technical/C_set_plus_hold_ripple_adder.png
+wrote die_maps_plain/C_set_plus_hold_ripple_adder.png
+wrote die_maps_technical/C_entire_a32o_ripple_adder.png
+wrote die_maps_plain/C_entire_a32o_ripple_adder.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase1/figures/die_maps_technical/README.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase1/figures/die_maps_plain/README.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase1/figures/README.md
+=== phase2 fa ===
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+FA pairs: 8
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/fa_endpoints.json
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/fa_endpoints.md
+=== phase2 success bundle ===
+structural drivers: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+FA endpoints: 16 nets (8 pairs) → fa_endpoints.json
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/success_fanin_depth2.png  (nodes=6 edges=6 cuts=4 back-edges=1)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/success_fanin_depth2.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d0_success_depth4.png  (nodes=27 edges=29 cuts=14 back-edges=1)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d0_success_depth4.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d1_a32o_2_4__X_depth4.png  (nodes=61 edges=68 cuts=33 back-edges=5)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d1_a32o_2_4__X_depth4.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_a32o_2_4__B2_depth4.png  (nodes=15 edges=18 cuts=6 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_a32o_2_4__B2_depth4.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_and2_2_15__X_depth4.png  (nodes=29 edges=32 cuts=13 back-edges=3)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_and2_2_15__X_depth4.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_and4b_2_3__X_depth4.png  (nodes=89 edges=92 cuts=50 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_and4b_2_3__X_depth4.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_inv_2_23__A_depth4.png  (nodes=13 edges=13 cuts=5 back-edges=1)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/d2_inv_2_23__A_depth4.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/success/fanin_depth4_from_depth2/README.md
+bundle done: overview + 6 depth-4 maps
+=== phase2 a221o ===
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+FA endpoints: 16 nets (8 pairs) → fa_endpoints.json
+render context inv_2_23__A depth=4 → inv_2_23__A_fanin_depth4.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/inv_2_23__A_fanin_depth4.png  (nodes=13 edges=13 cuts=5 back-edges=1)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/inv_2_23__A_fanin_depth4.md
+render expand a221o_2_1__X depth=5 → a221o_2_1__X_fanin_depth5.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/a221o_2_1__X_fanin_depth5.png  (nodes=36 edges=79 cuts=2 back-edges=31)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/a221o_2_1__X_fanin_depth5.md
+  pin A1 ← or4bb_2_0__X → a221o_2_1__A1__or4bb_2_0__X_depth4.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__A1__or4bb_2_0__X_depth4.png  (nodes=18 edges=44 cuts=1 back-edges=18)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__A1__or4bb_2_0__X_depth4.md
+  pin A2 ← mux2_1_12__A1 → a221o_2_1__A2__mux2_1_12__A1_depth4.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__A2__mux2_1_12__A1_depth4.png  (nodes=9 edges=11 cuts=2 back-edges=3)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__A2__mux2_1_12__A1_depth4.md
+  pin B2 ← mux2_1_12__A0 → a221o_2_1__B2__mux2_1_12__A0_depth4.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__B2__mux2_1_12__A0_depth4.png  (nodes=9 edges=11 cuts=2 back-edges=3)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__B2__mux2_1_12__A0_depth4.md
+  pin C1 ← a22o_2_2__X → a221o_2_1__C1__a22o_2_2__X_depth4.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__C1__a22o_2_2__X_depth4.png  (nodes=27 edges=37 cuts=8 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/pins/a221o_2_1__C1__a22o_2_2__X_depth4.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/README.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/a221o_behind_inv23/summary.json
+=== phase2 and4b behind compare ===
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+in fan-in of and4b_2_3__X: and2=11  and2b=17  total=28
+  [and2 ] and2_2_0     out=and3_2_0__C      pins=(or2_2_1__X, or2_2_0__B)  nodes=40 ff=9
+  [and2 ] and2_2_1     out=or2_2_1__A       pins=(or4_2_4__A, xor2_2_7__A)  nodes=34 ff=9
+  [and2 ] and2_2_10    out=and3_2_5__B      pins=(or4_2_5__A, or4_2_5__B)  nodes=109 ff=7
+  [and2 ] and2_2_11    out=and4_2_6__A      pins=(or4_2_9__A, or4_2_9__B)  nodes=27 ff=7
+  [and2 ] and2_2_12    out=and4_2_6__D      pins=(or4_2_7__A, or4_2_7__B)  nodes=27 ff=7
+  [and2 ] and2_2_13    out=and4_2_5__B      pins=(or4_2_8__A, or4_2_8__B)  nodes=27 ff=7
+  [and2 ] and2_2_14    out=and3_2_12__B     pins=(or4_2_6__A, or4_2_6__B)  nodes=27 ff=7
+  [and2 ] and2_2_2     out=and2_2_2__X      pins=(and2_2_2__A, and3_2_1__C)  nodes=46 ff=9
+  [and2 ] and2_2_3     out=and4_2_0__A      pins=(or4_2_1__A, or4_2_1__B)  nodes=109 ff=7
+  [and2 ] and2_2_4     out=and4_2_1__B      pins=(or4_2_2__A, or4_2_2__B)  nodes=109 ff=7
+  [and2 ] and2_2_5     out=and4_2_0__D      pins=(or4_2_3__A, or4_2_3__B)  nodes=109 ff=7
+  [and2b] and2b_2_0    out=or2_2_0__B       pins=(xor2_2_3__B, nor2_2_9__B)  nodes=37 ff=9
+  [and2b] and2b_2_1    out=and4_2_0__B      pins=(nand4_2_0__C, o21a_2_4__A1)  nodes=112 ff=11
+  [and2b] and2b_2_11   out=inv_2_7__A       pins=(or2_2_11__A, enable)  nodes=33 ff=9
+  [and2b] and2b_2_2    out=and4_2_0__C      pins=(nand4_2_3__C, o21a_2_5__A1)  nodes=112 ff=11
+  [and2b] and2b_2_20   out=and4_2_1__C      pins=(nand4_2_5__C, o21a_2_30__A1)  nodes=112 ff=11
+  [and2b] and2b_2_21   out=and3_2_5__C      pins=(nand4_2_6__C, o21a_2_18__A1)  nodes=112 ff=11
+  [and2b] and2b_2_22   out=and3_2_5__A      pins=(nand4_2_4__C, o21a_2_16__A1)  nodes=112 ff=11
+  [and2b] and2b_2_23   out=and4_2_6__B      pins=(nand4_2_7__C, o21a_2_19__A1)  nodes=27 ff=8
+  [and2b] and2b_2_24   out=and4_2_6__C      pins=(nand4_2_8__C, o21a_2_23__A1)  nodes=27 ff=8
+  [and2b] and2b_2_25   out=and4_2_5__A      pins=(nand4_2_9__C, o21a_2_21__A1)  nodes=27 ff=8
+  [and2b] and2b_2_26   out=and4_2_5__D      pins=(nand4_2_10__C, o21a_2_28__A1)  nodes=27 ff=8
+  [and2b] and2b_2_27   out=and3_2_12__C     pins=(nand4_2_13__C, o21a_2_25__A1)  nodes=27 ff=8
+  [and2b] and2b_2_28   out=and4_2_5__C      pins=(nand4_2_11__C, o21a_2_24__A1)  nodes=27 ff=8
+  [and2b] and2b_2_29   out=and3_2_12__A     pins=(nand4_2_12__C, o21a_2_27__A1)  nodes=27 ff=8
+  [and2b] and2b_2_3    out=and4_2_1__A      pins=(nand4_2_1__C, and2b_2_3__B)  nodes=112 ff=11
+  [and2b] and2b_2_4    out=and4_2_1__D      pins=(nand4_2_2__C, o21a_2_8__A1)  nodes=112 ff=11
+  [and2b] and2b_2_5    out=xor2_2_6__B      pins=(and4bb_2_0__X, o22ai_2_0__Y)  nodes=43 ff=9
+FA endpoints: 16 nets (8 pairs) → fa_endpoints.json
+
+Expanding and2b_2_3 (out and4_2_1__A) → and2b_2_3_out_and4_2_1__A_fanin_depth5.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/and2b_2_3_out_and4_2_1__A_fanin_depth5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/and2b_2_3_out_and4_2_1__A_fanin_depth5.md
+
+============================================================
+STRONG SIMILARITY GROUPS: 5  (threshold class-Jaccard≥0.9, node-ratio≥0.85)
+  instances in strong groups: 26/28
+  strong pin-pattern clusters: 4
+============================================================
+  [1] size=11  meanJ=0.952  families=and2+and2b
+      and2_2_10, and2_2_3, and2_2_4, and2_2_5, and2b_2_1, and2b_2_2, and2b_2_20, and2b_2_21, and2b_2_22, and2b_2_3, and2b_2_4
+  [2] size=7  meanJ=0.981  families=and2b
+      and2b_2_23, and2b_2_24, and2b_2_25, and2b_2_26, and2b_2_27, and2b_2_28, and2b_2_29
+  [3] size=4  meanJ=1.000  families=and2
+      and2_2_11, and2_2_12, and2_2_13, and2_2_14
+  [4] size=2  meanJ=0.971  families=and2+and2b
+      and2_2_1, and2b_2_11
+  [5] size=2  meanJ=0.927  families=and2+and2b
+      and2_2_0, and2b_2_0
+
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/and2_and2b_similarity.json
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/README.md
+
+>>> strong_group_count = 5
+>>> strong_pin_pattern_cluster_count = 4
+# and2 + and2b behind `and4b_2_3__X`
+
+**11** `and2` + **17** `and2b` = **28** instances.
+Expanded: **`and2b_2_3`** → `and4_2_1__A` ([figure](and2b_2_3_out_and4_2_1__A_fanin_depth5.png)).
+
+## Strong similarity groups
+
+**Number of strong groups: 5**
+
+Criterion: pairwise class-Jaccard ≥ `0.9` and node-ratio ≥ `0.85` (union-find; min size 2).
+Covered: **26/28** instances.
+
+| # | Size | I | Families | Mean class J | Mean cell J | Members |
+|--:|-----:|---|----------|-------------:|------------:|---------|
+| 1 | 11 | hasI | and2+and2b | 0.952 | 0.911 | `and2_2_10`, `and2_2_3`, `and2_2_4`, `and2_2_5`, `and2b_2_1`, `and2b_2_2`, `and2b_2_20`, `and2b_2_21`, `and2b_2_22`, `and2b_2_3`, `and2b_2_4` |
+| 2 | 7 | hasI | and2b | 0.981 | 0.934 | `and2b_2_23`, `and2b_2_24`, `and2b_2_25`, `and2b_2_26`, `and2b_2_27`, `and2b_2_28`, `and2b_2_29` |
+| 3 | 4 | hasI | and2 | 1.0 | 1.0 | `and2_2_11`, `and2_2_12`, `and2_2_13`, `and2_2_14` |
+| 4 | 2 | noI | and2+and2b | 0.971 | 0.786 | `and2_2_1`, `and2b_2_11` |
+| 5 | 2 | noI | and2+and2b | 0.927 | 0.848 | `and2_2_0`, `and2b_2_0` |
+
+`hasI` = fan-in reaches primary `I`; `noI` = input-independent.
+
+### Strong group 1 (11× · hasI)
+
+- `and2_2_10` (and2) → `and3_2_5__B` · 109n · 7ff
+- `and2_2_3` (and2) → `and4_2_0__A` · 109n · 7ff
+- `and2_2_4` (and2) → `and4_2_1__B` · 109n · 7ff
+- `and2_2_5` (and2) → `and4_2_0__D` · 109n · 7ff
+- `and2b_2_1` (and2b) → `and4_2_0__B` · 112n · 11ff
+- `and2b_2_2` (and2b) → `and4_2_0__C` · 112n · 11ff
+- `and2b_2_20` (and2b) → `and4_2_1__C` · 112n · 11ff
+- `and2b_2_21` (and2b) → `and3_2_5__C` · 112n · 11ff
+- `and2b_2_22` (and2b) → `and3_2_5__A` · 112n · 11ff
+- `and2b_2_3` (and2b) → `and4_2_1__A` · 112n · 11ff
+- `and2b_2_4` (and2b) → `and4_2_1__D` · 112n · 11ff
+
+### Strong group 2 (7× · hasI)
+
+- `and2b_2_23` (and2b) → `and4_2_6__B` · 27n · 8ff
+- `and2b_2_24` (and2b) → `and4_2_6__C` · 27n · 8ff
+- `and2b_2_25` (and2b) → `and4_2_5__A` · 27n · 8ff
+- `and2b_2_26` (and2b) → `and4_2_5__D` · 27n · 8ff
+- `and2b_2_27` (and2b) → `and3_2_12__C` · 27n · 8ff
+- `and2b_2_28` (and2b) → `and4_2_5__C` · 27n · 8ff
+- `and2b_2_29` (and2b) → `and3_2_12__A` · 27n · 8ff
+
+### Strong group 3 (4× · hasI)
+
+- `and2_2_11` (and2) → `and4_2_6__A` · 27n · 7ff
+- `and2_2_12` (and2) → `and4_2_6__D` · 27n · 7ff
+- `and2_2_13` (and2) → `and4_2_5__B` · 27n · 7ff
+- `and2_2_14` (and2) → `and3_2_12__B` · 27n · 7ff
+
+### Strong group 4 (2× · noI)
+
+- `and2_2_1` (and2) → `or2_2_1__A` · 34n · 9ff
+- `and2b_2_11` (and2b) → `inv_2_7__A` · 33n · 9ff
+
+### Strong group 5 (2× · noI)
+
+- `and2_2_0` (and2) → `and3_2_0__C` · 40n · 9ff
+- `and2b_2_0` (and2b) → `or2_2_0__B` · 37n · 9ff
+
+## Strong pin-pattern clusters (4)
+
+Pin-template clusters whose *within* mean class-Jaccard also clears the strong threshold:
+
+| # | Size | Mean J | Label | Members |
+|--:|-----:|-------:|-------|---------|
+| 1 | 7 | 0.981 | `and2b: nand4_C × o21a_A1  [shallow(~27n)]` | `and2b_2_23`, `and2b_2_24`, `and2b_2_25`, `and2b_2_26`, `and2b_2_27`, `and2b_2_28`, `and2b_2_29` |
+| 2 | 6 | 0.994 | `and2b: nand4_C × o21a_A1  [deep(~110n)]` | `and2b_2_1`, `and2b_2_2`, `and2b_2_20`, `and2b_2_21`, `and2b_2_22`, `and2b_2_4` |
+| 3 | 4 | 1.0 | `and2: or4_A × or4_B  [deep(~110n)]` | `and2_2_10`, `and2_2_3`, `and2_2_4`, `and2_2_5` |
+| 4 | 4 | 1.0 | `and2: or4_A × or4_B  [shallow(~27n)]` | `and2_2_11`, `and2_2_12`, `and2_2_13`, `and2_2_14` |
+
+## All instances
+
+| Family | Instance | Out net | pin0 | pin1 | nodes | ff |
+|--------|----------|---------|------|------|------:|---:|
+| `and2` | `and2_2_0` | `and3_2_0__C` | `or2_2_1__X` | `or2_2_0__B` | 40 | 9 |
+| `and2` | `and2_2_1` | `or2_2_1__A` | `or4_2_4__A` | `xor2_2_7__A` | 34 | 9 |
+... (94 more lines in README)
+=== phase2 and4b behind backtrees ===
+FA endpoints: 16 nets (8 pairs) → fa_endpoints.json
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+strong groups: 5  depth≤5
+
+[g01 size=11 hasI meanJ=0.952 [and2+and2b]] rep=and2b_2_2 → and4_2_0__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_rep_and2b_2_2_fanin_depth5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_rep_and2b_2_2_fanin_depth5.md
+  member and2_2_10 → and3_2_5__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_10_out_and3_2_5__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_10_out_and3_2_5__B_d5.md
+  member and2_2_3 → and4_2_0__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_3_out_and4_2_0__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_3_out_and4_2_0__A_d5.md
+  member and2_2_4 → and4_2_1__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_4_out_and4_2_1__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_4_out_and4_2_1__B_d5.md
+  member and2_2_5 → and4_2_0__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_5_out_and4_2_0__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2_2_5_out_and4_2_0__D_d5.md
+  member and2b_2_1 → and4_2_0__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_1_out_and4_2_0__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_1_out_and4_2_0__B_d5.md
+  member and2b_2_2 → and4_2_0__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_2_out_and4_2_0__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_2_out_and4_2_0__C_d5.md
+  member and2b_2_20 → and4_2_1__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_20_out_and4_2_1__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_20_out_and4_2_1__C_d5.md
+  member and2b_2_21 → and3_2_5__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_21_out_and3_2_5__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_21_out_and3_2_5__C_d5.md
+  member and2b_2_22 → and3_2_5__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_22_out_and3_2_5__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_22_out_and3_2_5__A_d5.md
+  member and2b_2_3 → and4_2_1__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_3_out_and4_2_1__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_3_out_and4_2_1__A_d5.md
+  member and2b_2_4 → and4_2_1__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_4_out_and4_2_1__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g01_n11_hasI/and2b_2_4_out_and4_2_1__D_d5.md
+
+[g02 size=7 hasI meanJ=0.981 [and2b]] rep=and2b_2_26 → and4_2_5__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_rep_and2b_2_26_fanin_depth5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_rep_and2b_2_26_fanin_depth5.md
+  member and2b_2_23 → and4_2_6__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_23_out_and4_2_6__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_23_out_and4_2_6__B_d5.md
+  member and2b_2_24 → and4_2_6__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_24_out_and4_2_6__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_24_out_and4_2_6__C_d5.md
+  member and2b_2_25 → and4_2_5__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_25_out_and4_2_5__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_25_out_and4_2_5__A_d5.md
+  member and2b_2_26 → and4_2_5__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_26_out_and4_2_5__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_26_out_and4_2_5__D_d5.md
+  member and2b_2_27 → and3_2_12__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_27_out_and3_2_12__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_27_out_and3_2_12__C_d5.md
+  member and2b_2_28 → and4_2_5__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_28_out_and4_2_5__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_28_out_and4_2_5__C_d5.md
+  member and2b_2_29 → and3_2_12__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_29_out_and3_2_12__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g02_n7_hasI/and2b_2_29_out_and3_2_12__A_d5.md
+
+[g03 size=4 hasI meanJ=1.0 [and2]] rep=and2_2_13 → and4_2_5__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_rep_and2_2_13_fanin_depth5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_rep_and2_2_13_fanin_depth5.md
+  member and2_2_11 → and4_2_6__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_11_out_and4_2_6__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_11_out_and4_2_6__A_d5.md
+  member and2_2_12 → and4_2_6__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_12_out_and4_2_6__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_12_out_and4_2_6__D_d5.md
+  member and2_2_13 → and4_2_5__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_13_out_and4_2_5__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_13_out_and4_2_5__B_d5.md
+  member and2_2_14 → and3_2_12__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_14_out_and3_2_12__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g03_n4_hasI/and2_2_14_out_and3_2_12__B_d5.md
+
+[g04 size=2 noI meanJ=0.971 [and2+and2b]] rep=and2_2_1 → or2_2_1__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g04_rep_and2_2_1_fanin_depth5.png  (nodes=22 edges=28 cuts=7 back-edges=3)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g04_rep_and2_2_1_fanin_depth5.md
+  member and2_2_1 → or2_2_1__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g04_n2_noI/and2_2_1_out_or2_2_1__A_d5.png  (nodes=22 edges=28 cuts=7 back-edges=3)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g04_n2_noI/and2_2_1_out_or2_2_1__A_d5.md
+  member and2b_2_11 → inv_2_7__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g04_n2_noI/and2b_2_11_out_inv_2_7__A_d5.png  (nodes=20 edges=21 cuts=8 back-edges=2)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g04_n2_noI/and2b_2_11_out_inv_2_7__A_d5.md
+
+[g05 size=2 noI meanJ=0.927 [and2+and2b]] rep=and2_2_0 → and3_2_0__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g05_rep_and2_2_0_fanin_depth5.png  (nodes=21 edges=28 cuts=6 back-edges=2)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g05_rep_and2_2_0_fanin_depth5.md
+  member and2_2_0 → and3_2_0__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g05_n2_noI/and2_2_0_out_and3_2_0__C_d5.png  (nodes=21 edges=28 cuts=6 back-edges=2)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g05_n2_noI/and2_2_0_out_and3_2_0__C_d5.md
+  member and2b_2_0 → or2_2_0__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g05_n2_noI/and2b_2_0_out_or2_2_0__B_d5.png  (nodes=21 edges=25 cuts=8 back-edges=1)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/g05_n2_noI/and2b_2_0_out_or2_2_0__B_d5.md
+
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/behind/strong_groups/README.md
+strong_group_backtrees = 5 representative trees
+=== phase2 and4b groups expand ===
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+FA endpoints: 16 nets (8 pairs) → fa_endpoints.json
+
+[t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n] and2b: nand4_C × o21a_A1  [shallow(~27n)]  n=7  hasI  rep=and2b_2_26
+  expand and2b_2_23 → and4_2_6__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_23_out_and4_2_6__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_23_out_and4_2_6__B_d5.md
+  expand and2b_2_24 → and4_2_6__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_24_out_and4_2_6__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_24_out_and4_2_6__C_d5.md
+  expand and2b_2_25 → and4_2_5__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_25_out_and4_2_5__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_25_out_and4_2_5__A_d5.md
+  expand and2b_2_26 → and4_2_5__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_26_out_and4_2_5__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_26_out_and4_2_5__D_d5.md
+  expand and2b_2_27 → and3_2_12__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_27_out_and3_2_12__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_27_out_and3_2_12__C_d5.md
+  expand and2b_2_28 → and4_2_5__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_28_out_and4_2_5__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_28_out_and4_2_5__C_d5.md
+  expand and2b_2_29 → and3_2_12__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_29_out_and3_2_12__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/and2b_2_29_out_and3_2_12__A_d5.md
+
+[t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n] and2b: nand4_C × o21a_A1  [deep(~110n)]  n=6  hasI  rep=and2b_2_21
+  expand and2b_2_1 → and4_2_0__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_1_out_and4_2_0__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_1_out_and4_2_0__B_d5.md
+  expand and2b_2_2 → and4_2_0__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_2_out_and4_2_0__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_2_out_and4_2_0__C_d5.md
+  expand and2b_2_20 → and4_2_1__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_20_out_and4_2_1__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_20_out_and4_2_1__C_d5.md
+  expand and2b_2_21 → and3_2_5__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_21_out_and3_2_5__C_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_21_out_and3_2_5__C_d5.md
+  expand and2b_2_22 → and3_2_5__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_22_out_and3_2_5__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_22_out_and3_2_5__A_d5.md
+  expand and2b_2_4 → and4_2_1__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_4_out_and4_2_1__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/and2b_2_4_out_and4_2_1__D_d5.md
+
+[t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n] and2: or4_A × or4_B  [deep(~110n)]  n=4  hasI  rep=and2_2_4
+  expand and2_2_10 → and3_2_5__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_10_out_and3_2_5__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_10_out_and3_2_5__B_d5.md
+  expand and2_2_3 → and4_2_0__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_3_out_and4_2_0__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_3_out_and4_2_0__A_d5.md
+  expand and2_2_4 → and4_2_1__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_4_out_and4_2_1__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_4_out_and4_2_1__B_d5.md
+  expand and2_2_5 → and4_2_0__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_5_out_and4_2_0__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/and2_2_5_out_and4_2_0__D_d5.md
+
+[t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n] and2: or4_A × or4_B  [shallow(~27n)]  n=4  hasI  rep=and2_2_13
+  expand and2_2_11 → and4_2_6__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_11_out_and4_2_6__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_11_out_and4_2_6__A_d5.md
+  expand and2_2_12 → and4_2_6__D
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_12_out_and4_2_6__D_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_12_out_and4_2_6__D_d5.md
+  expand and2_2_13 → and4_2_5__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_13_out_and4_2_5__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_13_out_and4_2_5__B_d5.md
+  expand and2_2_14 → and3_2_12__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_14_out_and3_2_12__B_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/and2_2_14_out_and3_2_12__B_d5.md
+
+[t05_n1_hasI_strong_g1_remainder_and2_and2b] strong g1 remainder (and2+and2b, size 1)  n=1  hasI  rep=and2b_2_3
+  expand and2b_2_3 → and4_2_1__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t05_n1_hasI_strong_g1_remainder_and2_and2b/and2b_2_3_out_and4_2_1__A_d5.png  (nodes=16 edges=23 cuts=5 back-edges=4)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t05_n1_hasI_strong_g1_remainder_and2_and2b/and2b_2_3_out_and4_2_1__A_d5.md
+
+[t06_n2_noI_strong_g4_remainder_and2_and2b] strong g4 remainder (and2+and2b, size 2)  n=2  noI  rep=and2_2_1
+  expand and2_2_1 → or2_2_1__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t06_n2_noI_strong_g4_remainder_and2_and2b/and2_2_1_out_or2_2_1__A_d5.png  (nodes=22 edges=28 cuts=7 back-edges=3)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t06_n2_noI_strong_g4_remainder_and2_and2b/and2_2_1_out_or2_2_1__A_d5.md
+  expand and2b_2_11 → inv_2_7__A
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t06_n2_noI_strong_g4_remainder_and2_and2b/and2b_2_11_out_inv_2_7__A_d5.png  (nodes=20 edges=21 cuts=8 back-edges=2)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t06_n2_noI_strong_g4_remainder_and2_and2b/and2b_2_11_out_inv_2_7__A_d5.md
+
+[t07_n2_noI_strong_g5_remainder_and2_and2b] strong g5 remainder (and2+and2b, size 2)  n=2  noI  rep=and2_2_0
+  expand and2_2_0 → and3_2_0__C
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t07_n2_noI_strong_g5_remainder_and2_and2b/and2_2_0_out_and3_2_0__C_d5.png  (nodes=21 edges=28 cuts=6 back-edges=2)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t07_n2_noI_strong_g5_remainder_and2_and2b/and2_2_0_out_and3_2_0__C_d5.md
+  expand and2b_2_0 → or2_2_0__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t07_n2_noI_strong_g5_remainder_and2_and2b/and2b_2_0_out_or2_2_0__B_d5.png  (nodes=21 edges=25 cuts=8 back-edges=1)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t07_n2_noI_strong_g5_remainder_and2_and2b/and2b_2_0_out_or2_2_0__B_d5.md
+
+[t08_n2_noI_outliers_not_in_strong_type_clusters] outliers (not in strong type clusters)  n=2  noI  rep=and2_2_2
+  expand and2_2_2 → and2_2_2__X
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t08_n2_noI_outliers_not_in_strong_type_clusters/and2_2_2_out_and2_2_2__X_d5.png  (nodes=28 edges=39 cuts=7 back-edges=0)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t08_n2_noI_outliers_not_in_strong_type_clusters/and2_2_2_out_and2_2_2__X_d5.md
+  expand and2b_2_5 → xor2_2_6__B
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t08_n2_noI_outliers_not_in_strong_type_clusters/and2b_2_5_out_xor2_2_6__B_d5.png  (nodes=28 edges=68 cuts=2 back-edges=20)
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/t08_n2_noI_outliers_not_in_strong_type_clusters/and2b_2_5_out_xor2_2_6__B_d5.md
+
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase2/and4b/groups/README.md
+types=8
+=== phase3 FA opens ===
+folder t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n  members=7  sim=True  run=True
+folder t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n  members=6  sim=True  run=True
+folder t05_n1_hasI_strong_g1_remainder_and2_and2b  members=1  sim=True  run=True
+compile…
+simulate…
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/open_log.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/FA_open_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/FA_open_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_FA_open_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/open_log.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/FA_open_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/FA_open_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t02_FA_open_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t05_n1_hasI_strong_g1_remainder_and2_and2b/open_log.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t05_n1_hasI_strong_g1_remainder_and2_and2b/FA_open_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t05_n1_hasI_strong_g1_remainder_and2_and2b/FA_open_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t05_FA_open_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_t02_t05_FA_open_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_t02_t05_FA_open_timeline.png
+match_ref=True
+=== phase3 k ones ===
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+members: 14  groups=[1, 2, 5]
+compile… (84 patterns, 58 probes)
+simulate…
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n/k_ones_flops_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t01_k_ones_flops_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n/k_ones_flops_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t02_k_ones_flops_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t05_n1_hasI_strong_g1_remainder_and2_and2b/k_ones_flops_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t05_k_ones_flops_timeline.png
+done
+=== phase3 or4b opens ===
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+members: 8
+compile…
+simulate…
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/open_log.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n/FA_open_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t03_or4b_nand2_I_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/open_log.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n/FA_open_timeline.png
+copied /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t04_or4b_nand2_I_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/t03_t04_or4b_nand2_I_timeline.png
+match_ref=True
+=== phase3 fa input ===
+compile…
+simulate…
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/fa_input_to_nand2.md
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/fa_input_to_nand2_timeline.png
+fa_A_N ones: []
+nand_B n: 121
+fa_phase ones: [10, 21, 32, 43, 54, 65, 76, 87, 98, 109, 120]
+=== phase3 flop init ===
+structural: {'source': 'netlist/puzzle_structural.v', 'trusted': 'rework/netlist/puzzle_structural.v from puzzle_gates.spice', 'instances_parsed': 722, 'driven_nets': 722, 'multi_output_cells': 0, 'has_success': True}
+flops: 92
+compile… (92 flop probes)
+simulate all0…
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/flop_init_all0/flop_init_timeline.png
+wrote /mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/and4b/groups/flop_init_all0/README.md
+init0=88 init1=4 stuck0=75
+=== phase3 nand2b ===
+Traceback (most recent call last):
+  File "phase3/nand2b_B2/run_confirm_no_I.py", line 16, in <module>
+    runpy.run_path(str(TOOL), run_name="__main__")
+  File "/usr/lib/python3.8/runpy.py", line 265, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.8/runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/ralev/Documents/CursorCoding/asic-puzzle-2026-master/rework_coded/phase3/nand2b_B2/phase3_confirm_nand2b_no_I.py", line 28, in <module>
+    from identify_fa_endpoints import find_fa_pairs, endpoint_sets, fanin_hits  # noqa: E402
+ModuleNotFoundError: No module named 'identify_fa_endpoints'
+EXIT:0

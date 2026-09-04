@@ -1,0 +1,61 @@
+{
+  "protocol": "only_i",
+  "join": "and2_2_15.X = inv_2_6.Y \u2227 and4_2_3.X",
+  "arms": {
+    "A": {
+      "dir": "inv_2_6",
+      "root": "inv_2_6__Y",
+      "sticky": "a31o_2_11__X"
+    },
+    "B": {
+      "dir": "and4_2_3",
+      "root": "and4_2_3__X"
+    }
+  },
+  "and2_2_15": {
+    "pins": [
+      {
+        "pin": "A",
+        "net": "inv_2_6__Y",
+        "net_full": "sky130_fd_sc_hd__inv_2_6__Y",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 48,
+        "flops": 12,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      },
+      {
+        "pin": "B",
+        "net": "and4_2_3__X",
+        "net_full": "sky130_fd_sc_hd__and4_2_3__X",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 65,
+        "flops": 17,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      }
+    ],
+    "nodes_behind": 81,
+    "flops": 20,
+    "primaries": [
+      "I",
+      "enable"
+    ]
+  },
+  "figures": {
+    "join": "and2_2_15__X_fanin_depth4.png",
+    "and4_2_3": "and4_2_3/and4_2_3__X_fanin_depth5.png",
+    "inv_2_6": "inv_2_6/a31o_2_11__X_fanin_depth5.png"
+  },
+  "pre_and4_region": "pre_and4_region.md",
+  "depths": {
+    "gates": 5,
+    "context": 4
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "source": {
+    "source": "netlist/puzzle_structural.v",
+    "trusted": "rework/netlist/puzzle_structural.v from puzzle_gates.spice",
+    "instances_parsed": 722,
+    "driven_nets": 722,
+    "multi_output_cells": 0,
+    "has_success": true
+  },
+  "roots": {
+    "full": "and2_2_15__X",
+    "A_arm": "inv_2_6__Y",
+    "B_arm": "and4_2_3__X"
+  },
+  "thresholds": {
+    "LARGE_NODES": 20,
+    "LARGE_FRAC": 0.25
+  },
+  "LARGE_PRE_AND4": false,
+  "A_exclusive_frac_of_full": 0.1786,
+  "full": {
+    "nodes": 84,
+    "flops": 20,
+    "primaries": [
+      "I",
+      "enable"
+    ],
+    "class_hist": {
+      "flop": 20,
+      "aoi": 20,
+      "and": 16,
+      "inv": 6,
+      "nand": 6,
+      "nor": 4,
+      "mux": 3,
+      "xor": 3,
+      "xnor": 2,
+      "primary": 2,
+      "or": 2
+    }
+  },
+  "A_arm": {
+    "nodes": 51,
+    "flops": 12,
+    "primaries": [
+      "I",
+      "enable"
+    ],
+    "class_hist": {
+      "aoi": 13,
+      "flop": 12,
+      "and": 6,
+      "inv": 5,
+      "nand": 4,
+      "mux": 3,
+      "primary": 2,
+      "xor": 2,
+      "nor": 2,
+      "or": 1,
+      "xnor": 1
+    }
+  },
+  "B_arm": {
+    "nodes": 68,
+    "flops": 17,
+    "primaries": [
+      "I",
+      "enable"
+    ],
+    "class_hist": {
+      "flop": 17,
+      "aoi": 16,
+      "and": 15,
+      "nand": 5,
+      "nor": 4,
+      "xor": 3,
+      "primary": 2,
+      "xnor": 2,
+      "inv": 2,
+      "mux": 1,
+      "or": 1
+    }
+  },
+  "A_exclusive": {
+    "nodes": 15,
+    "flops": 3,
+    "primaries": [],
+    "class_hist": {
+      "aoi": 4,
+      "inv": 4,
+      "flop": 3,
+      "mux": 2,
+      "or": 1,
+      "nand": 1
+    },
+    "leaves": []
+  },
+  "B_exclusive": {
+    "nodes": 32,
+    "flops": 8,
+    "primaries": [],
+    "class_hist": {
+      "and": 9,
+      "flop": 8,
+      "aoi": 7,
+      "nand": 2,
+      "nor": 2,
+      "or": 1,
+      "xnor": 1,
+      "inv": 1,
+      "xor": 1
+    },
+    "leaves": []
+  },
+  "shared": {
+    "nodes": 36,
+    "flops": 9,
+    "primaries": [
+      "I",
+      "enable"
+    ],
+    "class_hist": {
+      "flop": 9,
+      "aoi": 9,
+      "and": 6,
+      "nand": 3,
+      "primary": 2,
+      "xor": 2,
+      "nor": 2,
+      "xnor": 1,
+      "inv": 1,
+      "mux": 1
+    }
+  }
+}

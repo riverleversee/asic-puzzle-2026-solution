@@ -1,0 +1,107 @@
+# Rules — a31o sticky SET / a221o fold neighbor spacings
+# Source: phase3 a221o_set shift-chain structure match + I@1 sims
+#   (delays, FA gates, spaced/triple OR linearity).
+# Measured windows: phase3/a221o_set/fold_windows/fold_windows.{md,json}
+#   (run_fold_window_sweep.py — observe inv_2_11__A sticky directly)
+# Cross-check (historical): tools/stepup_slot0C_a6C_inv11.py FOLD_OFFSET_SAFE
+#   — or4 ABCD code map there is **superseded** by the sticky sweep
+#               rework_coded/phase4/_cmp_set_inv11_windows.py (or4 ABCD schedule)
+# Visuals: phase2/a221o_behind_inv23/
+# Artifacts:
+#   phase3/a221o_set/I_dep/shift_chain/structure_match.*
+#   phase3/a221o_set/I_dep/shift_chain/README.md
+#   phase3/a221o_set/fold_windows/fold_windows.*
+
+SCOPE
+  Sticky path behind inv_2_23 (same a221o fold as tools' FoldInv11 / inv11):
+
+    a31o_2_12.X  =  (I ∧ inv_2_7__A ∧ a221o_2_1.X) ∨ inv_2_11__A
+    dfrtp_2_37.Q = inv_2_11__A     # sticky feedback (B1)
+    inv_2_23.A   ←  inv_2_11.Y
+
+  I reaches a221o through an enabled_mux_shift_register (12 stages).
+  From an I=1 at t0, taps fire at t0+{1,10,11,12}.
+
+COMPARISON TO inv11 / hot-offset (tools)
+  Same Δ set {1,10,11,12} and same a221o fold.
+  Tools encode the **forbid** form: if I@t and I@(t+Δ) would make
+  a221o live under the later I, force the partner to 0 (unless the
+  later cycle sits on an allowed window below).
+  Phase-3 SET text is the **arm** form of the same mechanism: sticky
+  SET rises when such a **forbidden** (unsafe) pair occurs.
+  → Forcing / CP-SAT: treat unsafe partners as forced 0s (hot-offset).
+  → "Allowed" = sticky does **not** arm = safe for the forcer.
+
+FA PHASE SCHEDULE (structural all0; or4_2_4 ABCD by cyc mod 11)
+  phase  0: 1000
+  phase  1: 0100
+  phase  2: 1100
+  phase  3: 0010
+  phase  4: 1010
+  phase  5: 0110
+  phase  6: 1110
+  phase  7: 0001
+  phase  8: 1001
+  phase  9: 0101
+  phase 10: 0000     ← or4 "reset" / all-zero (or4.X=0)
+
+  Note: earlier drafts equated "allowed" with or4=0000 (phase 10) / 0101
+  (phase 9). Direct sticky observation does **not** support that mapping;
+  use the measured residues below, not the or4 code alone.
+
+ALLOWED NEIGHBOR / LATER WINDOWS (hard — measured)
+  Let t0 < t1 with I[t0]=I[t1]=1 and Δ = t1 − t0.
+
+  Criterion: residue is **allowed** iff the two-one pair does **not**
+  arm sticky `inv_2_11__A` (dfrtp_2_37.Q). Measured on rows 5 and 8
+  (both agree); single-one and all0 controls never arm.
+
+      Δ = 1 or 12 :  t1 ≡ 0 (mod 11)
+                     cycles: 0,11,22,33,44,55,66,77,88,99,110
+                     (was wrongly listed as ≡10 / or4=0000)
+
+      Δ = 10      :  t1 ≡ 10 (mod 11)
+                     cycles: 10,21,32,43,54,65,76,87,98,109,120
+                     (was wrongly listed as ≡9 / or4=0101)
+
+      Δ = 11      :  **never** allowed (ungated a221o.B2 path always live)
+
+  Equivalently (forcer / hot-offset form):
+    For each forced I=1 at t, and each k ∈ {1,10,11,12}:
+      if t+k (or t−k) would form a forbidden pair → force that partner to 0.
+    Forbidden = (Δ=11) OR (Δ∈{1,12} and later ̸≡ 0) OR (Δ=10 and later ̸≡ 10).
+
+  Neighboring ones (Δ=1) and ones 10–12 cycles later are therefore
+  banned **except** when the later cycle lands on the allowed window
+  above (row-boundary wrap for Δ=1/12; later≡10 for Δ=10).
+
+RULE (SET arm — when sticky rises)
+  Sticky SET (inv_2_11__A) arms when there exists a **forbidden** pair
+  (Δ, t1) as above with I at both ends (a221o live under the later I).
+  Then it holds via B1 feedback.
+  Spacings outside {1,10,11,12}, or Δ∈{1,10,12} with t1 on the allowed
+  window, do **not** arm SET by themselves.
+  (Earlier text said SET arms on *allowed* pairs — that inverted the
+  measurement. Also: success does **not** require this sticky to arm;
+  the forced 22-one solution leaves inv_2_23.A high for the whole run.)
+
+EVIDENCE
+  Structure: taps at +1/+10/+11/+12.
+  Direct sim: fold_windows.md — 95 modes; Δ∈{1,12} allowed only at
+  residue 0; Δ=10 only at residue 10; Δ=11 never; controls clean.
+  Historical note: tools FOLD_OFFSET_SAFE = {1:"0000", 10:"0101",
+  11:None, 12:"0000"} mapped those codes to phases 10/9; that derived
+  residue table is what this file previously published and is wrong
+  against the sticky endpoint.
+
+NOTES
+  inv_2_7__A is high every cycle on all0 — not the limiter.
+  Slot / leaf oracles: leaf PASS is exactly-2 ones on that leaf's FA
+  opens (phase3/and4b/groups/rules/) — not a separate "slot" constraint.
+  This neighbor rule is orthogonal to leaf Σ=2; it constrains pairs of
+  ones across time via a221o fold.
+
+RELATED
+  and4b exactly-2 on FA opens → phase3/and4b/groups/rules/
+  period-11 exactly-2 ones → phase3/and2_2_15/rules/mux_period11_two_ones_inhibit.txt
+                              phase3/and2_2_15/rules/and4_2_3_two_per_cycle.txt

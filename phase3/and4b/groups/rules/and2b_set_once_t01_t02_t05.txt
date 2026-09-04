@@ -1,0 +1,32 @@
+# Rules — and2b set_once groups t01, t02, t05
+# Source: phase3 k-ones flop watches (A_N / B / Y) on FA open windows.
+# Artifacts: phase3/and4b/groups/t0{1,2,5}_*/k_ones_flops.*
+
+SCOPE
+  hasI and2b sticky leaves (kind set_once):
+    t01  shallow and2b  (7): a6.B, a6.C, a5.A, a5.D, a12.C, a5.C, a12.A
+    t02  deep and2b     (6): slot.0.B, slot.0.C, slot.1.C, and3.C, and3.A, slot.1.D
+    t05  remainder      (1): slot.1.A (and2b_2_3)
+
+OPEN WINDOWS
+  Each leaf has an FA phase-decode open entry
+  (see phase3/and4b/groups/t0N_*/open_log.md + FA_open_timeline.png).
+  Open cycles = all FA open windows from sim, including 0 and 120 when present.
+  I is only compared / used to arm the leaf on those open cycles.
+
+RULE (hard)
+  For each leaf in t01, t02, t05:
+    Count of I=1 on that leaf's FA open windows must be EXACTLY 2.
+
+  Evidence (k-ones sweep; first k opens in list):
+    k=1  → Y never rises (under-armed)
+    k=2  → Y sticks through end (PASS for that leaf)
+    k≥3  → Y pulses then dies (A_N re-arms; FAIL)
+
+  Gate: Y = (¬A_N) ∧ B
+
+NOTES
+  Ones outside that leaf's open windows do not count toward its k.
+  Different leaves have different open sets; the exactly-2 constraint is per leaf.
+  FA open decode itself is I-independent (validated all0 vs opens_exact_shift1).
+  Cycles 0 and 120 are not marked invalid in rework; they count when FA is open.

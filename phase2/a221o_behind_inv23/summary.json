@@ -1,0 +1,171 @@
+{
+  "protocol": "only_i",
+  "protocol_note": "Expand only along fan-in that reaches primary I; non-I branches shown once as stubs. No per-pin figures.",
+  "chain": [
+    "a32o_2_4.A1 = inv_2_23.A",
+    "inv_2_23.A \u2190 inv_2_11.Y",
+    "inv_2_11.A \u2190 dfrtp_2_37.Q (net inv_2_11__A)",
+    "dfrtp_2_37.D \u2190 a31o_2_12.X",
+    "a31o_2_12 = (I \u2227 inv_2_7.A \u2227 a221o_2_1.X) \u2228 inv_2_11.A",
+    "a221o_2_1.X = (A1\u2227A2) \u2228 (B1\u2227B2) \u2228 C1"
+  ],
+  "aliases": {
+    "inv_2_7__A": "and2b_2_11.Y",
+    "or2_2_11__A": "and2b_2_11.A_N / dfrtp_2_47.Q",
+    "buf_2_0__X": "buffer of or4_2_4__X \u2192 a22o.B1"
+  },
+  "a31o": {
+    "instance": "a31o_2_12",
+    "out_net": "a31o_2_12__X",
+    "formula": "Y = (A1 \u2227 A2 \u2227 A3) \u2228 B1",
+    "pins": [
+      {
+        "pin": "A1",
+        "net": "I",
+        "net_full": "I",
+        "kind": "primary",
+        "reaches_I": true,
+        "nodes_behind": 0,
+        "flops": 0,
+        "primaries": [
+          "I"
+        ]
+      },
+      {
+        "pin": "A2",
+        "net": "inv_2_7__A",
+        "net_full": "sky130_fd_sc_hd__inv_2_7__A",
+        "kind": "stub",
+        "reaches_I": false,
+        "nodes_behind": 33,
+        "flops": 9,
+        "primaries": [
+          "enable"
+        ]
+      },
+      {
+        "pin": "A3",
+        "net": "a221o_2_1__X",
+        "net_full": "sky130_fd_sc_hd__a221o_2_1__X",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 62,
+        "flops": 21,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      },
+      {
+        "pin": "B1",
+        "net": "inv_2_11__A",
+        "net_full": "sky130_fd_sc_hd__inv_2_11__A",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 64,
+        "flops": 21,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      }
+    ],
+    "nodes_behind": 64,
+    "flops": 22,
+    "primaries": [
+      "I",
+      "enable"
+    ]
+  },
+  "a221o": {
+    "instance": "a221o_2_1",
+    "out_net": "a221o_2_1__X",
+    "formula": "Y = (A1\u2227A2) \u2228 (B1\u2227B2) \u2228 C1",
+    "pins": [
+      {
+        "pin": "A1",
+        "net": "or4bb_2_0__X",
+        "net_full": "sky130_fd_sc_hd__or4bb_2_0__X",
+        "kind": "stub",
+        "reaches_I": false,
+        "nodes_behind": 34,
+        "flops": 9,
+        "primaries": [
+          "enable"
+        ]
+      },
+      {
+        "pin": "A2",
+        "net": "mux2_1_12__A1",
+        "net_full": "sky130_fd_sc_hd__mux2_1_12__A1",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 53,
+        "flops": 18,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      },
+      {
+        "pin": "B1",
+        "net": "conb_1_2__HI",
+        "net_full": "sky130_fd_sc_hd__conb_1_2__HI",
+        "kind": "tied",
+        "reaches_I": false,
+        "nodes_behind": 0,
+        "flops": 0,
+        "primaries": []
+      },
+      {
+        "pin": "B2",
+        "net": "mux2_1_12__A0",
+        "net_full": "sky130_fd_sc_hd__mux2_1_12__A0",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 55,
+        "flops": 19,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      },
+      {
+        "pin": "C1",
+        "net": "a22o_2_2__X",
+        "net_full": "sky130_fd_sc_hd__a22o_2_2__X",
+        "kind": "\u2192I",
+        "reaches_I": true,
+        "nodes_behind": 60,
+        "flops": 21,
+        "primaries": [
+          "I",
+          "enable"
+        ]
+      }
+    ],
+    "nodes_behind": 62,
+    "flops": 21,
+    "primaries": [
+      "I",
+      "enable"
+    ]
+  },
+  "inv_2_23__A": {
+    "nodes_behind": 65,
+    "flops": 22,
+    "primaries": [
+      "I",
+      "enable"
+    ]
+  },
+  "depths": {
+    "gates": 5,
+    "context": 4
+  },
+  "figures": [
+    "inv_2_23__A_fanin_depth4.png",
+    "a31o_2_12__X_fanin_depth5.png",
+    "a221o_2_1__X_fanin_depth5.png"
+  ]
+}

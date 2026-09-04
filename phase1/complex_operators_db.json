@@ -1,0 +1,370 @@
+[
+  {
+    "id": "equality_comparator",
+    "name": "Equality / constant comparator",
+    "description": "Bitwise XNOR (or EQ) feeding a wide AND-reduce to 1 bit.",
+    "warmup_example": "comparator496",
+    "expect": {
+      "xnor_or_xor_frac": [
+        0.15,
+        0.55
+      ],
+      "and_tree_frac": [
+        0.2,
+        0.7
+      ],
+      "flop_frac": [
+        0.0,
+        0.25
+      ],
+      "mux_frac": [
+        0.0,
+        0.15
+      ],
+      "aoi_frac": [
+        0.0,
+        0.25
+      ]
+    },
+    "motifs": [
+      "and_reduce",
+      "xnor_pair",
+      "multi_and4"
+    ],
+    "anti_motifs": [
+      "carry_chain_dense"
+    ]
+  },
+  {
+    "id": "ripple_adder",
+    "name": "Binary adder (ripple / FA chain)",
+    "description": "Per-bit XOR for sum + majority/AOI for carry (a21o/o21a/maj).",
+    "warmup_example": "adder8",
+    "expect": {
+      "xor_frac": [
+        0.15,
+        0.45
+      ],
+      "aoi_frac": [
+        0.15,
+        0.55
+      ],
+      "and_tree_frac": [
+        0.05,
+        0.35
+      ],
+      "flop_frac": [
+        0.0,
+        0.2
+      ],
+      "mux_frac": [
+        0.0,
+        0.15
+      ]
+    },
+    "motifs": [
+      "xor_pair",
+      "carry_like"
+    ],
+    "anti_motifs": []
+  },
+  {
+    "id": "parity_xor_tree",
+    "name": "Parity / XOR-tree",
+    "description": "Mostly XOR/XNOR cascaded to one bit.",
+    "expect": {
+      "xor_frac": [
+        0.45,
+        1.0
+      ],
+      "and_tree_frac": [
+        0.0,
+        0.25
+      ],
+      "flop_frac": [
+        0.0,
+        0.2
+      ],
+      "mux_frac": [
+        0.0,
+        0.15
+      ]
+    },
+    "motifs": [
+      "xor_pair"
+    ],
+    "anti_motifs": [
+      "multi_and4"
+    ]
+  },
+  {
+    "id": "shift_register",
+    "name": "Shift register / serial-in parallel-out",
+    "description": "Flop chain with mux or enable; serial bit + enable.",
+    "warmup_example": "shift_register",
+    "expect": {
+      "flop_frac": [
+        0.35,
+        0.85
+      ],
+      "mux_frac": [
+        0.05,
+        0.45
+      ],
+      "xor_frac": [
+        0.0,
+        0.2
+      ],
+      "and_tree_frac": [
+        0.0,
+        0.3
+      ]
+    },
+    "motifs": [
+      "flop_chain",
+      "mux_enable"
+    ],
+    "anti_motifs": [
+      "carry_chain_dense"
+    ]
+  },
+  {
+    "id": "lfsr_crc",
+    "name": "LFSR / CRC / linear feedback",
+    "description": "Shift flops with XOR feedback taps.",
+    "expect": {
+      "flop_frac": [
+        0.25,
+        0.7
+      ],
+      "xor_frac": [
+        0.1,
+        0.45
+      ],
+      "mux_frac": [
+        0.0,
+        0.3
+      ]
+    },
+    "motifs": [
+      "flop_chain",
+      "xor_pair"
+    ],
+    "anti_motifs": []
+  },
+  {
+    "id": "sticky_sr_latch",
+    "name": "Sticky set / SR-style status",
+    "description": "Flop with OR-self hold (set-and-stay) or A|B delayed sticky.",
+    "expect": {
+      "flop_frac": [
+        0.15,
+        0.7
+      ],
+      "or_frac": [
+        0.05,
+        0.5
+      ],
+      "and_tree_frac": [
+        0.0,
+        0.4
+      ],
+      "xor_frac": [
+        0.0,
+        0.25
+      ]
+    },
+    "motifs": [
+      "sticky_or",
+      "self_feedback"
+    ],
+    "anti_motifs": []
+  },
+  {
+    "id": "wide_and_reduce",
+    "name": "Wide AND-reduce / all-ones check",
+    "description": "Tree of AND/NAND reducing many bits to one.",
+    "expect": {
+      "and_tree_frac": [
+        0.45,
+        1.0
+      ],
+      "xor_frac": [
+        0.0,
+        0.2
+      ],
+      "flop_frac": [
+        0.0,
+        0.25
+      ],
+      "mux_frac": [
+        0.0,
+        0.15
+      ]
+    },
+    "motifs": [
+      "and_reduce",
+      "multi_and4"
+    ],
+    "anti_motifs": [
+      "xor_pair"
+    ]
+  },
+  {
+    "id": "wide_or_reduce",
+    "name": "Wide OR-reduce / any-ones check",
+    "expect": {
+      "or_frac": [
+        0.4,
+        1.0
+      ],
+      "xor_frac": [
+        0.0,
+        0.2
+      ],
+      "flop_frac": [
+        0.0,
+        0.25
+      ]
+    },
+    "motifs": [
+      "or_reduce"
+    ],
+    "anti_motifs": []
+  },
+  {
+    "id": "mux_tree",
+    "name": "MUX tree / datapath select",
+    "expect": {
+      "mux_frac": [
+        0.3,
+        1.0
+      ],
+      "flop_frac": [
+        0.0,
+        0.4
+      ],
+      "xor_frac": [
+        0.0,
+        0.25
+      ]
+    },
+    "motifs": [
+      "mux_enable"
+    ],
+    "anti_motifs": []
+  },
+  {
+    "id": "onehot_priority",
+    "name": "One-hot / priority / thermometer decode",
+    "description": "NOR/NAND chains with mutual exclusion flavor.",
+    "expect": {
+      "nor_nand_frac": [
+        0.35,
+        1.0
+      ],
+      "xor_frac": [
+        0.0,
+        0.2
+      ],
+      "flop_frac": [
+        0.0,
+        0.3
+      ]
+    },
+    "motifs": [],
+    "anti_motifs": [
+      "xor_pair"
+    ]
+  },
+  {
+    "id": "popcount",
+    "name": "Population count / adder tree of bits",
+    "expect": {
+      "xor_frac": [
+        0.15,
+        0.45
+      ],
+      "aoi_frac": [
+        0.15,
+        0.5
+      ],
+      "and_tree_frac": [
+        0.1,
+        0.4
+      ],
+      "flop_frac": [
+        0.0,
+        0.2
+      ]
+    },
+    "motifs": [
+      "xor_pair",
+      "carry_like"
+    ],
+    "anti_motifs": []
+  },
+  {
+    "id": "fsm_control",
+    "name": "FSM / control decode",
+    "description": "Mixed AOI with modest flops; not XOR-heavy.",
+    "expect": {
+      "aoi_frac": [
+        0.2,
+        0.6
+      ],
+      "flop_frac": [
+        0.1,
+        0.45
+      ],
+      "xor_frac": [
+        0.0,
+        0.2
+      ],
+      "mux_frac": [
+        0.0,
+        0.35
+      ]
+    },
+    "motifs": [],
+    "anti_motifs": [
+      "xor_pair"
+    ]
+  },
+  {
+    "id": "serial_deserializer",
+    "name": "Serial bit gather + parallel check",
+    "description": "Shift/flops gathering I, then AND/XNOR check \u2014 warmup shape.",
+    "warmup_example": "adder_demo (shift+add+cmp)",
+    "expect": {
+      "flop_frac": [
+        0.2,
+        0.45
+      ],
+      "and_tree_frac": [
+        0.15,
+        0.4
+      ],
+      "xor_frac": [
+        0.08,
+        0.35
+      ],
+      "mux_frac": [
+        0.0,
+        0.25
+      ],
+      "aoi_frac": [
+        0.05,
+        0.35
+      ]
+    },
+    "motifs": [
+      "flop_chain",
+      "and_reduce"
+    ],
+    "anti_motifs": [
+      "carry_chain_dense"
+    ],
+    "min_nodes": 20
+  }
+]

@@ -1,0 +1,57 @@
+# Rules — and4_2_3 satisfied by two I=1 per period-11 cycle
+# Source: phase2/and2_2_15/and4_2_3/dfrtp_2_24/reports/I2win_2per_extended.*
+# Pin:    and4.A ← dfrtp_2_24.Q (a32o_2_2 sticky); and4.X = A∧B∧C∧D
+
+SCOPE
+  B-arm of success-entry AND:
+
+      and2_2_15.X = inv_2_6.Y ∧ and4_2_3.X
+
+  This rule is about **and4_2_3** (esp. pin A / dfrtp_2_24), not the
+  A-arm fail-sticky inhibit (see mux_period11_two_ones_inhibit.txt).
+
+CYCLE BOUNDARY
+  Start at the first entry (cycle 0). Period-11 cycles:
+
+      C_k = { 11*k , 11*k+1 , … , 11*k+10 }     k = 0,1,2,…
+
+  Over the 121-cycle enable window: k = 0..10 (eleven cycles).
+
+RULE (working)
+  **Exactly two I=1 per cycle C_k satisfies and4_2_3** for this arm’s
+  observe criterion (`and4.X` rises under structural sim with a few
+  extra cycles past 121).
+
+  Placement inside the cycle does **not** matter in the sweeps we ran:
+  every pair from offs {0..10}, including pairs that hit bit 10 / cyc 120,
+  passed once the sim horizon was long enough.
+
+  Likely mechanism is coarser than per-offset structure — **a total
+  ones budget** realized as exactly 2 × 11 = 22 ones over 0..120 —
+  rather than a fragile intra-cycle spacing rule. Exact-2 also matches
+  the A-arm fail-inhibit cadence.
+
+SIM HORIZON
+  Always sim **a few extra cycles** past 121 with I=0 (report suite uses
+  +4 → n_cyc=125). Reason: `and4.X` can first appear on cycle 121 after
+  an I=1 at 120; truncating at 121 looks like a false fail.
+
+EVIDENCE
+  dfrtp_2_24/reports/I2win_2per_extended.md (n_cyc=125):
+
+    exhaustive C(11,2) fixed pairs every cycle     55/55 pass
+    per-window random ×48                          48/48 pass
+    entry-0 on first+last only                     100/100 pass
+    force bit10 every cycle (incl. last)           10/10 pass
+    ─────────────────────────────────────────────  213/213 pass
+
+  Contrast: same patterns at n_cyc=121 with I@120 → and4.X n=0 until
+  extended (I_extend / force-final exploratory; replaced by this report).
+
+PASS CRITERION (report)
+  and4.X high on ≥1 cycle under the extended sim.
+
+STATUS
+  Working rule for and4_2_3 under 2-per-cycle I. Open: whether total
+  ones can drop below 22, and whether B/C/D pins need extra constraints
+  beyond this density for a joint and4.X solution with the A-arm.

@@ -1,0 +1,65 @@
+{
+  "folder": "nor3_2_2",
+  "and4_pin": "D",
+  "flop": null,
+  "parent": "and4_2_3",
+  "out_net": "nor3_2_2__Y",
+  "q_net": "nor3_2_2__Y",
+  "gate": "nor3_2_2",
+  "formula": "Y = \u00ac(A \u2228 B \u2228 C)",
+  "sink": "and4_2_3.D",
+  "pins": [
+    {
+      "pin": "A",
+      "net": "nor3_2_2__A",
+      "net_full": "sky130_fd_sc_hd__nor3_2_2__A",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 55,
+      "flops": 14,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    },
+    {
+      "pin": "B",
+      "net": "nor3_2_2__B",
+      "net_full": "sky130_fd_sc_hd__nor3_2_2__B",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 60,
+      "flops": 15,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    },
+    {
+      "pin": "C",
+      "net": "or3_2_8__X",
+      "net_full": "sky130_fd_sc_hd__or3_2_8__X",
+      "kind": "\u2192I",
+      "reaches_I": true,
+      "nodes_behind": 63,
+      "flops": 17,
+      "primaries": [
+        "I",
+        "enable"
+      ]
+    }
+  ],
+  "nodes_behind": 64,
+  "flops": 17,
+  "primaries": [
+    "I",
+    "enable"
+  ],
+  "q_nodes_behind": 64,
+  "q_flops": 17,
+  "figures": [
+    "nor3_2_2__Y_fanin_depth5.png"
+  ],
+  "protocol": "only_i",
+  "depth": 5
+}

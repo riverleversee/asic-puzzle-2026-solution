@@ -1,0 +1,256 @@
+COMPLEX OPERATOR MATCH — CORE GROUPINGS
+================================================================
+Operator DB entries: 13
+Groupings scored:    14
+OG stubs treated as black-box inputs (not expanded).
+
+RANKING (best operator match per group/combo)
+----------------------------------------------------------------
+  1.000  G_hold_B2                     n= 37  → Serial bit gather + parallel check
+         motifs=['and_reduce', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.27 xor=0.08 and=0.27 aoi=0.24 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.985  G_set_inv                     n= 66  → Shift register / serial-in parallel-out
+         motifs=['carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xor_pair']
+         flop=0.33 xor=0.04 and=0.14 aoi=0.18 mux=0.20
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=3)
+  0.959  G_status_A                    n= 34  → LFSR / CRC / linear feedback
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.27 xor=0.09 and=0.27 aoi=0.27 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.942  G_status_B                    n= 36  → LFSR / CRC / linear feedback
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.28 xor=0.08 and=0.25 aoi=0.25 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.942  C_status_A_plus_B             n= 36  → LFSR / CRC / linear feedback
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'xor_pair']
+         flop=0.28 xor=0.08 and=0.25 aoi=0.25 mux=0.03
+         width: arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+  0.937  G_set_and2                    n= 82  → Serial bit gather + parallel check
+         motifs=['and_reduce', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.24 xor=0.06 and=0.27 aoi=0.24 mux=0.04
+         width: arith ~2-bit via fa_pairs (FA=2, xor=3, xnor=2, carry_len=2); AND-reduce width≈5 (flops=4, stubs=0)
+  0.876  G_main_check                  n=281  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.11 xor=0.08 and=0.28 aoi=0.29 mux=0.02
+         width: arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+  0.876  C_and4b_all_inputs            n=283  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.11 xor=0.08 and=0.28 aoi=0.29 mux=0.02
+         width: arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+  0.876  C_main_plus_statusA           n=281  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.11 xor=0.08 and=0.28 aoi=0.29 mux=0.02
+         width: arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+  0.842  G_and4b_join                  n=384  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.14 xor=0.06 and=0.31 aoi=0.27 mux=0.02
+         width: arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+  0.834  G_success_glue                n=466  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.28 aoi=0.26 mux=0.04
+         width: arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)
+  0.834  C_full_set_path               n=464  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.28 aoi=0.25 mux=0.04
+         width: arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+  0.834  C_set_plus_hold               n=465  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.29 aoi=0.25 mux=0.04
+         width: arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+  0.834  C_entire_a32o                 n=466  → Binary adder (ripple / FA chain)
+         motifs=['and_reduce', 'carry_chain_dense', 'carry_like', 'flop_chain', 'multi_and4', 'mux_enable', 'xnor_pair', 'xor_pair']
+         flop=0.17 xor=0.05 and=0.28 aoi=0.26 mux=0.04
+         width: arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)
+
+GRANULAR STRUCTURE (≥0.55 score)
+----------------------------------------------------------------
+
+### G_hold_B2 → Serial bit gather + parallel check (1.000)
+    counts: {'flop': 10, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 10}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+    AND-reduce: leaves=2 (flops=2, stubs=0) and_nodes=1
+      leaves: or2_2_11__A, or2_2_11__B
+
+### G_set_inv → Shift register / serial-in parallel-out (0.985)
+    counts: {'flop': 22, 'mux': 13, 'xor': 2, 'xnor': 1, 'aoi': 12, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=12 carry_chain=3
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+    AND-reduce: leaves=1 (flops=1, stubs=0) and_nodes=0
+      leaves: inv_2_11__A
+
+### G_status_A → LFSR / CRC / linear feedback (0.959)
+    counts: {'flop': 9, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+    AND-reduce: leaves=1 (flops=0, stubs=0) and_nodes=0
+      leaves: a31o_2_13__X
+
+### G_status_B → LFSR / CRC / linear feedback (0.942)
+    counts: {'flop': 10, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+    AND-reduce: leaves=1 (flops=0, stubs=0) and_nodes=0
+      leaves: or2_2_11__X
+
+### C_status_A_plus_B → LFSR / CRC / linear feedback (0.942)
+    counts: {'flop': 10, 'mux': 1, 'xor': 2, 'xnor': 1, 'aoi': 9, 'and_nand': 9}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=2 xnor=1 aoi=9 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+    AND-reduce: leaves=1 (flops=0, stubs=0) and_nodes=0
+      leaves: a31o_2_13__X
+
+### G_set_and2 → Serial bit gather + parallel check (0.937)
+    counts: {'flop': 20, 'mux': 3, 'xor': 3, 'xnor': 2, 'aoi': 20, 'and_nand': 22}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈2-bit (fa_pairs)  FA_pairs=2 xor=3 xnor=2 aoi=20 carry_chain=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+    AND-reduce: leaves=5 (flops=4, stubs=0) and_nodes=2
+      leaves: and4_2_3__A, and4_2_3__B, and4_2_3__C, inv_2_6__A, nor3_2_2__Y
+
+### G_main_check → Binary adder (ripple / FA chain) (0.876)
+    counts: {'flop': 31, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 82, 'and_nand': 79}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=11 xnor=11 aoi=82 carry_chain=5
+      FA or2_2_2__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA and3_2_2__C + a21oi_2_5__Y[a21oi_2] share=2
+      FA xor2_2_7__X + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=22 (flops=22, stubs=0) and_nodes=15
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_1__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, o21a_2_16__A1, o21a_2_18__A1, o21a_2_30__A1, o21a_2_4__A1, o21a_2_5__A1, o21a_2_8__A1, or4_2_1__A, or4_2_2__A, or4_2_3__A, or4_2_5__A
+
+### C_and4b_all_inputs → Binary adder (ripple / FA chain) (0.876)
+    counts: {'flop': 32, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 82, 'and_nand': 79}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=11 xnor=11 aoi=82 carry_chain=5
+      FA or2_2_2__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA and3_2_2__C + a21oi_2_5__Y[a21oi_2] share=2
+      FA xor2_2_7__X + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=22 (flops=22, stubs=0) and_nodes=15
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_1__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, o21a_2_16__A1, o21a_2_18__A1, o21a_2_30__A1, o21a_2_4__A1, o21a_2_5__A1, o21a_2_8__A1, or4_2_1__A, or4_2_2__A, or4_2_3__A, or4_2_5__A
+
+### C_main_plus_statusA → Binary adder (ripple / FA chain) (0.876)
+    counts: {'flop': 31, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 82, 'and_nand': 79}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=11 xnor=11 aoi=82 carry_chain=5
+      FA or2_2_2__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA and3_2_2__C + a21oi_2_5__Y[a21oi_2] share=2
+      FA xor2_2_7__X + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=22 (flops=22, stubs=0) and_nodes=15
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_1__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, o21a_2_16__A1, o21a_2_18__A1, o21a_2_30__A1, o21a_2_4__A1, o21a_2_5__A1, o21a_2_8__A1, or4_2_1__A, or4_2_2__A, or4_2_3__A, or4_2_5__A
+
+### G_and4b_join → Binary adder (ripple / FA chain) (0.842)
+    counts: {'flop': 54, 'mux': 6, 'xor': 11, 'xnor': 11, 'aoi': 104, 'and_nand': 119}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=11 xnor=11 aoi=104 carry_chain=5
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA and3_2_2__C + a31o_2_7__X[a31o_2] share=2
+    AND-reduce: leaves=46 (flops=46, stubs=0) and_nodes=31
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, nand4_2_7__C, nand4_2_8__C, nand4_2_9__C, o21a_2_16__A1
+
+### G_success_glue → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 119, 'and_nand': 133}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=12 xnor=12 aoi=119 carry_chain=5
+      FA nor2_2_8__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_0__X + a31o_2_8__X[a31o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a41oi_2_0__Y[a41oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA and3_2_2__C + a31o_2_7__X[a31o_2] share=2
+    AND-reduce: leaves=53 (flops=51, stubs=0) and_nodes=34
+      leaves: and2b_2_3__B, and4_2_3__A, and4_2_3__B, and4_2_3__C, inv_2_11__A, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, inv_2_6__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C
+
+### C_full_set_path → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 118, 'and_nand': 132}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=12 xnor=12 aoi=118 carry_chain=5
+      FA or2_2_2__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA and3_2_2__C + a21oi_2_5__Y[a21oi_2] share=2
+      FA xor2_2_7__X + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=46 (flops=46, stubs=0) and_nodes=31
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, nand4_2_7__C, nand4_2_8__C, nand4_2_9__C, o21a_2_16__A1
+
+### C_set_plus_hold → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 118, 'and_nand': 133}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=12 xnor=12 aoi=118 carry_chain=5
+      FA or2_2_2__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA and3_2_2__C + a21oi_2_5__Y[a21oi_2] share=2
+      FA xor2_2_7__X + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=46 (flops=46, stubs=0) and_nodes=31
+      leaves: and2b_2_3__B, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C, nand4_2_6__C, nand4_2_7__C, nand4_2_8__C, nand4_2_9__C, o21a_2_16__A1
+
+### C_entire_a32o → Binary adder (ripple / FA chain) (0.834)
+    counts: {'flop': 78, 'mux': 20, 'xor': 12, 'xnor': 12, 'aoi': 119, 'and_nand': 133}
+    shifter: mux_hold_stages=0 max_bank=0-bit  banks=0
+    adder/compare: est≈7-bit (fa_pairs)  FA_pairs=7 xor=12 xnor=12 aoi=119 carry_chain=5
+      FA or2_2_2__A + xor2_2_2__A[a32o_2] share=2
+      FA xor2_2_9__X + a21o_2_9__X[a21o_2] share=2
+      FA nor2_2_31__B + a21oi_2_13__Y[a21oi_2] share=2
+      FA or4_2_0__A + xor2_2_6__A[a21o_2] share=2
+      FA and3_2_2__C + a21oi_2_5__Y[a21oi_2] share=2
+      FA xor2_2_7__X + o211a_2_0__X[o211a_2] share=2
+    AND-reduce: leaves=53 (flops=51, stubs=0) and_nodes=34
+      leaves: and2b_2_3__B, and4_2_3__A, and4_2_3__B, and4_2_3__C, inv_2_11__A, inv_2_16__A, inv_2_17__A, inv_2_18__A, inv_2_19__A, inv_2_1__A, inv_2_20__A, inv_2_2__A, inv_2_3__A, inv_2_6__A, nand4_2_0__C, nand4_2_10__C, nand4_2_11__C, nand4_2_12__C, nand4_2_13__C, nand4_2_1__C, nand4_2_2__C, nand4_2_3__C, nand4_2_4__C, nand4_2_5__C
+
+SUMMARY
+  Strong matches (≥0.55): 14
+    - G_hold_B2: Serial bit gather + parallel check (1.000)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - G_set_inv: Shift register / serial-in parallel-out (0.985)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=3)
+    - G_status_A: LFSR / CRC / linear feedback (0.959)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - G_status_B: LFSR / CRC / linear feedback (0.942)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - C_status_A_plus_B: LFSR / CRC / linear feedback (0.942)
+        arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)
+    - G_set_and2: Serial bit gather + parallel check (0.937)
+        arith ~2-bit via fa_pairs (FA=2, xor=3, xnor=2, carry_len=2); AND-reduce width≈5 (flops=4, stubs=0)
+    - G_main_check: Binary adder (ripple / FA chain) (0.876)
+        arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+    - C_and4b_all_inputs: Binary adder (ripple / FA chain) (0.876)
+        arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+    - C_main_plus_statusA: Binary adder (ripple / FA chain) (0.876)
+        arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈22 (flops=22, stubs=0)
+    - G_and4b_join: Binary adder (ripple / FA chain) (0.842)
+        arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+    - G_success_glue: Binary adder (ripple / FA chain) (0.834)
+        arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)
+    - C_full_set_path: Binary adder (ripple / FA chain) (0.834)
+        arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+    - C_set_plus_hold: Binary adder (ripple / FA chain) (0.834)
+        arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈46 (flops=46, stubs=0)
+    - C_entire_a32o: Binary adder (ripple / FA chain) (0.834)
+        arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width≈53 (flops=51, stubs=0)

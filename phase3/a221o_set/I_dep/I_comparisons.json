@@ -1,0 +1,775 @@
+{
+  "definition": "I-vs-I comparison = gate with \u22652 data operands that each reach primary I. mux2: A0 and A1 both \u2192I. xor/xnor: all data deps \u2192I.",
+  "paths": {
+    "a221o.A2": {
+      "root": "mux2_1_12__A1",
+      "cone_nodes": 56,
+      "mux_I_vs_I": [
+        {
+          "net": "mux2_1_10__X",
+          "instance": "mux2_1_10",
+          "depth": 1,
+          "A0": "mux2_1_12__A1",
+          "A1": "mux2_1_8__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_8__X",
+          "instance": "mux2_1_8",
+          "depth": 3,
+          "A0": "mux2_1_8__A0",
+          "A1": "mux2_1_8__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_14__X",
+          "instance": "mux2_1_14",
+          "depth": 5,
+          "A0": "mux2_1_8__A1",
+          "A1": "mux2_1_15__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_15__X",
+          "instance": "mux2_1_15",
+          "depth": 7,
+          "A0": "mux2_1_15__A0",
+          "A1": "mux2_1_16__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_16__X",
+          "instance": "mux2_1_16",
+          "depth": 9,
+          "A0": "mux2_1_16__A0",
+          "A1": "mux2_1_9__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_9__X",
+          "instance": "mux2_1_9",
+          "depth": 11,
+          "A0": "mux2_1_9__A0",
+          "A1": "mux2_1_9__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_17__X",
+          "instance": "mux2_1_17",
+          "depth": 13,
+          "A0": "mux2_1_9__A1",
+          "A1": "mux2_1_19__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_19__X",
+          "instance": "mux2_1_19",
+          "depth": 15,
+          "A0": "mux2_1_19__A0",
+          "A1": "mux2_1_19__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_18__X",
+          "instance": "mux2_1_18",
+          "depth": 17,
+          "A0": "mux2_1_19__A1",
+          "A1": "a22o_2_2__A2",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_13__X",
+          "instance": "mux2_1_13",
+          "depth": 19,
+          "A0": "a22o_2_2__A2",
+          "A1": "I",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        }
+      ],
+      "xor_I_vs_I": [],
+      "count_mux": 10,
+      "count_xor": 0,
+      "count_total": 10
+    },
+    "a221o.B2": {
+      "root": "mux2_1_12__A0",
+      "cone_nodes": 58,
+      "mux_I_vs_I": [
+        {
+          "net": "mux2_1_12__X",
+          "instance": "mux2_1_12",
+          "depth": 1,
+          "A0": "mux2_1_12__A0",
+          "A1": "mux2_1_12__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_10__X",
+          "instance": "mux2_1_10",
+          "depth": 3,
+          "A0": "mux2_1_12__A1",
+          "A1": "mux2_1_8__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_8__X",
+          "instance": "mux2_1_8",
+          "depth": 5,
+          "A0": "mux2_1_8__A0",
+          "A1": "mux2_1_8__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_14__X",
+          "instance": "mux2_1_14",
+          "depth": 7,
+          "A0": "mux2_1_8__A1",
+          "A1": "mux2_1_15__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_15__X",
+          "instance": "mux2_1_15",
+          "depth": 9,
+          "A0": "mux2_1_15__A0",
+          "A1": "mux2_1_16__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_16__X",
+          "instance": "mux2_1_16",
+          "depth": 11,
+          "A0": "mux2_1_16__A0",
+          "A1": "mux2_1_9__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_9__X",
+          "instance": "mux2_1_9",
+          "depth": 13,
+          "A0": "mux2_1_9__A0",
+          "A1": "mux2_1_9__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_17__X",
+          "instance": "mux2_1_17",
+          "depth": 15,
+          "A0": "mux2_1_9__A1",
+          "A1": "mux2_1_19__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_19__X",
+          "instance": "mux2_1_19",
+          "depth": 17,
+          "A0": "mux2_1_19__A0",
+          "A1": "mux2_1_19__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_18__X",
+          "instance": "mux2_1_18",
+          "depth": 19,
+          "A0": "mux2_1_19__A1",
+          "A1": "a22o_2_2__A2",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_13__X",
+          "instance": "mux2_1_13",
+          "depth": 21,
+          "A0": "a22o_2_2__A2",
+          "A1": "I",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        }
+      ],
+      "xor_I_vs_I": [],
+      "count_mux": 11,
+      "count_xor": 0,
+      "count_total": 11
+    },
+    "a221o.C1": {
+      "root": "a22o_2_2__X",
+      "cone_nodes": 63,
+      "mux_I_vs_I": [
+        {
+          "net": "mux2_1_11__X",
+          "instance": "mux2_1_11",
+          "depth": 2,
+          "A0": "a22o_2_2__B2",
+          "A1": "mux2_1_12__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_13__X",
+          "instance": "mux2_1_13",
+          "depth": 2,
+          "A0": "a22o_2_2__A2",
+          "A1": "I",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_12__X",
+          "instance": "mux2_1_12",
+          "depth": 4,
+          "A0": "mux2_1_12__A0",
+          "A1": "mux2_1_12__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_10__X",
+          "instance": "mux2_1_10",
+          "depth": 6,
+          "A0": "mux2_1_12__A1",
+          "A1": "mux2_1_8__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_8__X",
+          "instance": "mux2_1_8",
+          "depth": 8,
+          "A0": "mux2_1_8__A0",
+          "A1": "mux2_1_8__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_14__X",
+          "instance": "mux2_1_14",
+          "depth": 10,
+          "A0": "mux2_1_8__A1",
+          "A1": "mux2_1_15__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_15__X",
+          "instance": "mux2_1_15",
+          "depth": 12,
+          "A0": "mux2_1_15__A0",
+          "A1": "mux2_1_16__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_16__X",
+          "instance": "mux2_1_16",
+          "depth": 14,
+          "A0": "mux2_1_16__A0",
+          "A1": "mux2_1_9__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_9__X",
+          "instance": "mux2_1_9",
+          "depth": 16,
+          "A0": "mux2_1_9__A0",
+          "A1": "mux2_1_9__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_17__X",
+          "instance": "mux2_1_17",
+          "depth": 18,
+          "A0": "mux2_1_9__A1",
+          "A1": "mux2_1_19__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_19__X",
+          "instance": "mux2_1_19",
+          "depth": 20,
+          "A0": "mux2_1_19__A0",
+          "A1": "mux2_1_19__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_18__X",
+          "instance": "mux2_1_18",
+          "depth": 22,
+          "A0": "mux2_1_19__A1",
+          "A1": "a22o_2_2__A2",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        }
+      ],
+      "xor_I_vs_I": [],
+      "count_mux": 12,
+      "count_xor": 0,
+      "count_total": 12
+    },
+    "a22o.A2": {
+      "root": "a22o_2_2__A2",
+      "cone_nodes": 38,
+      "mux_I_vs_I": [
+        {
+          "net": "mux2_1_13__X",
+          "instance": "mux2_1_13",
+          "depth": 1,
+          "A0": "a22o_2_2__A2",
+          "A1": "I",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        }
+      ],
+      "xor_I_vs_I": [],
+      "count_mux": 1,
+      "count_xor": 0,
+      "count_total": 1
+    },
+    "a22o.B2": {
+      "root": "a22o_2_2__B2",
+      "cone_nodes": 60,
+      "mux_I_vs_I": [
+        {
+          "net": "mux2_1_11__X",
+          "instance": "mux2_1_11",
+          "depth": 1,
+          "A0": "a22o_2_2__B2",
+          "A1": "mux2_1_12__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_12__X",
+          "instance": "mux2_1_12",
+          "depth": 3,
+          "A0": "mux2_1_12__A0",
+          "A1": "mux2_1_12__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_10__X",
+          "instance": "mux2_1_10",
+          "depth": 5,
+          "A0": "mux2_1_12__A1",
+          "A1": "mux2_1_8__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_8__X",
+          "instance": "mux2_1_8",
+          "depth": 7,
+          "A0": "mux2_1_8__A0",
+          "A1": "mux2_1_8__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_14__X",
+          "instance": "mux2_1_14",
+          "depth": 9,
+          "A0": "mux2_1_8__A1",
+          "A1": "mux2_1_15__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_15__X",
+          "instance": "mux2_1_15",
+          "depth": 11,
+          "A0": "mux2_1_15__A0",
+          "A1": "mux2_1_16__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_16__X",
+          "instance": "mux2_1_16",
+          "depth": 13,
+          "A0": "mux2_1_16__A0",
+          "A1": "mux2_1_9__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_9__X",
+          "instance": "mux2_1_9",
+          "depth": 15,
+          "A0": "mux2_1_9__A0",
+          "A1": "mux2_1_9__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_17__X",
+          "instance": "mux2_1_17",
+          "depth": 17,
+          "A0": "mux2_1_9__A1",
+          "A1": "mux2_1_19__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_19__X",
+          "instance": "mux2_1_19",
+          "depth": 19,
+          "A0": "mux2_1_19__A0",
+          "A1": "mux2_1_19__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_18__X",
+          "instance": "mux2_1_18",
+          "depth": 21,
+          "A0": "mux2_1_19__A1",
+          "A1": "a22o_2_2__A2",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_13__X",
+          "instance": "mux2_1_13",
+          "depth": 23,
+          "A0": "a22o_2_2__A2",
+          "A1": "I",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        }
+      ],
+      "xor_I_vs_I": [],
+      "count_mux": 12,
+      "count_xor": 0,
+      "count_total": 12
+    },
+    "a221o": {
+      "root": "a221o_2_1__X",
+      "cone_nodes": 66,
+      "mux_I_vs_I": [
+        {
+          "net": "mux2_1_10__X",
+          "instance": "mux2_1_10",
+          "depth": 2,
+          "A0": "mux2_1_12__A1",
+          "A1": "mux2_1_8__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_12__X",
+          "instance": "mux2_1_12",
+          "depth": 2,
+          "A0": "mux2_1_12__A0",
+          "A1": "mux2_1_12__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_11__X",
+          "instance": "mux2_1_11",
+          "depth": 3,
+          "A0": "a22o_2_2__B2",
+          "A1": "mux2_1_12__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_13__X",
+          "instance": "mux2_1_13",
+          "depth": 3,
+          "A0": "a22o_2_2__A2",
+          "A1": "I",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_8__X",
+          "instance": "mux2_1_8",
+          "depth": 4,
+          "A0": "mux2_1_8__A0",
+          "A1": "mux2_1_8__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_14__X",
+          "instance": "mux2_1_14",
+          "depth": 6,
+          "A0": "mux2_1_8__A1",
+          "A1": "mux2_1_15__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_15__X",
+          "instance": "mux2_1_15",
+          "depth": 8,
+          "A0": "mux2_1_15__A0",
+          "A1": "mux2_1_16__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_16__X",
+          "instance": "mux2_1_16",
+          "depth": 10,
+          "A0": "mux2_1_16__A0",
+          "A1": "mux2_1_9__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_9__X",
+          "instance": "mux2_1_9",
+          "depth": 12,
+          "A0": "mux2_1_9__A0",
+          "A1": "mux2_1_9__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_17__X",
+          "instance": "mux2_1_17",
+          "depth": 14,
+          "A0": "mux2_1_9__A1",
+          "A1": "mux2_1_19__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_19__X",
+          "instance": "mux2_1_19",
+          "depth": 16,
+          "A0": "mux2_1_19__A0",
+          "A1": "mux2_1_19__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_18__X",
+          "instance": "mux2_1_18",
+          "depth": 18,
+          "A0": "mux2_1_19__A1",
+          "A1": "a22o_2_2__A2",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        }
+      ],
+      "xor_I_vs_I": [],
+      "count_mux": 12,
+      "count_xor": 0,
+      "count_total": 12
+    },
+    "a22o": {
+      "root": "a22o_2_2__X",
+      "cone_nodes": 63,
+      "mux_I_vs_I": [
+        {
+          "net": "mux2_1_11__X",
+          "instance": "mux2_1_11",
+          "depth": 2,
+          "A0": "a22o_2_2__B2",
+          "A1": "mux2_1_12__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_13__X",
+          "instance": "mux2_1_13",
+          "depth": 2,
+          "A0": "a22o_2_2__A2",
+          "A1": "I",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_12__X",
+          "instance": "mux2_1_12",
+          "depth": 4,
+          "A0": "mux2_1_12__A0",
+          "A1": "mux2_1_12__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_10__X",
+          "instance": "mux2_1_10",
+          "depth": 6,
+          "A0": "mux2_1_12__A1",
+          "A1": "mux2_1_8__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_8__X",
+          "instance": "mux2_1_8",
+          "depth": 8,
+          "A0": "mux2_1_8__A0",
+          "A1": "mux2_1_8__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_14__X",
+          "instance": "mux2_1_14",
+          "depth": 10,
+          "A0": "mux2_1_8__A1",
+          "A1": "mux2_1_15__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_15__X",
+          "instance": "mux2_1_15",
+          "depth": 12,
+          "A0": "mux2_1_15__A0",
+          "A1": "mux2_1_16__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_16__X",
+          "instance": "mux2_1_16",
+          "depth": 14,
+          "A0": "mux2_1_16__A0",
+          "A1": "mux2_1_9__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_9__X",
+          "instance": "mux2_1_9",
+          "depth": 16,
+          "A0": "mux2_1_9__A0",
+          "A1": "mux2_1_9__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_17__X",
+          "instance": "mux2_1_17",
+          "depth": 18,
+          "A0": "mux2_1_9__A1",
+          "A1": "mux2_1_19__A0",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_19__X",
+          "instance": "mux2_1_19",
+          "depth": 20,
+          "A0": "mux2_1_19__A0",
+          "A1": "mux2_1_19__A1",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        },
+        {
+          "net": "mux2_1_18__X",
+          "instance": "mux2_1_18",
+          "depth": 22,
+          "A0": "mux2_1_19__A1",
+          "A1": "a22o_2_2__A2",
+          "S": "inv_2_7__A",
+          "S_reaches_I": false,
+          "kind": "mux2 A0\u2227A1 \u2192I"
+        }
+      ],
+      "xor_I_vs_I": [],
+      "count_mux": 12,
+      "count_xor": 0,
+      "count_total": 12
+    }
+  }
+}

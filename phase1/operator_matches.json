@@ -1,0 +1,4028 @@
+{
+  "ranking": [
+    {
+      "group": "G_hold_B2",
+      "n_nodes": 37,
+      "best_op": "Serial bit gather + parallel check",
+      "best_id": "serial_deserializer",
+      "score": 1.0,
+      "motifs": [
+        "and_reduce",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.27,
+        "mux_frac": 0.027,
+        "xor_frac": 0.081,
+        "xnor_or_xor_frac": 0.081,
+        "and_tree_frac": 0.27,
+        "or_frac": 0.081,
+        "nor_nand_frac": 0.162,
+        "aoi_frac": 0.243,
+        "inv_frac": 0.027
+      },
+      "granular_summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 2,
+      "fa_like_pairs": 2,
+      "and_reduce_leaves": 2
+    },
+    {
+      "group": "G_set_inv",
+      "n_nodes": 66,
+      "best_op": "Shift register / serial-in parallel-out",
+      "best_id": "shift_register",
+      "score": 0.985,
+      "motifs": [
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.333,
+        "mux_frac": 0.197,
+        "xor_frac": 0.045,
+        "xnor_or_xor_frac": 0.045,
+        "and_tree_frac": 0.136,
+        "or_frac": 0.061,
+        "nor_nand_frac": 0.076,
+        "aoi_frac": 0.182,
+        "inv_frac": 0.03
+      },
+      "granular_summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=3)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 2,
+      "fa_like_pairs": 2,
+      "and_reduce_leaves": 1
+    },
+    {
+      "group": "G_status_A",
+      "n_nodes": 34,
+      "best_op": "LFSR / CRC / linear feedback",
+      "best_id": "lfsr_crc",
+      "score": 0.959,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.265,
+        "mux_frac": 0.029,
+        "xor_frac": 0.088,
+        "xnor_or_xor_frac": 0.088,
+        "and_tree_frac": 0.265,
+        "or_frac": 0.059,
+        "nor_nand_frac": 0.147,
+        "aoi_frac": 0.265,
+        "inv_frac": 0.029
+      },
+      "granular_summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 2,
+      "fa_like_pairs": 2,
+      "and_reduce_leaves": 1
+    },
+    {
+      "group": "G_status_B",
+      "n_nodes": 36,
+      "best_op": "LFSR / CRC / linear feedback",
+      "best_id": "lfsr_crc",
+      "score": 0.942,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.278,
+        "mux_frac": 0.028,
+        "xor_frac": 0.083,
+        "xnor_or_xor_frac": 0.083,
+        "and_tree_frac": 0.25,
+        "or_frac": 0.083,
+        "nor_nand_frac": 0.139,
+        "aoi_frac": 0.25,
+        "inv_frac": 0.028
+      },
+      "granular_summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 2,
+      "fa_like_pairs": 2,
+      "and_reduce_leaves": 1
+    },
+    {
+      "group": "C_status_A_plus_B",
+      "n_nodes": 36,
+      "best_op": "LFSR / CRC / linear feedback",
+      "best_id": "lfsr_crc",
+      "score": 0.942,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.278,
+        "mux_frac": 0.028,
+        "xor_frac": 0.083,
+        "xnor_or_xor_frac": 0.083,
+        "and_tree_frac": 0.25,
+        "or_frac": 0.083,
+        "nor_nand_frac": 0.139,
+        "aoi_frac": 0.25,
+        "inv_frac": 0.028
+      },
+      "granular_summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 2,
+      "fa_like_pairs": 2,
+      "and_reduce_leaves": 1
+    },
+    {
+      "group": "G_set_and2",
+      "n_nodes": 82,
+      "best_op": "Serial bit gather + parallel check",
+      "best_id": "serial_deserializer",
+      "score": 0.937,
+      "motifs": [
+        "and_reduce",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.244,
+        "mux_frac": 0.037,
+        "xor_frac": 0.061,
+        "xnor_or_xor_frac": 0.061,
+        "and_tree_frac": 0.268,
+        "or_frac": 0.073,
+        "nor_nand_frac": 0.122,
+        "aoi_frac": 0.244,
+        "inv_frac": 0.073
+      },
+      "granular_summary": "arith ~2-bit via fa_pairs (FA=2, xor=3, xnor=2, carry_len=2); AND-reduce width\u22485 (flops=4, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 2,
+      "fa_like_pairs": 2,
+      "and_reduce_leaves": 5
+    },
+    {
+      "group": "G_main_check",
+      "n_nodes": 281,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.876,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.11,
+        "mux_frac": 0.021,
+        "xor_frac": 0.078,
+        "xnor_or_xor_frac": 0.078,
+        "and_tree_frac": 0.281,
+        "or_frac": 0.189,
+        "nor_nand_frac": 0.253,
+        "aoi_frac": 0.292,
+        "inv_frac": 0.025
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224822 (flops=22, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 22
+    },
+    {
+      "group": "C_and4b_all_inputs",
+      "n_nodes": 283,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.876,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.113,
+        "mux_frac": 0.021,
+        "xor_frac": 0.078,
+        "xnor_or_xor_frac": 0.078,
+        "and_tree_frac": 0.279,
+        "or_frac": 0.191,
+        "nor_nand_frac": 0.251,
+        "aoi_frac": 0.29,
+        "inv_frac": 0.025
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224822 (flops=22, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 22
+    },
+    {
+      "group": "C_main_plus_statusA",
+      "n_nodes": 281,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.876,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.11,
+        "mux_frac": 0.021,
+        "xor_frac": 0.078,
+        "xnor_or_xor_frac": 0.078,
+        "and_tree_frac": 0.281,
+        "or_frac": 0.189,
+        "nor_nand_frac": 0.253,
+        "aoi_frac": 0.292,
+        "inv_frac": 0.025
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224822 (flops=22, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 22
+    },
+    {
+      "group": "G_and4b_join",
+      "n_nodes": 384,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.842,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.141,
+        "mux_frac": 0.016,
+        "xor_frac": 0.057,
+        "xnor_or_xor_frac": 0.057,
+        "and_tree_frac": 0.31,
+        "or_frac": 0.174,
+        "nor_nand_frac": 0.245,
+        "aoi_frac": 0.271,
+        "inv_frac": 0.029
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224846 (flops=46, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 46
+    },
+    {
+      "group": "G_success_glue",
+      "n_nodes": 466,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.834,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.167,
+        "mux_frac": 0.043,
+        "xor_frac": 0.052,
+        "xnor_or_xor_frac": 0.052,
+        "and_tree_frac": 0.285,
+        "or_frac": 0.157,
+        "nor_nand_frac": 0.215,
+        "aoi_frac": 0.255,
+        "inv_frac": 0.036
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224853 (flops=51, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 53
+    },
+    {
+      "group": "C_full_set_path",
+      "n_nodes": 464,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.834,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.168,
+        "mux_frac": 0.043,
+        "xor_frac": 0.052,
+        "xnor_or_xor_frac": 0.052,
+        "and_tree_frac": 0.284,
+        "or_frac": 0.157,
+        "nor_nand_frac": 0.213,
+        "aoi_frac": 0.254,
+        "inv_frac": 0.037
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224846 (flops=46, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 46
+    },
+    {
+      "group": "C_set_plus_hold",
+      "n_nodes": 465,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.834,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.168,
+        "mux_frac": 0.043,
+        "xor_frac": 0.052,
+        "xnor_or_xor_frac": 0.052,
+        "and_tree_frac": 0.286,
+        "or_frac": 0.157,
+        "nor_nand_frac": 0.215,
+        "aoi_frac": 0.254,
+        "inv_frac": 0.037
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224846 (flops=46, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 46
+    },
+    {
+      "group": "C_entire_a32o",
+      "n_nodes": 466,
+      "best_op": "Binary adder (ripple / FA chain)",
+      "best_id": "ripple_adder",
+      "score": 0.834,
+      "motifs": [
+        "and_reduce",
+        "carry_chain_dense",
+        "carry_like",
+        "flop_chain",
+        "multi_and4",
+        "mux_enable",
+        "xnor_pair",
+        "xor_pair"
+      ],
+      "frac": {
+        "flop_frac": 0.167,
+        "mux_frac": 0.043,
+        "xor_frac": 0.052,
+        "xnor_or_xor_frac": 0.052,
+        "and_tree_frac": 0.285,
+        "or_frac": 0.157,
+        "nor_nand_frac": 0.215,
+        "aoi_frac": 0.255,
+        "inv_frac": 0.036
+      },
+      "granular_summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224853 (flops=51, stubs=0)",
+      "shifter_max_bits": 0,
+      "est_datapath_bits": 7,
+      "fa_like_pairs": 7,
+      "and_reduce_leaves": 53
+    }
+  ],
+  "matches": {
+    "G_success_glue": {
+      "fingerprint": {
+        "root": "a32o_2_4__X",
+        "n_nodes": 466,
+        "class_counts": {
+          "flop": 78,
+          "xnor": 12,
+          "nand": 63,
+          "aoi": 119,
+          "and": 70,
+          "or": 36,
+          "nor": 37,
+          "buf": 1,
+          "inv": 17,
+          "mux": 20,
+          "xor": 12,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 78,
+          "nor2_2": 34,
+          "nand2_2": 30,
+          "o21a_2": 28,
+          "a31o_2": 23,
+          "mux2_1": 20,
+          "and2b_2": 20,
+          "nand2b_2": 17,
+          "inv_2": 17,
+          "nand4_2": 14,
+          "and3_2": 14,
+          "a21o_2": 14,
+          "and2_2": 13,
+          "xnor2_2": 12,
+          "and4bb_2": 12,
+          "a21oi_2": 12,
+          "xor2_2": 12,
+          "or4_2": 10,
+          "or2_2": 9,
+          "o211a_2": 9
+        },
+        "frac": {
+          "flop_frac": 0.167,
+          "mux_frac": 0.043,
+          "xor_frac": 0.052,
+          "xnor_or_xor_frac": 0.052,
+          "and_tree_frac": 0.285,
+          "or_frac": 0.157,
+          "nor_nand_frac": 0.215,
+          "aoi_frac": 0.255,
+          "inv_frac": 0.036
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 78,
+          "mux": 20,
+          "xor": 12,
+          "xnor": 12,
+          "aoi": 119,
+          "and_nand": 133
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "nor2_2_8__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a41oi_2",
+              "carry": "a41oi_2_0__Y",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_7__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 12,
+          "xnor_count": 12,
+          "aoi_count": 119,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 34,
+          "leaf_count": 53,
+          "leaf_flops": 51,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "and4_2_3__A",
+            "and4_2_3__B",
+            "and4_2_3__C",
+            "inv_2_11__A",
+            "inv_2_16__A",
+            "inv_2_17__A",
+            "inv_2_18__A",
+            "inv_2_19__A",
+            "inv_2_1__A",
+            "inv_2_20__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "inv_2_6__A",
+            "nand4_2_0__C",
+            "nand4_2_10__C",
+            "nand4_2_11__C",
+            "nand4_2_12__C",
+            "nand4_2_13__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "nand4_2_7__C",
+            "nand4_2_8__C",
+            "nand4_2_9__C",
+            "nor3_2_2__Y",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_19__A1",
+            "o21a_2_21__A1",
+            "o21a_2_23__A1",
+            "o21a_2_24__A1",
+            "o21a_2_25__A1",
+            "o21a_2_27__A1",
+            "o21a_2_28__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or2_2_11__A",
+            "or2_2_11__B",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A",
+            "or4_2_6__A",
+            "or4_2_7__A",
+            "or4_2_8__A",
+            "or4_2_9__A",
+            "success"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224853 (flops=51, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.834,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.26 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.82,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.26 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.28 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.793,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.17 in[0.25,0.70]\u21920.67",
+            "xor_frac=0.05 in[0.10,0.45]\u21920.52",
+            "mux_frac=0.04 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.742,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.04 in[0.30,1.00]\u21920.14",
+            "flop_frac=0.17 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.05 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.695,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.28 in[0.45,1.00]\u21920.63",
+            "xor_frac=0.05 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.834,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+          "aoi_frac=0.26 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    },
+    "G_and4b_join": {
+      "fingerprint": {
+        "root": "and4b_2_3__X",
+        "n_nodes": 384,
+        "class_counts": {
+          "flop": 54,
+          "xnor": 11,
+          "nand": 59,
+          "aoi": 104,
+          "and": 60,
+          "or": 32,
+          "nor": 35,
+          "inv": 11,
+          "mux": 6,
+          "xor": 11,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 54,
+          "nor2_2": 33,
+          "nand2_2": 27,
+          "o21a_2": 26,
+          "a31o_2": 19,
+          "and2b_2": 17,
+          "nand2b_2": 16,
+          "nand4_2": 14,
+          "a21o_2": 13,
+          "and4bb_2": 12,
+          "xnor2_2": 11,
+          "and3_2": 11,
+          "and2_2": 11,
+          "inv_2": 11,
+          "xor2_2": 11,
+          "a21oi_2": 10,
+          "or4_2": 9,
+          "or4b_2": 8,
+          "or2_2": 8,
+          "o211a_2": 8
+        },
+        "frac": {
+          "flop_frac": 0.141,
+          "mux_frac": 0.016,
+          "xor_frac": 0.057,
+          "xnor_or_xor_frac": 0.057,
+          "and_tree_frac": 0.31,
+          "or_frac": 0.174,
+          "nor_nand_frac": 0.245,
+          "aoi_frac": 0.271,
+          "inv_frac": 0.029
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 54,
+          "mux": 6,
+          "xor": 11,
+          "xnor": 11,
+          "aoi": 104,
+          "and_nand": 119
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "nor2_2_8__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a41oi_2",
+              "carry": "a41oi_2_0__Y",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_7__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 11,
+          "xnor_count": 11,
+          "aoi_count": 104,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 31,
+          "leaf_count": 46,
+          "leaf_flops": 46,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "inv_2_16__A",
+            "inv_2_17__A",
+            "inv_2_18__A",
+            "inv_2_19__A",
+            "inv_2_1__A",
+            "inv_2_20__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "nand4_2_0__C",
+            "nand4_2_10__C",
+            "nand4_2_11__C",
+            "nand4_2_12__C",
+            "nand4_2_13__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "nand4_2_7__C",
+            "nand4_2_8__C",
+            "nand4_2_9__C",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_19__A1",
+            "o21a_2_21__A1",
+            "o21a_2_23__A1",
+            "o21a_2_24__A1",
+            "o21a_2_25__A1",
+            "o21a_2_27__A1",
+            "o21a_2_28__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or2_2_11__A",
+            "or2_2_11__B",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A",
+            "or4_2_6__A",
+            "or4_2_7__A",
+            "or4_2_8__A",
+            "or4_2_9__A"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224846 (flops=46, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.842,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.06 in[0.15,0.45]\u21920.38",
+            "aoi_frac=0.27 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.31 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.14 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.828,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.06 in[0.15,0.45]\u21920.38",
+            "aoi_frac=0.27 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.31 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.14 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.79,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.14 in[0.25,0.70]\u21920.56",
+            "xor_frac=0.06 in[0.10,0.45]\u21920.57",
+            "mux_frac=0.02 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.72,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.02 in[0.30,1.00]\u21920.05",
+            "flop_frac=0.14 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.06 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.71,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.31 in[0.45,1.00]\u21920.69",
+            "xor_frac=0.06 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.14 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.842,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.06 in[0.15,0.45]\u21920.38",
+          "aoi_frac=0.27 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.31 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.14 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    },
+    "G_main_check": {
+      "fingerprint": {
+        "root": "and3_2_6__X",
+        "n_nodes": 281,
+        "class_counts": {
+          "flop": 31,
+          "aoi": 82,
+          "mux": 6,
+          "xnor": 11,
+          "nand": 41,
+          "and": 38,
+          "or": 23,
+          "xor": 11,
+          "nor": 30,
+          "inv": 7,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 31,
+          "nor2_2": 29,
+          "nand2_2": 23,
+          "o21a_2": 15,
+          "a31o_2": 12,
+          "xnor2_2": 11,
+          "xor2_2": 11,
+          "a21oi_2": 10,
+          "and2b_2": 10,
+          "a21o_2": 9,
+          "and3_2": 9,
+          "nand2b_2": 9,
+          "o211a_2": 8,
+          "nand4_2": 7,
+          "and4bb_2": 7,
+          "and2_2": 7,
+          "or2_2": 7,
+          "inv_2": 7,
+          "or3_2": 7,
+          "mux2_1": 6
+        },
+        "frac": {
+          "flop_frac": 0.11,
+          "mux_frac": 0.021,
+          "xor_frac": 0.078,
+          "xnor_or_xor_frac": 0.078,
+          "and_tree_frac": 0.281,
+          "or_frac": 0.189,
+          "nor_nand_frac": 0.253,
+          "aoi_frac": 0.292,
+          "inv_frac": 0.025
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 31,
+          "mux": 6,
+          "xor": 11,
+          "xnor": 11,
+          "aoi": 82,
+          "and_nand": 79
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "or2_2_2__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_5__Y",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 11,
+          "xnor_count": 11,
+          "aoi_count": 82,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 15,
+          "leaf_count": 22,
+          "leaf_flops": 22,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "inv_2_16__A",
+            "inv_2_1__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "nand4_2_0__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224822 (flops=22, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.876,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+            "aoi_frac=0.29 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.864,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+            "aoi_frac=0.29 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.28 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.789,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.11 in[0.25,0.70]\u21920.44",
+            "xor_frac=0.08 in[0.10,0.45]\u21920.78",
+            "mux_frac=0.02 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.724,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.02 in[0.30,1.00]\u21920.07",
+            "flop_frac=0.11 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.08 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.692,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.28 in[0.45,1.00]\u21920.62",
+            "xor_frac=0.08 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.876,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+          "aoi_frac=0.29 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.11 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    },
+    "G_status_A": {
+      "fingerprint": {
+        "root": "or2_2_11__A",
+        "n_nodes": 34,
+        "class_counts": {
+          "and": 6,
+          "aoi": 9,
+          "flop": 9,
+          "nor": 2,
+          "nand": 3,
+          "xor": 2,
+          "mux": 1,
+          "inv": 1,
+          "xnor": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 9,
+          "and4_2": 2,
+          "a31o_2": 2,
+          "and3_2": 2,
+          "nor2_2": 2,
+          "xor2_2": 2,
+          "a21oi_2": 1,
+          "o211a_2": 1,
+          "o311a_2": 1,
+          "a221oi_2": 1,
+          "a211oi_2": 1,
+          "nand3b_2": 1,
+          "and4bb_2": 1,
+          "mux2_1": 1,
+          "a41oi_2": 1,
+          "inv_2": 1,
+          "and2b_2": 1,
+          "nand2_2": 1,
+          "xnor2_2": 1,
+          "a21o_2": 1
+        },
+        "frac": {
+          "flop_frac": 0.265,
+          "mux_frac": 0.029,
+          "xor_frac": 0.088,
+          "xnor_or_xor_frac": 0.088,
+          "and_tree_frac": 0.265,
+          "or_frac": 0.059,
+          "nor_nand_frac": 0.147,
+          "aoi_frac": 0.265,
+          "inv_frac": 0.029
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 9,
+          "mux": 1,
+          "xor": 2,
+          "xnor": 1,
+          "aoi": 9,
+          "and_nand": 9
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 2,
+          "fa_pairs": [
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            }
+          ],
+          "xor_count": 2,
+          "xnor_count": 1,
+          "aoi_count": 9,
+          "carry_aoi_chain_len": 2,
+          "est_datapath_bits": 2,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 0,
+          "leaf_count": 1,
+          "leaf_flops": 0,
+          "leaf_stubs": 0,
+          "leaves": [
+            "a31o_2_13__X"
+          ]
+        },
+        "summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.959,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.27 in[0.25,0.70]\u21921.00",
+            "xor_frac=0.09 in[0.10,0.45]\u21920.88",
+            "mux_frac=0.03 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.884,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.09 in[0.15,0.45]\u21920.59",
+            "aoi_frac=0.27 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.27 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.27 in[0.00,0.20]\u21920.92",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.872,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.09 in[0.15,0.45]\u21920.59",
+            "aoi_frac=0.27 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.27 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.27 in[0.00,0.20]\u21920.92"
+          ]
+        },
+        {
+          "operator_id": "serial_deserializer",
+          "operator_name": "Serial bit gather + parallel check",
+          "score": 0.8,
+          "motif_hits": [
+            "and_reduce",
+            "flop_chain"
+          ],
+          "anti_hits": [
+            "carry_chain_dense"
+          ],
+          "range_detail": [
+            "flop_frac=0.27 in[0.20,0.45]\u21921.00",
+            "and_tree_frac=0.27 in[0.15,0.40]\u21921.00",
+            "xor_frac=0.09 in[0.08,0.35]\u21921.00",
+            "mux_frac=0.03 in[0.00,0.25]\u21921.00",
+            "aoi_frac=0.27 in[0.05,0.35]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.68,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.27 in[0.45,1.00]\u21920.59",
+            "xor_frac=0.09 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.27 in[0.00,0.25]\u21920.98",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "lfsr_crc",
+        "operator_name": "LFSR / CRC / linear feedback",
+        "score": 0.959,
+        "motif_hits": [
+          "flop_chain",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "flop_frac=0.27 in[0.25,0.70]\u21921.00",
+          "xor_frac=0.09 in[0.10,0.45]\u21920.88",
+          "mux_frac=0.03 in[0.00,0.30]\u21921.00"
+        ]
+      }
+    },
+    "G_status_B": {
+      "fingerprint": {
+        "root": "or2_2_11__B",
+        "n_nodes": 36,
+        "class_counts": {
+          "and": 6,
+          "aoi": 9,
+          "flop": 10,
+          "nor": 2,
+          "nand": 3,
+          "xor": 2,
+          "mux": 1,
+          "inv": 1,
+          "or": 1,
+          "xnor": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 10,
+          "and4_2": 2,
+          "a31o_2": 2,
+          "and3_2": 2,
+          "nor2_2": 2,
+          "xor2_2": 2,
+          "a21oi_2": 1,
+          "o211a_2": 1,
+          "o311a_2": 1,
+          "a221oi_2": 1,
+          "a211oi_2": 1,
+          "nand3b_2": 1,
+          "and4bb_2": 1,
+          "mux2_1": 1,
+          "a41oi_2": 1,
+          "inv_2": 1,
+          "and2b_2": 1,
+          "nand2_2": 1,
+          "or2_2": 1,
+          "xnor2_2": 1
+        },
+        "frac": {
+          "flop_frac": 0.278,
+          "mux_frac": 0.028,
+          "xor_frac": 0.083,
+          "xnor_or_xor_frac": 0.083,
+          "and_tree_frac": 0.25,
+          "or_frac": 0.083,
+          "nor_nand_frac": 0.139,
+          "aoi_frac": 0.25,
+          "inv_frac": 0.028
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 10,
+          "mux": 1,
+          "xor": 2,
+          "xnor": 1,
+          "aoi": 9,
+          "and_nand": 9
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 2,
+          "fa_pairs": [
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            }
+          ],
+          "xor_count": 2,
+          "xnor_count": 1,
+          "aoi_count": 9,
+          "carry_aoi_chain_len": 2,
+          "est_datapath_bits": 2,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 0,
+          "leaf_count": 1,
+          "leaf_flops": 0,
+          "leaf_stubs": 0,
+          "leaves": [
+            "or2_2_11__X"
+          ]
+        },
+        "summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.942,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.28 in[0.25,0.70]\u21921.00",
+            "xor_frac=0.08 in[0.10,0.45]\u21920.83",
+            "mux_frac=0.03 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.874,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.55",
+            "aoi_frac=0.25 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.25 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.28 in[0.00,0.20]\u21920.90",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.862,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.55",
+            "aoi_frac=0.25 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.25 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.28 in[0.00,0.20]\u21920.90"
+          ]
+        },
+        {
+          "operator_id": "serial_deserializer",
+          "operator_name": "Serial bit gather + parallel check",
+          "score": 0.8,
+          "motif_hits": [
+            "and_reduce",
+            "flop_chain"
+          ],
+          "anti_hits": [
+            "carry_chain_dense"
+          ],
+          "range_detail": [
+            "flop_frac=0.28 in[0.20,0.45]\u21921.00",
+            "and_tree_frac=0.25 in[0.15,0.40]\u21921.00",
+            "xor_frac=0.08 in[0.08,0.35]\u21921.00",
+            "mux_frac=0.03 in[0.00,0.25]\u21921.00",
+            "aoi_frac=0.25 in[0.05,0.35]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.669,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.25 in[0.45,1.00]\u21920.56",
+            "xor_frac=0.08 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.28 in[0.00,0.25]\u21920.96",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "lfsr_crc",
+        "operator_name": "LFSR / CRC / linear feedback",
+        "score": 0.942,
+        "motif_hits": [
+          "flop_chain",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "flop_frac=0.28 in[0.25,0.70]\u21921.00",
+          "xor_frac=0.08 in[0.10,0.45]\u21920.83",
+          "mux_frac=0.03 in[0.00,0.30]\u21921.00"
+        ]
+      }
+    },
+    "G_set_and2": {
+      "fingerprint": {
+        "root": "and2_2_15__X",
+        "n_nodes": 82,
+        "class_counts": {
+          "and": 16,
+          "aoi": 20,
+          "flop": 20,
+          "inv": 6,
+          "xnor": 2,
+          "nand": 6,
+          "xor": 3,
+          "mux": 3,
+          "or": 2,
+          "nor": 4
+        },
+        "cell_counts": {
+          "dfrtp_2": 20,
+          "inv_2": 6,
+          "and3_2": 5,
+          "a31o_2": 5,
+          "and2b_2": 4,
+          "and4_2": 4,
+          "nand2_2": 4,
+          "a21oi_2": 3,
+          "xor2_2": 3,
+          "mux2_1": 3,
+          "nor2_2": 3,
+          "o211a_2": 2,
+          "xnor2_2": 2,
+          "a21o_2": 2,
+          "o21a_2": 2,
+          "and2_2": 2,
+          "o311a_2": 1,
+          "a221oi_2": 1,
+          "nand3b_2": 1,
+          "a32o_2": 1
+        },
+        "frac": {
+          "flop_frac": 0.244,
+          "mux_frac": 0.037,
+          "xor_frac": 0.061,
+          "xnor_or_xor_frac": 0.061,
+          "and_tree_frac": 0.268,
+          "or_frac": 0.073,
+          "nor_nand_frac": 0.122,
+          "aoi_frac": 0.244,
+          "inv_frac": 0.073
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 20,
+          "mux": 3,
+          "xor": 3,
+          "xnor": 2,
+          "aoi": 20,
+          "and_nand": 22
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 2,
+          "fa_pairs": [
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            }
+          ],
+          "xor_count": 3,
+          "xnor_count": 2,
+          "aoi_count": 20,
+          "carry_aoi_chain_len": 2,
+          "est_datapath_bits": 2,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 2,
+          "leaf_count": 5,
+          "leaf_flops": 4,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and4_2_3__A",
+            "and4_2_3__B",
+            "and4_2_3__C",
+            "inv_2_6__A",
+            "nor3_2_2__Y"
+          ]
+        },
+        "summary": "arith ~2-bit via fa_pairs (FA=2, xor=3, xnor=2, carry_len=2); AND-reduce width\u22485 (flops=4, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "serial_deserializer",
+          "operator_name": "Serial bit gather + parallel check",
+          "score": 0.937,
+          "motif_hits": [
+            "and_reduce",
+            "flop_chain"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.24 in[0.20,0.45]\u21921.00",
+            "and_tree_frac=0.27 in[0.15,0.40]\u21921.00",
+            "xor_frac=0.06 in[0.08,0.35]\u21920.76",
+            "mux_frac=0.04 in[0.00,0.25]\u21921.00",
+            "aoi_frac=0.24 in[0.05,0.35]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.869,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.24 in[0.25,0.70]\u21920.98",
+            "xor_frac=0.06 in[0.10,0.45]\u21920.61",
+            "mux_frac=0.04 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.843,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.06 in[0.15,0.45]\u21920.41",
+            "aoi_frac=0.24 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.27 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.24 in[0.00,0.20]\u21920.95",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.829,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.06 in[0.15,0.45]\u21920.41",
+            "aoi_frac=0.24 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.27 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.24 in[0.00,0.20]\u21920.95"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.737,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.04 in[0.30,1.00]\u21920.12",
+            "flop_frac=0.24 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.06 in[0.00,0.25]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "serial_deserializer",
+        "operator_name": "Serial bit gather + parallel check",
+        "score": 0.937,
+        "motif_hits": [
+          "and_reduce",
+          "flop_chain"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "flop_frac=0.24 in[0.20,0.45]\u21921.00",
+          "and_tree_frac=0.27 in[0.15,0.40]\u21921.00",
+          "xor_frac=0.06 in[0.08,0.35]\u21920.76",
+          "mux_frac=0.04 in[0.00,0.25]\u21921.00",
+          "aoi_frac=0.24 in[0.05,0.35]\u21921.00"
+        ]
+      }
+    },
+    "G_set_inv": {
+      "fingerprint": {
+        "root": "inv_2_23__A",
+        "n_nodes": 66,
+        "class_counts": {
+          "mux": 13,
+          "and": 6,
+          "aoi": 12,
+          "flop": 22,
+          "inv": 2,
+          "nor": 2,
+          "nand": 3,
+          "xor": 2,
+          "buf": 1,
+          "xnor": 1,
+          "or": 2
+        },
+        "cell_counts": {
+          "dfrtp_2": 22,
+          "mux2_1": 13,
+          "a31o_2": 3,
+          "and4_2": 2,
+          "and3_2": 2,
+          "inv_2": 2,
+          "nor2_2": 2,
+          "xor2_2": 2,
+          "a21oi_2": 1,
+          "a221o_2": 1,
+          "o211a_2": 1,
+          "o311a_2": 1,
+          "a221oi_2": 1,
+          "a211oi_2": 1,
+          "nand3b_2": 1,
+          "and4bb_2": 1,
+          "a41oi_2": 1,
+          "and2b_2": 1,
+          "nand2_2": 1,
+          "buf_2": 1
+        },
+        "frac": {
+          "flop_frac": 0.333,
+          "mux_frac": 0.197,
+          "xor_frac": 0.045,
+          "xnor_or_xor_frac": 0.045,
+          "and_tree_frac": 0.136,
+          "or_frac": 0.061,
+          "nor_nand_frac": 0.076,
+          "aoi_frac": 0.182,
+          "inv_frac": 0.03
+        },
+        "motifs": [
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 22,
+          "mux": 13,
+          "xor": 2,
+          "xnor": 1,
+          "aoi": 12,
+          "and_nand": 9
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 2,
+          "fa_pairs": [
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            }
+          ],
+          "xor_count": 2,
+          "xnor_count": 1,
+          "aoi_count": 12,
+          "carry_aoi_chain_len": 3,
+          "est_datapath_bits": 2,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 0,
+          "leaf_count": 1,
+          "leaf_flops": 1,
+          "leaf_stubs": 0,
+          "leaves": [
+            "inv_2_11__A"
+          ]
+        },
+        "summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=3)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "shift_register",
+          "operator_name": "Shift register / serial-in parallel-out",
+          "score": 0.985,
+          "motif_hits": [
+            "flop_chain",
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.33 in[0.35,0.85]\u21920.95",
+            "mux_frac=0.20 in[0.05,0.45]\u21921.00",
+            "xor_frac=0.04 in[0.00,0.20]\u21921.00",
+            "and_tree_frac=0.14 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.887,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.20 in[0.30,1.00]\u21920.66",
+            "flop_frac=0.33 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.04 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.825,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.33 in[0.25,0.70]\u21921.00",
+            "xor_frac=0.04 in[0.10,0.45]\u21920.45",
+            "mux_frac=0.20 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.804,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.04 in[0.15,0.45]\u21920.30",
+            "aoi_frac=0.18 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.14 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.33 in[0.00,0.20]\u21920.83",
+            "mux_frac=0.20 in[0.00,0.15]\u21920.94"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.79,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.04 in[0.15,0.45]\u21920.30",
+            "aoi_frac=0.18 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.14 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.33 in[0.00,0.20]\u21920.83"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "shift_register",
+        "operator_name": "Shift register / serial-in parallel-out",
+        "score": 0.985,
+        "motif_hits": [
+          "flop_chain",
+          "mux_enable"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "flop_frac=0.33 in[0.35,0.85]\u21920.95",
+          "mux_frac=0.20 in[0.05,0.45]\u21921.00",
+          "xor_frac=0.04 in[0.00,0.20]\u21921.00",
+          "and_tree_frac=0.14 in[0.00,0.30]\u21921.00"
+        ]
+      }
+    },
+    "G_hold_B2": {
+      "fingerprint": {
+        "root": "a32o_2_4__B2",
+        "n_nodes": 37,
+        "class_counts": {
+          "and": 6,
+          "aoi": 9,
+          "flop": 10,
+          "nor": 2,
+          "nand": 4,
+          "xor": 2,
+          "mux": 1,
+          "inv": 1,
+          "or": 1,
+          "xnor": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 10,
+          "and4_2": 2,
+          "a31o_2": 2,
+          "and3_2": 2,
+          "nor2_2": 2,
+          "xor2_2": 2,
+          "a21oi_2": 1,
+          "o211a_2": 1,
+          "o311a_2": 1,
+          "a221oi_2": 1,
+          "a211oi_2": 1,
+          "nand3b_2": 1,
+          "and4bb_2": 1,
+          "mux2_1": 1,
+          "a41oi_2": 1,
+          "inv_2": 1,
+          "and2b_2": 1,
+          "nand2_2": 1,
+          "or2_2": 1,
+          "xnor2_2": 1
+        },
+        "frac": {
+          "flop_frac": 0.27,
+          "mux_frac": 0.027,
+          "xor_frac": 0.081,
+          "xnor_or_xor_frac": 0.081,
+          "and_tree_frac": 0.27,
+          "or_frac": 0.081,
+          "nor_nand_frac": 0.162,
+          "aoi_frac": 0.243,
+          "inv_frac": 0.027
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "enable"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 10,
+          "mux": 1,
+          "xor": 2,
+          "xnor": 1,
+          "aoi": 9,
+          "and_nand": 10
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 2,
+          "fa_pairs": [
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            }
+          ],
+          "xor_count": 2,
+          "xnor_count": 1,
+          "aoi_count": 9,
+          "carry_aoi_chain_len": 2,
+          "est_datapath_bits": 2,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 1,
+          "leaf_count": 2,
+          "leaf_flops": 2,
+          "leaf_stubs": 0,
+          "leaves": [
+            "or2_2_11__A",
+            "or2_2_11__B"
+          ]
+        },
+        "summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "serial_deserializer",
+          "operator_name": "Serial bit gather + parallel check",
+          "score": 1.0,
+          "motif_hits": [
+            "and_reduce",
+            "flop_chain"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.27 in[0.20,0.45]\u21921.00",
+            "and_tree_frac=0.27 in[0.15,0.40]\u21921.00",
+            "xor_frac=0.08 in[0.08,0.35]\u21921.00",
+            "mux_frac=0.03 in[0.00,0.25]\u21921.00",
+            "aoi_frac=0.24 in[0.05,0.35]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.936,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.27 in[0.25,0.70]\u21921.00",
+            "xor_frac=0.08 in[0.10,0.45]\u21920.81",
+            "mux_frac=0.03 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.872,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.54",
+            "aoi_frac=0.24 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.27 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.27 in[0.00,0.20]\u21920.91",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.859,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.54",
+            "aoi_frac=0.24 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.27 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.27 in[0.00,0.20]\u21920.91"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.682,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.27 in[0.45,1.00]\u21920.60",
+            "xor_frac=0.08 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.27 in[0.00,0.25]\u21920.97",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "serial_deserializer",
+        "operator_name": "Serial bit gather + parallel check",
+        "score": 1.0,
+        "motif_hits": [
+          "and_reduce",
+          "flop_chain"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "flop_frac=0.27 in[0.20,0.45]\u21921.00",
+          "and_tree_frac=0.27 in[0.15,0.40]\u21921.00",
+          "xor_frac=0.08 in[0.08,0.35]\u21921.00",
+          "mux_frac=0.03 in[0.00,0.25]\u21921.00",
+          "aoi_frac=0.24 in[0.05,0.35]\u21921.00"
+        ]
+      }
+    },
+    "C_status_A_plus_B": {
+      "fingerprint": {
+        "root": "C_status_A_plus_B",
+        "n_nodes": 36,
+        "class_counts": {
+          "and": 6,
+          "aoi": 9,
+          "flop": 10,
+          "nor": 2,
+          "nand": 3,
+          "xor": 2,
+          "mux": 1,
+          "inv": 1,
+          "or": 1,
+          "xnor": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 10,
+          "and4_2": 2,
+          "a31o_2": 2,
+          "and3_2": 2,
+          "nor2_2": 2,
+          "xor2_2": 2,
+          "a21oi_2": 1,
+          "o211a_2": 1,
+          "o311a_2": 1,
+          "a221oi_2": 1,
+          "a211oi_2": 1,
+          "nand3b_2": 1,
+          "and4bb_2": 1,
+          "mux2_1": 1,
+          "a41oi_2": 1,
+          "inv_2": 1,
+          "and2b_2": 1,
+          "nand2_2": 1,
+          "or2_2": 1,
+          "xnor2_2": 1
+        },
+        "frac": {
+          "flop_frac": 0.278,
+          "mux_frac": 0.028,
+          "xor_frac": 0.083,
+          "xnor_or_xor_frac": 0.083,
+          "and_tree_frac": 0.25,
+          "or_frac": 0.083,
+          "nor_nand_frac": 0.139,
+          "aoi_frac": 0.25,
+          "inv_frac": 0.028
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "enable"
+        ],
+        "combined_from": [
+          "G_status_A",
+          "G_status_B"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 10,
+          "mux": 1,
+          "xor": 2,
+          "xnor": 1,
+          "aoi": 9,
+          "and_nand": 9
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 2,
+          "fa_pairs": [
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            }
+          ],
+          "xor_count": 2,
+          "xnor_count": 1,
+          "aoi_count": 9,
+          "carry_aoi_chain_len": 2,
+          "est_datapath_bits": 2,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 0,
+          "leaf_count": 1,
+          "leaf_flops": 0,
+          "leaf_stubs": 0,
+          "leaves": [
+            "a31o_2_13__X"
+          ]
+        },
+        "summary": "arith ~2-bit via fa_pairs (FA=2, xor=2, xnor=1, carry_len=2)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.942,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.28 in[0.25,0.70]\u21921.00",
+            "xor_frac=0.08 in[0.10,0.45]\u21920.83",
+            "mux_frac=0.03 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.874,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.55",
+            "aoi_frac=0.25 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.25 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.28 in[0.00,0.20]\u21920.90",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.862,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.55",
+            "aoi_frac=0.25 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.25 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.28 in[0.00,0.20]\u21920.90"
+          ]
+        },
+        {
+          "operator_id": "serial_deserializer",
+          "operator_name": "Serial bit gather + parallel check",
+          "score": 0.8,
+          "motif_hits": [
+            "and_reduce",
+            "flop_chain"
+          ],
+          "anti_hits": [
+            "carry_chain_dense"
+          ],
+          "range_detail": [
+            "flop_frac=0.28 in[0.20,0.45]\u21921.00",
+            "and_tree_frac=0.25 in[0.15,0.40]\u21921.00",
+            "xor_frac=0.08 in[0.08,0.35]\u21921.00",
+            "mux_frac=0.03 in[0.00,0.25]\u21921.00",
+            "aoi_frac=0.25 in[0.05,0.35]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.669,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.25 in[0.45,1.00]\u21920.56",
+            "xor_frac=0.08 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.28 in[0.00,0.25]\u21920.96",
+            "mux_frac=0.03 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "lfsr_crc",
+        "operator_name": "LFSR / CRC / linear feedback",
+        "score": 0.942,
+        "motif_hits": [
+          "flop_chain",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "flop_frac=0.28 in[0.25,0.70]\u21921.00",
+          "xor_frac=0.08 in[0.10,0.45]\u21920.83",
+          "mux_frac=0.03 in[0.00,0.30]\u21921.00"
+        ]
+      }
+    },
+    "C_and4b_all_inputs": {
+      "fingerprint": {
+        "root": "C_and4b_all_inputs",
+        "n_nodes": 283,
+        "class_counts": {
+          "flop": 32,
+          "mux": 6,
+          "xnor": 11,
+          "aoi": 82,
+          "nand": 41,
+          "and": 38,
+          "xor": 11,
+          "nor": 30,
+          "inv": 7,
+          "or": 24,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 32,
+          "nor2_2": 29,
+          "nand2_2": 23,
+          "o21a_2": 15,
+          "a31o_2": 12,
+          "xnor2_2": 11,
+          "xor2_2": 11,
+          "a21oi_2": 10,
+          "and2b_2": 10,
+          "nand2b_2": 9,
+          "and3_2": 9,
+          "a21o_2": 9,
+          "o211a_2": 8,
+          "or2_2": 8,
+          "nand4_2": 7,
+          "and4bb_2": 7,
+          "and2_2": 7,
+          "inv_2": 7,
+          "or3_2": 7,
+          "mux2_1": 6
+        },
+        "frac": {
+          "flop_frac": 0.113,
+          "mux_frac": 0.021,
+          "xor_frac": 0.078,
+          "xnor_or_xor_frac": 0.078,
+          "and_tree_frac": 0.279,
+          "or_frac": 0.191,
+          "nor_nand_frac": 0.251,
+          "aoi_frac": 0.29,
+          "inv_frac": 0.025
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ],
+        "combined_from": [
+          "G_main_check",
+          "G_status_A",
+          "G_status_B"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 32,
+          "mux": 6,
+          "xor": 11,
+          "xnor": 11,
+          "aoi": 82,
+          "and_nand": 79
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "or2_2_2__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_5__Y",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 11,
+          "xnor_count": 11,
+          "aoi_count": 82,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 15,
+          "leaf_count": 22,
+          "leaf_flops": 22,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "inv_2_16__A",
+            "inv_2_1__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "nand4_2_0__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224822 (flops=22, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.876,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+            "aoi_frac=0.29 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.864,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+            "aoi_frac=0.29 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.28 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.792,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.11 in[0.25,0.70]\u21920.45",
+            "xor_frac=0.08 in[0.10,0.45]\u21920.78",
+            "mux_frac=0.02 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.724,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.02 in[0.30,1.00]\u21920.07",
+            "flop_frac=0.11 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.08 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.691,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.28 in[0.45,1.00]\u21920.62",
+            "xor_frac=0.08 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.876,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+          "aoi_frac=0.29 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.11 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    },
+    "C_full_set_path": {
+      "fingerprint": {
+        "root": "C_full_set_path",
+        "n_nodes": 464,
+        "class_counts": {
+          "flop": 78,
+          "mux": 20,
+          "and": 70,
+          "xnor": 12,
+          "aoi": 118,
+          "nand": 62,
+          "or": 36,
+          "xor": 12,
+          "nor": 37,
+          "buf": 1,
+          "inv": 17,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 78,
+          "nor2_2": 34,
+          "nand2_2": 30,
+          "o21a_2": 28,
+          "a31o_2": 23,
+          "mux2_1": 20,
+          "and2b_2": 20,
+          "inv_2": 17,
+          "nand2b_2": 16,
+          "nand4_2": 14,
+          "and3_2": 14,
+          "a21o_2": 14,
+          "and2_2": 13,
+          "xnor2_2": 12,
+          "a21oi_2": 12,
+          "and4bb_2": 12,
+          "xor2_2": 12,
+          "or4_2": 10,
+          "o211a_2": 9,
+          "or2_2": 9
+        },
+        "frac": {
+          "flop_frac": 0.168,
+          "mux_frac": 0.043,
+          "xor_frac": 0.052,
+          "xnor_or_xor_frac": 0.052,
+          "and_tree_frac": 0.284,
+          "or_frac": 0.157,
+          "nor_nand_frac": 0.213,
+          "aoi_frac": 0.254,
+          "inv_frac": 0.037
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ],
+        "combined_from": [
+          "G_and4b_join",
+          "G_set_and2",
+          "G_set_inv"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 78,
+          "mux": 20,
+          "xor": 12,
+          "xnor": 12,
+          "aoi": 118,
+          "and_nand": 132
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "or2_2_2__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_5__Y",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 12,
+          "xnor_count": 12,
+          "aoi_count": 118,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 31,
+          "leaf_count": 46,
+          "leaf_flops": 46,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "inv_2_16__A",
+            "inv_2_17__A",
+            "inv_2_18__A",
+            "inv_2_19__A",
+            "inv_2_1__A",
+            "inv_2_20__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "nand4_2_0__C",
+            "nand4_2_10__C",
+            "nand4_2_11__C",
+            "nand4_2_12__C",
+            "nand4_2_13__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "nand4_2_7__C",
+            "nand4_2_8__C",
+            "nand4_2_9__C",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_19__A1",
+            "o21a_2_21__A1",
+            "o21a_2_23__A1",
+            "o21a_2_24__A1",
+            "o21a_2_25__A1",
+            "o21a_2_27__A1",
+            "o21a_2_28__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or2_2_11__A",
+            "or2_2_11__B",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A",
+            "or4_2_6__A",
+            "or4_2_7__A",
+            "or4_2_8__A",
+            "or4_2_9__A"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224846 (flops=46, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.834,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.25 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.82,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.25 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.28 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.794,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.17 in[0.25,0.70]\u21920.67",
+            "xor_frac=0.05 in[0.10,0.45]\u21920.52",
+            "mux_frac=0.04 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.742,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.04 in[0.30,1.00]\u21920.14",
+            "flop_frac=0.17 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.05 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.694,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.28 in[0.45,1.00]\u21920.63",
+            "xor_frac=0.05 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.834,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+          "aoi_frac=0.25 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    },
+    "C_set_plus_hold": {
+      "fingerprint": {
+        "root": "C_set_plus_hold",
+        "n_nodes": 465,
+        "class_counts": {
+          "flop": 78,
+          "mux": 20,
+          "and": 70,
+          "xnor": 12,
+          "aoi": 118,
+          "nand": 63,
+          "or": 36,
+          "xor": 12,
+          "nor": 37,
+          "buf": 1,
+          "inv": 17,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 78,
+          "nor2_2": 34,
+          "nand2_2": 30,
+          "o21a_2": 28,
+          "a31o_2": 23,
+          "mux2_1": 20,
+          "and2b_2": 20,
+          "nand2b_2": 17,
+          "inv_2": 17,
+          "nand4_2": 14,
+          "and3_2": 14,
+          "a21o_2": 14,
+          "and2_2": 13,
+          "xnor2_2": 12,
+          "a21oi_2": 12,
+          "and4bb_2": 12,
+          "xor2_2": 12,
+          "or4_2": 10,
+          "o211a_2": 9,
+          "or2_2": 9
+        },
+        "frac": {
+          "flop_frac": 0.168,
+          "mux_frac": 0.043,
+          "xor_frac": 0.052,
+          "xnor_or_xor_frac": 0.052,
+          "and_tree_frac": 0.286,
+          "or_frac": 0.157,
+          "nor_nand_frac": 0.215,
+          "aoi_frac": 0.254,
+          "inv_frac": 0.037
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ],
+        "combined_from": [
+          "G_and4b_join",
+          "G_set_and2",
+          "G_set_inv",
+          "G_hold_B2"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 78,
+          "mux": 20,
+          "xor": 12,
+          "xnor": 12,
+          "aoi": 118,
+          "and_nand": 133
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "or2_2_2__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_5__Y",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 12,
+          "xnor_count": 12,
+          "aoi_count": 118,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 31,
+          "leaf_count": 46,
+          "leaf_flops": 46,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "inv_2_16__A",
+            "inv_2_17__A",
+            "inv_2_18__A",
+            "inv_2_19__A",
+            "inv_2_1__A",
+            "inv_2_20__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "nand4_2_0__C",
+            "nand4_2_10__C",
+            "nand4_2_11__C",
+            "nand4_2_12__C",
+            "nand4_2_13__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "nand4_2_7__C",
+            "nand4_2_8__C",
+            "nand4_2_9__C",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_19__A1",
+            "o21a_2_21__A1",
+            "o21a_2_23__A1",
+            "o21a_2_24__A1",
+            "o21a_2_25__A1",
+            "o21a_2_27__A1",
+            "o21a_2_28__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or2_2_11__A",
+            "or2_2_11__B",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A",
+            "or4_2_6__A",
+            "or4_2_7__A",
+            "or4_2_8__A",
+            "or4_2_9__A"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224846 (flops=46, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.834,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.25 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.29 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.82,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.25 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.29 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.794,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.17 in[0.25,0.70]\u21920.67",
+            "xor_frac=0.05 in[0.10,0.45]\u21920.52",
+            "mux_frac=0.04 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.742,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.04 in[0.30,1.00]\u21920.14",
+            "flop_frac=0.17 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.05 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.695,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.29 in[0.45,1.00]\u21920.64",
+            "xor_frac=0.05 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.834,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+          "aoi_frac=0.25 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.29 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    },
+    "C_main_plus_statusA": {
+      "fingerprint": {
+        "root": "C_main_plus_statusA",
+        "n_nodes": 281,
+        "class_counts": {
+          "flop": 31,
+          "mux": 6,
+          "xnor": 11,
+          "aoi": 82,
+          "nand": 41,
+          "and": 38,
+          "xor": 11,
+          "nor": 30,
+          "inv": 7,
+          "or": 23,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 31,
+          "nor2_2": 29,
+          "nand2_2": 23,
+          "o21a_2": 15,
+          "a31o_2": 12,
+          "xnor2_2": 11,
+          "xor2_2": 11,
+          "a21oi_2": 10,
+          "and2b_2": 10,
+          "nand2b_2": 9,
+          "and3_2": 9,
+          "a21o_2": 9,
+          "o211a_2": 8,
+          "nand4_2": 7,
+          "and4bb_2": 7,
+          "and2_2": 7,
+          "inv_2": 7,
+          "or3_2": 7,
+          "or2_2": 7,
+          "mux2_1": 6
+        },
+        "frac": {
+          "flop_frac": 0.11,
+          "mux_frac": 0.021,
+          "xor_frac": 0.078,
+          "xnor_or_xor_frac": 0.078,
+          "and_tree_frac": 0.281,
+          "or_frac": 0.189,
+          "nor_nand_frac": 0.253,
+          "aoi_frac": 0.292,
+          "inv_frac": 0.025
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ],
+        "combined_from": [
+          "G_main_check",
+          "G_status_A"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 31,
+          "mux": 6,
+          "xor": 11,
+          "xnor": 11,
+          "aoi": 82,
+          "and_nand": 79
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "or2_2_2__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_5__Y",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 11,
+          "xnor_count": 11,
+          "aoi_count": 82,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 15,
+          "leaf_count": 22,
+          "leaf_flops": 22,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "inv_2_16__A",
+            "inv_2_1__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "nand4_2_0__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=11, xnor=11, carry_len=5); AND-reduce width\u224822 (flops=22, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.876,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+            "aoi_frac=0.29 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.864,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+            "aoi_frac=0.29 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.28 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.789,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.11 in[0.25,0.70]\u21920.44",
+            "xor_frac=0.08 in[0.10,0.45]\u21920.78",
+            "mux_frac=0.02 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.724,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.02 in[0.30,1.00]\u21920.07",
+            "flop_frac=0.11 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.08 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.692,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.28 in[0.45,1.00]\u21920.62",
+            "xor_frac=0.08 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.11 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.876,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.08 in[0.15,0.45]\u21920.52",
+          "aoi_frac=0.29 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.11 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.02 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    },
+    "C_entire_a32o": {
+      "fingerprint": {
+        "root": "C_entire_a32o",
+        "n_nodes": 466,
+        "class_counts": {
+          "flop": 78,
+          "mux": 20,
+          "and": 70,
+          "xnor": 12,
+          "aoi": 119,
+          "nand": 63,
+          "or": 36,
+          "xor": 12,
+          "nor": 37,
+          "buf": 1,
+          "inv": 17,
+          "other": 1
+        },
+        "cell_counts": {
+          "dfrtp_2": 78,
+          "nor2_2": 34,
+          "nand2_2": 30,
+          "o21a_2": 28,
+          "a31o_2": 23,
+          "mux2_1": 20,
+          "and2b_2": 20,
+          "nand2b_2": 17,
+          "inv_2": 17,
+          "nand4_2": 14,
+          "and3_2": 14,
+          "a21o_2": 14,
+          "and2_2": 13,
+          "xnor2_2": 12,
+          "a21oi_2": 12,
+          "and4bb_2": 12,
+          "xor2_2": 12,
+          "or4_2": 10,
+          "o211a_2": 9,
+          "or2_2": 9
+        },
+        "frac": {
+          "flop_frac": 0.167,
+          "mux_frac": 0.043,
+          "xor_frac": 0.052,
+          "xnor_or_xor_frac": 0.052,
+          "and_tree_frac": 0.285,
+          "or_frac": 0.157,
+          "nor_nand_frac": 0.215,
+          "aoi_frac": 0.255,
+          "inv_frac": 0.036
+        },
+        "motifs": [
+          "and_reduce",
+          "carry_chain_dense",
+          "carry_like",
+          "flop_chain",
+          "multi_and4",
+          "mux_enable",
+          "xnor_pair",
+          "xor_pair"
+        ],
+        "stub_leaves": [],
+        "primary_leaves": [
+          "I",
+          "enable"
+        ],
+        "combined_from": [
+          "G_success_glue"
+        ]
+      },
+      "granular": {
+        "counts": {
+          "flop": 78,
+          "mux": 20,
+          "xor": 12,
+          "xnor": 12,
+          "aoi": 119,
+          "and_nand": 133
+        },
+        "shifter": {
+          "mux_hold_stages": 0,
+          "banks": [],
+          "max_bank_bits": 0,
+          "direct_serial_flops": []
+        },
+        "adder_compare": {
+          "fa_like_pairs": 7,
+          "fa_pairs": [
+            {
+              "sum": "or2_2_2__A",
+              "carry_cell": "a32o_2",
+              "carry": "xor2_2_2__A",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_9__X",
+              "carry_cell": "a21o_2",
+              "carry": "a21o_2_9__X",
+              "shared": 2
+            },
+            {
+              "sum": "nor2_2_31__B",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_13__Y",
+              "shared": 2
+            },
+            {
+              "sum": "or4_2_0__A",
+              "carry_cell": "a21o_2",
+              "carry": "xor2_2_6__A",
+              "shared": 2
+            },
+            {
+              "sum": "and3_2_2__C",
+              "carry_cell": "a21oi_2",
+              "carry": "a21oi_2_5__Y",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_7__X",
+              "carry_cell": "o211a_2",
+              "carry": "o211a_2_0__X",
+              "shared": 2
+            },
+            {
+              "sum": "xor2_2_0__X",
+              "carry_cell": "a31o_2",
+              "carry": "a31o_2_8__X",
+              "shared": 2
+            }
+          ],
+          "xor_count": 12,
+          "xnor_count": 12,
+          "aoi_count": 119,
+          "carry_aoi_chain_len": 5,
+          "est_datapath_bits": 7,
+          "est_method": "fa_pairs"
+        },
+        "and_reduce": {
+          "and_nodes": 34,
+          "leaf_count": 53,
+          "leaf_flops": 51,
+          "leaf_stubs": 0,
+          "leaves": [
+            "and2b_2_3__B",
+            "and4_2_3__A",
+            "and4_2_3__B",
+            "and4_2_3__C",
+            "inv_2_11__A",
+            "inv_2_16__A",
+            "inv_2_17__A",
+            "inv_2_18__A",
+            "inv_2_19__A",
+            "inv_2_1__A",
+            "inv_2_20__A",
+            "inv_2_2__A",
+            "inv_2_3__A",
+            "inv_2_6__A",
+            "nand4_2_0__C",
+            "nand4_2_10__C",
+            "nand4_2_11__C",
+            "nand4_2_12__C",
+            "nand4_2_13__C",
+            "nand4_2_1__C",
+            "nand4_2_2__C",
+            "nand4_2_3__C",
+            "nand4_2_4__C",
+            "nand4_2_5__C",
+            "nand4_2_6__C",
+            "nand4_2_7__C",
+            "nand4_2_8__C",
+            "nand4_2_9__C",
+            "nor3_2_2__Y",
+            "o21a_2_16__A1",
+            "o21a_2_18__A1",
+            "o21a_2_19__A1",
+            "o21a_2_21__A1",
+            "o21a_2_23__A1",
+            "o21a_2_24__A1",
+            "o21a_2_25__A1",
+            "o21a_2_27__A1",
+            "o21a_2_28__A1",
+            "o21a_2_30__A1",
+            "o21a_2_4__A1",
+            "o21a_2_5__A1",
+            "o21a_2_8__A1",
+            "or2_2_11__A",
+            "or2_2_11__B",
+            "or4_2_1__A",
+            "or4_2_2__A",
+            "or4_2_3__A",
+            "or4_2_5__A",
+            "or4_2_6__A",
+            "or4_2_7__A",
+            "or4_2_8__A",
+            "or4_2_9__A",
+            "success"
+          ]
+        },
+        "summary": "arith ~7-bit via fa_pairs (FA=7, xor=12, xnor=12, carry_len=5); AND-reduce width\u224853 (flops=51, stubs=0)"
+      },
+      "top_matches": [
+        {
+          "operator_id": "ripple_adder",
+          "operator_name": "Binary adder (ripple / FA chain)",
+          "score": 0.834,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.26 in[0.15,0.55]\u21921.00",
+            "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "popcount",
+          "operator_name": "Population count / adder tree of bits",
+          "score": 0.82,
+          "motif_hits": [
+            "carry_like",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+            "aoi_frac=0.26 in[0.15,0.50]\u21921.00",
+            "and_tree_frac=0.28 in[0.10,0.40]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.20]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "lfsr_crc",
+          "operator_name": "LFSR / CRC / linear feedback",
+          "score": 0.793,
+          "motif_hits": [
+            "flop_chain",
+            "xor_pair"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "flop_frac=0.17 in[0.25,0.70]\u21920.67",
+            "xor_frac=0.05 in[0.10,0.45]\u21920.52",
+            "mux_frac=0.04 in[0.00,0.30]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "mux_tree",
+          "operator_name": "MUX tree / datapath select",
+          "score": 0.742,
+          "motif_hits": [
+            "mux_enable"
+          ],
+          "anti_hits": [],
+          "range_detail": [
+            "mux_frac=0.04 in[0.30,1.00]\u21920.14",
+            "flop_frac=0.17 in[0.00,0.40]\u21921.00",
+            "xor_frac=0.05 in[0.00,0.25]\u21921.00"
+          ]
+        },
+        {
+          "operator_id": "wide_and_reduce",
+          "operator_name": "Wide AND-reduce / all-ones check",
+          "score": 0.695,
+          "motif_hits": [
+            "and_reduce",
+            "multi_and4"
+          ],
+          "anti_hits": [
+            "xor_pair"
+          ],
+          "range_detail": [
+            "and_tree_frac=0.28 in[0.45,1.00]\u21920.63",
+            "xor_frac=0.05 in[0.00,0.20]\u21921.00",
+            "flop_frac=0.17 in[0.00,0.25]\u21921.00",
+            "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+          ]
+        }
+      ],
+      "best": {
+        "operator_id": "ripple_adder",
+        "operator_name": "Binary adder (ripple / FA chain)",
+        "score": 0.834,
+        "motif_hits": [
+          "carry_like",
+          "xor_pair"
+        ],
+        "anti_hits": [],
+        "range_detail": [
+          "xor_frac=0.05 in[0.15,0.45]\u21920.35",
+          "aoi_frac=0.26 in[0.15,0.55]\u21921.00",
+          "and_tree_frac=0.28 in[0.05,0.35]\u21921.00",
+          "flop_frac=0.17 in[0.00,0.20]\u21921.00",
+          "mux_frac=0.04 in[0.00,0.15]\u21921.00"
+        ]
+      }
+    }
+  }
+}

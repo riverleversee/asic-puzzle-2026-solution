@@ -1,0 +1,794 @@
+{
+  "hypothesis": "I\u2192a221o/a22o A2/B2 path is an enabled_mux_shift_register; a22o.X/a221o.X are FA-gated observes \u2014 not delay structures.",
+  "hypothesis_supported": true,
+  "templates": [
+    {
+      "name": "enabled_mux_shift_register",
+      "matched": true,
+      "summary": "MATCH \u00b7 12/12 stages satisfy mux-hold shift rules; S=inv_2_7__A; taps on chain: a22o.A2=Q0, a221o.A2=Q9, a221o.B2=Q10, a22o.B2=Q11",
+      "checks": [
+        {
+          "rule": "entry_is_mux",
+          "ok": true,
+          "detail": "mux2_1_13"
+        },
+        {
+          "rule": "entry_A1_is_I",
+          "ok": true,
+          "detail": "A1=I"
+        },
+        {
+          "rule": "entry_has_S",
+          "ok": true,
+          "detail": "inv_2_7__A"
+        },
+        {
+          "rule": "extracted_stages",
+          "ok": true,
+          "detail": "n_stages=12"
+        },
+        {
+          "rule": "shared_S_nonempty",
+          "ok": true,
+          "detail": "inv_2_7__A"
+        },
+        {
+          "rule": "stage0_din_is_I",
+          "ok": true,
+          "detail": "A1=I"
+        }
+      ],
+      "stages": [
+        {
+          "index": 0,
+          "mux": "mux2_1_13",
+          "flop": "dfrtp_2_41",
+          "Q": "a22o_2_2__A2",
+          "A1": "I",
+          "A0": "a22o_2_2__A2",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=a22o_2_2__A2 Q=a22o_2_2__A2"
+            },
+            {
+              "rule": "A1_is_din",
+              "ok": true,
+              "detail": "A1=I"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_13__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "mux": "mux2_1_18",
+          "flop": "dfrtp_2_31",
+          "Q": "mux2_1_19__A1",
+          "A1": "a22o_2_2__A2",
+          "A0": "mux2_1_19__A1",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_19__A1 Q=mux2_1_19__A1"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=a22o_2_2__A2 prevQ=a22o_2_2__A2"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_18__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "mux": "mux2_1_19",
+          "flop": "dfrtp_2_39",
+          "Q": "mux2_1_19__A0",
+          "A1": "mux2_1_19__A1",
+          "A0": "mux2_1_19__A0",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_19__A0 Q=mux2_1_19__A0"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_19__A1 prevQ=mux2_1_19__A1"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_19__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "mux": "mux2_1_17",
+          "flop": "dfrtp_2_32",
+          "Q": "mux2_1_9__A1",
+          "A1": "mux2_1_19__A0",
+          "A0": "mux2_1_9__A1",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_9__A1 Q=mux2_1_9__A1"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_19__A0 prevQ=mux2_1_19__A0"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_17__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "mux": "mux2_1_9",
+          "flop": "dfrtp_2_40",
+          "Q": "mux2_1_9__A0",
+          "A1": "mux2_1_9__A1",
+          "A0": "mux2_1_9__A0",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_9__A0 Q=mux2_1_9__A0"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_9__A1 prevQ=mux2_1_9__A1"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_9__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "mux": "mux2_1_16",
+          "flop": "dfrtp_2_35",
+          "Q": "mux2_1_16__A0",
+          "A1": "mux2_1_9__A0",
+          "A0": "mux2_1_16__A0",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_16__A0 Q=mux2_1_16__A0"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_9__A0 prevQ=mux2_1_9__A0"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_16__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "mux": "mux2_1_15",
+          "flop": "dfrtp_2_42",
+          "Q": "mux2_1_15__A0",
+          "A1": "mux2_1_16__A0",
+          "A0": "mux2_1_15__A0",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_15__A0 Q=mux2_1_15__A0"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_16__A0 prevQ=mux2_1_16__A0"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_15__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "mux": "mux2_1_14",
+          "flop": "dfrtp_2_30",
+          "Q": "mux2_1_8__A1",
+          "A1": "mux2_1_15__A0",
+          "A0": "mux2_1_8__A1",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_8__A1 Q=mux2_1_8__A1"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_15__A0 prevQ=mux2_1_15__A0"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_14__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "mux": "mux2_1_8",
+          "flop": "dfrtp_2_34",
+          "Q": "mux2_1_8__A0",
+          "A1": "mux2_1_8__A1",
+          "A0": "mux2_1_8__A0",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_8__A0 Q=mux2_1_8__A0"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_8__A1 prevQ=mux2_1_8__A1"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_8__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "mux": "mux2_1_10",
+          "flop": "dfrtp_2_33",
+          "Q": "mux2_1_12__A1",
+          "A1": "mux2_1_8__A0",
+          "A0": "mux2_1_12__A1",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_12__A1 Q=mux2_1_12__A1"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_8__A0 prevQ=mux2_1_8__A0"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_10__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "mux": "mux2_1_12",
+          "flop": "dfrtp_2_36",
+          "Q": "mux2_1_12__A0",
+          "A1": "mux2_1_12__A1",
+          "A0": "mux2_1_12__A0",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=mux2_1_12__A0 Q=mux2_1_12__A0"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_12__A1 prevQ=mux2_1_12__A1"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_12__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "mux": "mux2_1_11",
+          "flop": "dfrtp_2_38",
+          "Q": "a22o_2_2__B2",
+          "A1": "mux2_1_12__A0",
+          "A0": "a22o_2_2__B2",
+          "S": "inv_2_7__A",
+          "ok": true,
+          "checks": [
+            {
+              "rule": "S_shared",
+              "ok": true,
+              "detail": "S=inv_2_7__A vs inv_2_7__A"
+            },
+            {
+              "rule": "A0_holds_own_Q",
+              "ok": true,
+              "detail": "A0=a22o_2_2__B2 Q=a22o_2_2__B2"
+            },
+            {
+              "rule": "A1_is_prev_Q",
+              "ok": true,
+              "detail": "A1=mux2_1_12__A0 prevQ=mux2_1_12__A0"
+            },
+            {
+              "rule": "flop_D_is_mux_X",
+              "ok": true,
+              "detail": "D=mux2_1_11__X"
+            },
+            {
+              "rule": "no_arith_on_D",
+              "ok": true,
+              "detail": "direct mux\u2192flop"
+            }
+          ]
+        }
+      ],
+      "extra": {
+        "tap_hits": {
+          "a22o.A2": {
+            "net": "a22o_2_2__A2",
+            "is_shift_Q": true,
+            "stage_index": 0,
+            "expected_delay": 1
+          },
+          "a221o.A2": {
+            "net": "mux2_1_12__A1",
+            "is_shift_Q": true,
+            "stage_index": 9,
+            "expected_delay": 10
+          },
+          "a221o.B2": {
+            "net": "mux2_1_12__A0",
+            "is_shift_Q": true,
+            "stage_index": 10,
+            "expected_delay": 11
+          },
+          "a22o.B2": {
+            "net": "a22o_2_2__B2",
+            "is_shift_Q": true,
+            "stage_index": 11,
+            "expected_delay": 12
+          }
+        },
+        "S_common": "inv_2_7__A",
+        "n_stages": 12
+      }
+    },
+    {
+      "name": "plain_dff_chain",
+      "matched": false,
+      "summary": "NO MATCH \u00b7 D inputs are mux outputs (hold+shift), not bare Q/I",
+      "checks": [
+        {
+          "rule": "stage0_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_13__X class=mux"
+        },
+        {
+          "rule": "stage0_D_is_I",
+          "ok": false,
+          "detail": "D=mux2_1_13__X"
+        },
+        {
+          "rule": "stage1_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_18__X class=mux"
+        },
+        {
+          "rule": "stage1_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_18__X prev=a22o_2_2__A2"
+        },
+        {
+          "rule": "stage2_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_19__X class=mux"
+        },
+        {
+          "rule": "stage2_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_19__X prev=mux2_1_19__A1"
+        },
+        {
+          "rule": "stage3_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_17__X class=mux"
+        },
+        {
+          "rule": "stage3_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_17__X prev=mux2_1_19__A0"
+        },
+        {
+          "rule": "stage4_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_9__X class=mux"
+        },
+        {
+          "rule": "stage4_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_9__X prev=mux2_1_9__A1"
+        },
+        {
+          "rule": "stage5_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_16__X class=mux"
+        },
+        {
+          "rule": "stage5_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_16__X prev=mux2_1_9__A0"
+        },
+        {
+          "rule": "stage6_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_15__X class=mux"
+        },
+        {
+          "rule": "stage6_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_15__X prev=mux2_1_16__A0"
+        },
+        {
+          "rule": "stage7_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_14__X class=mux"
+        },
+        {
+          "rule": "stage7_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_14__X prev=mux2_1_15__A0"
+        },
+        {
+          "rule": "stage8_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_8__X class=mux"
+        },
+        {
+          "rule": "stage8_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_8__X prev=mux2_1_8__A1"
+        },
+        {
+          "rule": "stage9_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_10__X class=mux"
+        },
+        {
+          "rule": "stage9_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_10__X prev=mux2_1_8__A0"
+        },
+        {
+          "rule": "stage10_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_12__X class=mux"
+        },
+        {
+          "rule": "stage10_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_12__X prev=mux2_1_12__A1"
+        },
+        {
+          "rule": "stage11_D_not_mux",
+          "ok": false,
+          "detail": "D\u2190mux2_1_11__X class=mux"
+        },
+        {
+          "rule": "stage11_D_is_prev_Q",
+          "ok": false,
+          "detail": "D=mux2_1_11__X prev=mux2_1_12__A0"
+        }
+      ],
+      "stages": [],
+      "extra": {}
+    },
+    {
+      "name": "fa_xor_arith_path",
+      "matched": false,
+      "summary": "NO MATCH \u00b7 spine is mux+flop (not FA/xor arith); taps are flop Q",
+      "checks": [
+        {
+          "rule": "s0_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=primary"
+        },
+        {
+          "rule": "s1_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s2_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s3_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s4_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s5_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s6_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s7_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s8_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s9_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s10_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "s11_A1_not_arith",
+          "ok": true,
+          "detail": "A1 class=flop"
+        },
+        {
+          "rule": "tap_a22o.A2_is_flop",
+          "ok": true,
+          "detail": "class=flop"
+        },
+        {
+          "rule": "tap_a221o.A2_is_flop",
+          "ok": true,
+          "detail": "class=flop"
+        },
+        {
+          "rule": "tap_a221o.B2_is_flop",
+          "ok": true,
+          "detail": "class=flop"
+        },
+        {
+          "rule": "tap_a22o.B2_is_flop",
+          "ok": true,
+          "detail": "class=flop"
+        }
+      ],
+      "stages": [],
+      "extra": {
+        "arith_cells_on_A1": 0
+      }
+    },
+    {
+      "name": "gated_observe_sites",
+      "matched": true,
+      "summary": "CONFIRMED \u00b7 a22o.X/a221o.X = shift taps \u2227 FA-prior stubs (gated observe, not a delay)",
+      "checks": [
+        {
+          "rule": "a22o_A2_is_shift_Q",
+          "ok": true,
+          "detail": "A2=a22o_2_2__A2"
+        },
+        {
+          "rule": "a22o_B2_is_shift_Q",
+          "ok": true,
+          "detail": "B2=a22o_2_2__B2"
+        },
+        {
+          "rule": "a22o_A1_not_shift_tap",
+          "ok": true,
+          "detail": "A1=or4_2_4__X class=or"
+        },
+        {
+          "rule": "a22o_is_a22o_cell",
+          "ok": true,
+          "detail": "a22o_2"
+        },
+        {
+          "rule": "a221o_C1_is_a22o_X",
+          "ok": true,
+          "detail": "C1=a22o_2_2__X"
+        },
+        {
+          "rule": "a221o_A2_is_shift",
+          "ok": true,
+          "detail": "A2=mux2_1_12__A1"
+        },
+        {
+          "rule": "a221o_B2_is_shift",
+          "ok": true,
+          "detail": "B2=mux2_1_12__A0"
+        }
+      ],
+      "stages": [],
+      "extra": {
+        "a22o_pins": {
+          "A1": "or4_2_4__X",
+          "A2": "a22o_2_2__A2",
+          "B2": "a22o_2_2__B2",
+          "B1": "buf_2_0__X"
+        }
+      }
+    }
+  ],
+  "figures": [
+    "structure_checklist.png",
+    "structure_chain_schematic.png"
+  ]
+}

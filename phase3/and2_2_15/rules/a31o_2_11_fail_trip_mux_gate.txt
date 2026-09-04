@@ -1,0 +1,64 @@
+# Rules — a31o_2_11 sticky FAIL trip (and2_2_15 A-arm)
+# Source: phase2/and2_2_15/inv_2_6 timelines (noI stubs + I1 probes)
+# Visuals:
+#   phase2/and2_2_15/inv_2_6/
+#   phase3/and2_2_15/figures/mux2_1_7_a31o_dependence.png
+
+SCOPE
+  Sticky latch behind inv_2_6 (A-arm of and2_2_15):
+
+    a31o_2_11.X  =  (A1 ∧ A2 ∧ A3) ∨ B1
+      A1 = inv_2_9__A     # FA prior (and4bb_2_6.X) — NO-I
+      A2 = inv_2_7__A     # FA prior (and2b_2_11.Y) — NO-I
+      A3 = mux2_1_7__X    # →I (gated observe / inhibit)
+      B1 = inv_2_6__A     # sticky Q (dfrtp_2_28)
+
+    dfrtp_2_28.D ← a31o_2_11.X
+    inv_2_6.A    = dfrtp_2_28.Q
+    inv_2_6.Y    = ¬Q          # and2_2_15.A
+
+  When the sticky Q sets, inv_2_6.Y goes low → and2_2_15 cannot
+  contribute to success SET. That is a FAIL / inhibit trip, not a
+  success SET (contrast a31o_2_12 / inv_2_23 SET arm).
+
+OBSERVATION (I-independent)
+  On all0 (and identical on all1 for the stubs):
+
+    inv_2_7__A  high every cycle (and2b.Y with A_N=0)
+    inv_2_9__A  high @ cyc ≡ 10 (mod 11)
+                i.e. 10, 21, 32, 43, …   # end of each 11-bit FA period
+
+  So A1∧A2 is live on those period-11 edges without any I.
+  If A3 (mux X) is also 1 at that edge, (A1∧A2∧A3) fires → a31o.X
+  rises → sticky Q sets on the next flop capture → FAIL.
+
+RULE (working)
+  The fail latch trips at the end of an 11-bit FA cycle when the
+  I-independent AND of FA stubs is live AND mux2_1_7.X is high.
+
+  To prevent the trip: force mux2_1_7.X = 0 on those windows
+  (a31o.A3 held low) so (A1∧A2∧A3) cannot fire even though A1∧A2
+  are I-independent.
+
+MUX (structural)
+  mux2_1_7:
+    S  = inv_2_8__A          # flop Q (dfrtp_2_29)
+    A1 = or2_2_7__X          # = or2_2_7__A ∨ I
+    A0 = mux2_1_7__A0        # = ~(or2_2_7__A ∧ I)   via nand2_2_25
+    X  = S ? A1 : A0         # → a31o.A3
+
+  I reaches X only through A0/A1 (and S is state). Holding X=0 is the
+  inhibit; which pin to drive depends on S:
+    S=0 → X=A0; A0=0 requires I=1 and or2_2_7__A=1
+    S=1 → X=A1; A1=0 requires or2_2_7__A=0 and I=0
+
+STATUS
+  Working note from phase-2 timelines — not a full I-recipe yet.
+  Confirmed: stubs I-independent; trip phase ≡ 10 mod 11; inhibit
+  path is mux → a31o.A3.
+
+RELATED
+  Two-ones-per-window inhibit (working): mux_period11_two_ones_inhibit.txt
+  Mechanism note: ../notes/mux_S_prep_and_switch.txt
+  Success SET sticky (different a31o): phase3/a221o_set/rules/
+  Phase-2 timelines: phase2/and2_2_15/inv_2_6/timelines/

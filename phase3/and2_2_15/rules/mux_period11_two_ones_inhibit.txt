@@ -1,0 +1,55 @@
+# Rules — period-11 mux window needs two I=1 to inhibit fail sticky
+# Source: phase2/and2_2_15/inv_2_6/timelines/I2_every_window.*
+#         (+ sibling o211a_2_8/timelines/I2_every_window.*)
+# Prior:  a31o_2_11_fail_trip_mux_gate.txt  (trip edge ≡ 10 mod 11; inhibit = mux.X=0)
+# Note:   ../notes/mux_S_prep_and_switch.txt
+
+SCOPE
+  Same A-arm fail sticky as a31o_2_11_fail_trip_mux_gate.txt:
+
+    trip candidate @ cyc ≡ 10 (mod 11) when A1∧A2 live (I-independent)
+    inhibit if mux2_1_7.X = 0 at that edge → a31o.A3 low → sticky stays 0
+
+  Mux is itself period-11 state (S = dfrtp_2_29.Q); the S machine
+  advances / resets on the same FA cycle as the trip edge.
+
+RULE (working)
+  Partition time into period-11 windows:
+
+      W_k = { 11*k , 11*k+1 , … , 11*k+10 }     k = 0,1,2,…
+
+  The fail sticky trips at the end of W_k (into W_{k+1}) when the
+  **previous** window W_k did **not** contain (at least) two I=1.
+
+  Equivalently: to keep the sticky from arming, each period-11 window
+  must see **exactly two ones**. Evidence used exactly two per window
+  for every k in 0..10 (22 ones over 0..120). Working rule for solvers:
+  enforce **exactly 2** per C_k (not merely ≤2).
+
+EVIDENCE (I2_every_window)
+  Pattern: in every W_k, I=1 at offsets {0, Δ} with Δ ∈ 1..10
+  (first one at window base; second spaced by Δ).
+
+  For every such Δ:
+
+    sticky_Q  n = 0     (never trips)
+    inv_2_6.Y n = 121   (A-arm stays live all run)
+    a31o.X     n = 0
+
+  Contrast all0 (zero ones per window): sticky first Q @ 11, n=110.
+
+MECHANISM (short)
+  Within a window the first I=1 **preps** mux-side state; the second
+  I=1 **switches mux S**. That S change is what holds mux.X low on the
+  period edge so A1∧A2∧A3 cannot fire. See notes/mux_S_prep_and_switch.txt.
+
+STATUS
+  Working rule from the every-window 2-I stack. Not yet a full recipe for
+  arbitrary placements inside the window (only {0,Δ} offsets tested), nor
+  for “≥2 vs exactly 2”, nor for windows that mix with later sparse I.
+
+RELATED
+  Trip / inhibit gate:  a31o_2_11_fail_trip_mux_gate.txt
+  Mechanism note:       ../notes/mux_S_prep_and_switch.txt
+  Timelines:            phase2/.../inv_2_6/timelines/I2_every_window.*
+                        phase2/.../o211a_2_8/timelines/I2_every_window.*

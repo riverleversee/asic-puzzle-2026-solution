@@ -1,0 +1,609 @@
+{
+  "source": "phase2/and4b/behind/and2_and2b_similarity.json",
+  "depth": 5,
+  "note": "Expand-back roots = and2/and2b type members from similarity analysis",
+  "types": [
+    {
+      "index": 1,
+      "folder": "t01_n7_hasI_and2b_nand4_c_x_o21a_a1_shallow_27n",
+      "size": 7,
+      "reaches_I": true,
+      "i_tag": "hasI",
+      "label": "and2b: nand4_C \u00d7 o21a_A1  [shallow(~27n)]",
+      "kind": "pin_pattern",
+      "mean_class_jaccard": 0.981,
+      "representative": "and2b_2_26",
+      "members": [
+        {
+          "instance": "and2b_2_23",
+          "family": "and2b",
+          "out_net": "and4_2_6__B",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 27,
+          "flops": 8,
+          "is_rep": false,
+          "figure": "and2b_2_23_out_and4_2_6__B_d5.png",
+          "nodes_behind_full": 41,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_24",
+          "family": "and2b",
+          "out_net": "and4_2_6__C",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 27,
+          "flops": 8,
+          "is_rep": false,
+          "figure": "and2b_2_24_out_and4_2_6__C_d5.png",
+          "nodes_behind_full": 41,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_25",
+          "family": "and2b",
+          "out_net": "and4_2_5__A",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 27,
+          "flops": 8,
+          "is_rep": false,
+          "figure": "and2b_2_25_out_and4_2_5__A_d5.png",
+          "nodes_behind_full": 41,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_26",
+          "family": "and2b",
+          "out_net": "and4_2_5__D",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 27,
+          "flops": 8,
+          "is_rep": true,
+          "figure": "and2b_2_26_out_and4_2_5__D_d5.png",
+          "nodes_behind_full": 41,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_27",
+          "family": "and2b",
+          "out_net": "and3_2_12__C",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 27,
+          "flops": 8,
+          "is_rep": false,
+          "figure": "and2b_2_27_out_and3_2_12__C_d5.png",
+          "nodes_behind_full": 41,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_28",
+          "family": "and2b",
+          "out_net": "and4_2_5__C",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 27,
+          "flops": 8,
+          "is_rep": false,
+          "figure": "and2b_2_28_out_and4_2_5__C_d5.png",
+          "nodes_behind_full": 41,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_29",
+          "family": "and2b",
+          "out_net": "and3_2_12__A",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 27,
+          "flops": 8,
+          "is_rep": false,
+          "figure": "and2b_2_29_out_and3_2_12__A_d5.png",
+          "nodes_behind_full": 41,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "folder": "t02_n6_hasI_and2b_nand4_c_x_o21a_a1_deep_110n",
+      "size": 6,
+      "reaches_I": true,
+      "i_tag": "hasI",
+      "label": "and2b: nand4_C \u00d7 o21a_A1  [deep(~110n)]",
+      "kind": "pin_pattern",
+      "mean_class_jaccard": 0.994,
+      "representative": "and2b_2_21",
+      "members": [
+        {
+          "instance": "and2b_2_1",
+          "family": "and2b",
+          "out_net": "and4_2_0__B",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 112,
+          "flops": 11,
+          "is_rep": false,
+          "figure": "and2b_2_1_out_and4_2_0__B_d5.png",
+          "nodes_behind_full": 188,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_2",
+          "family": "and2b",
+          "out_net": "and4_2_0__C",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 112,
+          "flops": 11,
+          "is_rep": false,
+          "figure": "and2b_2_2_out_and4_2_0__C_d5.png",
+          "nodes_behind_full": 188,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_20",
+          "family": "and2b",
+          "out_net": "and4_2_1__C",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 112,
+          "flops": 11,
+          "is_rep": false,
+          "figure": "and2b_2_20_out_and4_2_1__C_d5.png",
+          "nodes_behind_full": 188,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_21",
+          "family": "and2b",
+          "out_net": "and3_2_5__C",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 112,
+          "flops": 11,
+          "is_rep": true,
+          "figure": "and2b_2_21_out_and3_2_5__C_d5.png",
+          "nodes_behind_full": 188,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_22",
+          "family": "and2b",
+          "out_net": "and3_2_5__A",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 112,
+          "flops": 11,
+          "is_rep": false,
+          "figure": "and2b_2_22_out_and3_2_5__A_d5.png",
+          "nodes_behind_full": 188,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_4",
+          "family": "and2b",
+          "out_net": "and4_2_1__D",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "o21a_N_N__A1"
+          },
+          "nodes": 112,
+          "flops": 11,
+          "is_rep": false,
+          "figure": "and2b_2_4_out_and4_2_1__D_d5.png",
+          "nodes_behind_full": 188,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "folder": "t03_n4_hasI_and2_or4_a_x_or4_b_deep_110n",
+      "size": 4,
+      "reaches_I": true,
+      "i_tag": "hasI",
+      "label": "and2: or4_A \u00d7 or4_B  [deep(~110n)]",
+      "kind": "pin_pattern",
+      "mean_class_jaccard": 1.0,
+      "representative": "and2_2_4",
+      "members": [
+        {
+          "instance": "and2_2_10",
+          "family": "and2",
+          "out_net": "and3_2_5__B",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 109,
+          "flops": 7,
+          "is_rep": false,
+          "figure": "and2_2_10_out_and3_2_5__B_d5.png",
+          "nodes_behind_full": 190,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2_2_3",
+          "family": "and2",
+          "out_net": "and4_2_0__A",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 109,
+          "flops": 7,
+          "is_rep": false,
+          "figure": "and2_2_3_out_and4_2_0__A_d5.png",
+          "nodes_behind_full": 190,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2_2_4",
+          "family": "and2",
+          "out_net": "and4_2_1__B",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 109,
+          "flops": 7,
+          "is_rep": true,
+          "figure": "and2_2_4_out_and4_2_1__B_d5.png",
+          "nodes_behind_full": 190,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2_2_5",
+          "family": "and2",
+          "out_net": "and4_2_0__D",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 109,
+          "flops": 7,
+          "is_rep": false,
+          "figure": "and2_2_5_out_and4_2_0__D_d5.png",
+          "nodes_behind_full": 190,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "folder": "t04_n4_hasI_and2_or4_a_x_or4_b_shallow_27n",
+      "size": 4,
+      "reaches_I": true,
+      "i_tag": "hasI",
+      "label": "and2: or4_A \u00d7 or4_B  [shallow(~27n)]",
+      "kind": "pin_pattern",
+      "mean_class_jaccard": 1.0,
+      "representative": "and2_2_13",
+      "members": [
+        {
+          "instance": "and2_2_11",
+          "family": "and2",
+          "out_net": "and4_2_6__A",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 27,
+          "flops": 7,
+          "is_rep": false,
+          "figure": "and2_2_11_out_and4_2_6__A_d5.png",
+          "nodes_behind_full": 43,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2_2_12",
+          "family": "and2",
+          "out_net": "and4_2_6__D",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 27,
+          "flops": 7,
+          "is_rep": false,
+          "figure": "and2_2_12_out_and4_2_6__D_d5.png",
+          "nodes_behind_full": 43,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2_2_13",
+          "family": "and2",
+          "out_net": "and4_2_5__B",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 27,
+          "flops": 7,
+          "is_rep": true,
+          "figure": "and2_2_13_out_and4_2_5__B_d5.png",
+          "nodes_behind_full": 43,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2_2_14",
+          "family": "and2",
+          "out_net": "and3_2_12__B",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "or4_N_N__B"
+          },
+          "nodes": 27,
+          "flops": 7,
+          "is_rep": false,
+          "figure": "and2_2_14_out_and3_2_12__B_d5.png",
+          "nodes_behind_full": 43,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "folder": "t05_n1_hasI_strong_g1_remainder_and2_and2b",
+      "size": 1,
+      "reaches_I": true,
+      "i_tag": "hasI",
+      "label": "strong g1 remainder (and2+and2b, size 1)",
+      "kind": "strong_group_remainder",
+      "mean_class_jaccard": 0.952,
+      "representative": "and2b_2_3",
+      "members": [
+        {
+          "instance": "and2b_2_3",
+          "family": "and2b",
+          "out_net": "and4_2_1__A",
+          "pin_pattern": {
+            "A_N": "nand4_N_N__C",
+            "B": "and2b_N_N__B"
+          },
+          "nodes": 112,
+          "flops": 11,
+          "is_rep": true,
+          "figure": "and2b_2_3_out_and4_2_1__A_d5.png",
+          "nodes_behind_full": 188,
+          "primaries": [
+            "I",
+            "enable"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "folder": "t06_n2_noI_strong_g4_remainder_and2_and2b",
+      "size": 2,
+      "reaches_I": false,
+      "i_tag": "noI",
+      "label": "strong g4 remainder (and2+and2b, size 2)",
+      "kind": "strong_group_remainder",
+      "mean_class_jaccard": 0.971,
+      "representative": "and2_2_1",
+      "members": [
+        {
+          "instance": "and2_2_1",
+          "family": "and2",
+          "out_net": "or2_2_1__A",
+          "pin_pattern": {
+            "A": "or4_N_N__A",
+            "B": "xor2_N_N__A"
+          },
+          "nodes": 34,
+          "flops": 9,
+          "is_rep": true,
+          "figure": "and2_2_1_out_or2_2_1__A_d5.png",
+          "nodes_behind_full": 34,
+          "primaries": [
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_11",
+          "family": "and2b",
+          "out_net": "inv_2_7__A",
+          "pin_pattern": {
+            "A_N": "or2_N_N__A",
+            "B": "enable"
+          },
+          "nodes": 33,
+          "flops": 9,
+          "is_rep": false,
+          "figure": "and2b_2_11_out_inv_2_7__A_d5.png",
+          "nodes_behind_full": 33,
+          "primaries": [
+            "enable"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "folder": "t07_n2_noI_strong_g5_remainder_and2_and2b",
+      "size": 2,
+      "reaches_I": false,
+      "i_tag": "noI",
+      "label": "strong g5 remainder (and2+and2b, size 2)",
+      "kind": "strong_group_remainder",
+      "mean_class_jaccard": 0.927,
+      "representative": "and2_2_0",
+      "members": [
+        {
+          "instance": "and2_2_0",
+          "family": "and2",
+          "out_net": "and3_2_0__C",
+          "pin_pattern": {
+            "A": "or2_N_N__X",
+            "B": "or2_N_N__B"
+          },
+          "nodes": 40,
+          "flops": 9,
+          "is_rep": true,
+          "figure": "and2_2_0_out_and3_2_0__C_d5.png",
+          "nodes_behind_full": 43,
+          "primaries": [
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_0",
+          "family": "and2b",
+          "out_net": "or2_2_0__B",
+          "pin_pattern": {
+            "A_N": "xor2_N_N__B",
+            "B": "nor2_N_N__B"
+          },
+          "nodes": 37,
+          "flops": 9,
+          "is_rep": false,
+          "figure": "and2b_2_0_out_or2_2_0__B_d5.png",
+          "nodes_behind_full": 39,
+          "primaries": [
+            "enable"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "folder": "t08_n2_noI_outliers_not_in_strong_type_clusters",
+      "size": 2,
+      "reaches_I": false,
+      "i_tag": "noI",
+      "label": "outliers (not in strong type clusters)",
+      "kind": "outlier",
+      "mean_class_jaccard": null,
+      "representative": "and2_2_2",
+      "members": [
+        {
+          "instance": "and2_2_2",
+          "family": "and2",
+          "out_net": "and2_2_2__X",
+          "pin_pattern": {
+            "A": "and2_N_N__A",
+            "B": "and3_N_N__C"
+          },
+          "nodes": 46,
+          "flops": 9,
+          "is_rep": true,
+          "figure": "and2_2_2_out_and2_2_2__X_d5.png",
+          "nodes_behind_full": 52,
+          "primaries": [
+            "enable"
+          ]
+        },
+        {
+          "instance": "and2b_2_5",
+          "family": "and2b",
+          "out_net": "xor2_2_6__B",
+          "pin_pattern": {
+            "A_N": "and4bb_N_N__X",
+            "B": "o22ai_N_N__Y"
+          },
+          "nodes": 43,
+          "flops": 9,
+          "is_rep": false,
+          "figure": "and2b_2_5_out_xor2_2_6__B_d5.png",
+          "nodes_behind_full": 43,
+          "primaries": [
+            "enable"
+          ]
+        }
+      ]
+    }
+  ]
+}

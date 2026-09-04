@@ -1,0 +1,153 @@
+{
+  "source": "netlist/puzzle_structural.v",
+  "method": "xor/xnor paired with AO/OA/maj sharing \u22652 data inputs",
+  "fa_pair_count": 8,
+  "fa_sum_count": 8,
+  "fa_carry_count": 8,
+  "pairs": [
+    {
+      "sum": "and3_2_2__C",
+      "sum_full": "sky130_fd_sc_hd__and3_2_2__C",
+      "sum_cell": "xnor2_2",
+      "carry": "o211a_2_0__X",
+      "carry_full": "sky130_fd_sc_hd__o211a_2_0__X",
+      "carry_cell": "o211a_2",
+      "shared": 2,
+      "shared_inputs": [
+        "xor2_2_0__B",
+        "xor2_2_4__A"
+      ]
+    },
+    {
+      "sum": "nor2_2_31__B",
+      "sum_full": "sky130_fd_sc_hd__nor2_2_31__B",
+      "sum_cell": "xnor2_2",
+      "carry": "a21oi_2_13__Y",
+      "carry_full": "sky130_fd_sc_hd__a21oi_2_13__Y",
+      "carry_cell": "a21oi_2",
+      "shared": 2,
+      "shared_inputs": [
+        "inv_2_7__A",
+        "or4_2_4__A"
+      ]
+    },
+    {
+      "sum": "nor2_2_8__A",
+      "sum_full": "sky130_fd_sc_hd__nor2_2_8__A",
+      "sum_cell": "xnor2_2",
+      "carry": "xor2_2_2__A",
+      "carry_full": "sky130_fd_sc_hd__xor2_2_2__A",
+      "carry_cell": "a32o_2",
+      "shared": 2,
+      "shared_inputs": [
+        "or4_2_4__B",
+        "xor2_2_0__X"
+      ]
+    },
+    {
+      "sum": "or4_2_0__A",
+      "sum_full": "sky130_fd_sc_hd__or4_2_0__A",
+      "sum_cell": "xor2_2",
+      "carry": "xor2_2_6__A",
+      "carry_full": "sky130_fd_sc_hd__xor2_2_6__A",
+      "carry_cell": "a21o_2",
+      "shared": 2,
+      "shared_inputs": [
+        "xor2_2_8__A",
+        "xor2_2_8__B"
+      ]
+    },
+    {
+      "sum": "xnor2_2_26__A",
+      "sum_full": "sky130_fd_sc_hd__xnor2_2_26__A",
+      "sum_cell": "xnor2_2",
+      "carry": "a221o_2_4__X",
+      "carry_full": "sky130_fd_sc_hd__a221o_2_4__X",
+      "carry_cell": "a221o_2",
+      "shared": 2,
+      "shared_inputs": [
+        "xor2_2_14__B",
+        "xor2_2_19__A"
+      ]
+    },
+    {
+      "sum": "xnor2_2_28__Y",
+      "sum_full": "sky130_fd_sc_hd__xnor2_2_28__Y",
+      "sum_cell": "xnor2_2",
+      "carry": "or3_2_17__A",
+      "carry_full": "sky130_fd_sc_hd__or3_2_17__A",
+      "carry_cell": "a211oi_2",
+      "shared": 2,
+      "shared_inputs": [
+        "or2_2_9__A",
+        "or3b_2_0__A"
+      ]
+    },
+    {
+      "sum": "xor2_2_0__X",
+      "sum_full": "sky130_fd_sc_hd__xor2_2_0__X",
+      "sum_cell": "xor2_2",
+      "carry": "a31o_2_8__X",
+      "carry_full": "sky130_fd_sc_hd__a31o_2_8__X",
+      "carry_cell": "a31o_2",
+      "shared": 2,
+      "shared_inputs": [
+        "xor2_2_0__B",
+        "xor2_2_7__A"
+      ]
+    },
+    {
+      "sum": "xor2_2_9__X",
+      "sum_full": "sky130_fd_sc_hd__xor2_2_9__X",
+      "sum_cell": "xor2_2",
+      "carry": "a21o_2_9__X",
+      "carry_full": "sky130_fd_sc_hd__a21o_2_9__X",
+      "carry_cell": "a21o_2",
+      "shared": 2,
+      "shared_inputs": [
+        "inv_2_5__A",
+        "xor2_2_9__A"
+      ]
+    }
+  ],
+  "endpoints_full": {
+    "fa_sum": [
+      "sky130_fd_sc_hd__and3_2_2__C",
+      "sky130_fd_sc_hd__nor2_2_31__B",
+      "sky130_fd_sc_hd__nor2_2_8__A",
+      "sky130_fd_sc_hd__or4_2_0__A",
+      "sky130_fd_sc_hd__xnor2_2_26__A",
+      "sky130_fd_sc_hd__xnor2_2_28__Y",
+      "sky130_fd_sc_hd__xor2_2_0__X",
+      "sky130_fd_sc_hd__xor2_2_9__X"
+    ],
+    "fa_carry": [
+      "sky130_fd_sc_hd__a21o_2_9__X",
+      "sky130_fd_sc_hd__a21oi_2_13__Y",
+      "sky130_fd_sc_hd__a221o_2_4__X",
+      "sky130_fd_sc_hd__a31o_2_8__X",
+      "sky130_fd_sc_hd__o211a_2_0__X",
+      "sky130_fd_sc_hd__or3_2_17__A",
+      "sky130_fd_sc_hd__xor2_2_2__A",
+      "sky130_fd_sc_hd__xor2_2_6__A"
+    ],
+    "fa_any": [
+      "sky130_fd_sc_hd__a21o_2_9__X",
+      "sky130_fd_sc_hd__a21oi_2_13__Y",
+      "sky130_fd_sc_hd__a221o_2_4__X",
+      "sky130_fd_sc_hd__a31o_2_8__X",
+      "sky130_fd_sc_hd__and3_2_2__C",
+      "sky130_fd_sc_hd__nor2_2_31__B",
+      "sky130_fd_sc_hd__nor2_2_8__A",
+      "sky130_fd_sc_hd__o211a_2_0__X",
+      "sky130_fd_sc_hd__or3_2_17__A",
+      "sky130_fd_sc_hd__or4_2_0__A",
+      "sky130_fd_sc_hd__xnor2_2_26__A",
+      "sky130_fd_sc_hd__xnor2_2_28__Y",
+      "sky130_fd_sc_hd__xor2_2_0__X",
+      "sky130_fd_sc_hd__xor2_2_2__A",
+      "sky130_fd_sc_hd__xor2_2_6__A",
+      "sky130_fd_sc_hd__xor2_2_9__X"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+# Note — why two ones per period-11 window inhibit the fail sticky
+# Companion rule: ../rules/mux_period11_two_ones_inhibit.txt
+# Timelines:      phase2/and2_2_15/inv_2_6/timelines/I2_every_window.*
+#                 mux pin stack:     timelines/mux_pins_I123_from2.*
+
+WHY THIS FITS THE MUX
+  mux2_1_7 is on the same period-11 cycle as the FA stubs:
+
+    S  = inv_2_8__A / dfrtp_2_29.Q     # state, advances with the cycle
+    X  = S ? A1 : A0                   # → a31o.A3 (inhibit pin)
+    A1 = or2_2_7__A ∨ I
+    A0 = ~(or2_2_7__A ∧ I)
+
+  S does not free-run forever in one polarity; it **resets / retires
+  each 11-cycle window**. So inhibit work has to be re-done every
+  window — ones from a prior window do not keep S parked for the next
+  trip edge.
+
+TWO-ONES STORY (working mental model)
+  Inside one window W_k:
+
+    1. First I=1  — **prep**. Loads / moves the mux-side state so the
+       select path is armed for a later switch (A0/A1 side and/or the
+       flop that drives S).
+
+    2. Second I=1 — **switch**. Flips mux S. With S in the right
+       polarity at the period edge, X is forced low even though the
+       I-independent stubs A1∧A2 of a31o are live @ ≡10 mod 11.
+
+  Without that second one, S never completes the switch for this
+  window → X stays high on the trip edge → sticky arms.
+
+  That matches the observed rule: sticky trips when the **previous**
+  cycle (period-11 window) did not see two ones.
+
+WHAT THE TIMELINES SHOW
+  I2_every_window (exactly two ones in every W_k, Δ=1..10):
+
+    sticky never rises; inv.Y stays high for the whole run.
+
+  Mux pin lanes on those modes: S activity and X low-windows track Δ;
+  a31o.X stays empty. On all0, S stays quiet, X stays high, sticky
+  trips at cyc 11.
+
+OPEN
+  Exact flop equations for “prep” vs “switch” (which net is armed by
+  the first one) still to be written down cell-by-cell. Offsets other
+  than {0,Δ} inside the window not swept yet.

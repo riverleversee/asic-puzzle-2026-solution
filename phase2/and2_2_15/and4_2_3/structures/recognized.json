@@ -1,0 +1,1147 @@
+{
+  "root": "and4_2_3__X",
+  "root_full": "sky130_fd_sc_hd__and4_2_3__X",
+  "cone_size": 68,
+  "raw_matches": [
+    {
+      "pattern_id": "and2b_enable_gate",
+      "anchor": "inv_2_7__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_7__A",
+      "ports": {
+        "A_N": "or2_2_11__A",
+        "B": "enable",
+        "Y": "inv_2_7__A"
+      },
+      "ports_full": {
+        "A_N": "sky130_fd_sc_hd__or2_2_11__A",
+        "B": "enable",
+        "Y": "sky130_fd_sc_hd__inv_2_7__A"
+      },
+      "members": [
+        "inv_2_7__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_7__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "B_is_enable",
+          "ok": true,
+          "detail": "B=enable"
+        }
+      ],
+      "extra": {
+        "instance": "and2b_2_11"
+      }
+    },
+    {
+      "pattern_id": "sticky_ao_latch",
+      "anchor": "dfrtp_2_45__D",
+      "anchor_full": "sky130_fd_sc_hd__dfrtp_2_45__D",
+      "ports": {
+        "Y": "dfrtp_2_45__D",
+        "Q": "or4_2_4__D",
+        "feedback_pin": "B2",
+        "in_C1": "a41oi_2_0__Y",
+        "in_A2": "inv_2_9__A",
+        "in_A1": "inv_2_7__A",
+        "in_B1": "and4_2_7__X"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__dfrtp_2_45__D",
+        "Q": "sky130_fd_sc_hd__or4_2_4__D",
+        "feedback_pin": "B2",
+        "in_C1": "sky130_fd_sc_hd__a41oi_2_0__Y",
+        "in_A2": "sky130_fd_sc_hd__inv_2_9__A",
+        "in_A1": "sky130_fd_sc_hd__inv_2_7__A",
+        "in_B1": "sky130_fd_sc_hd__and4_2_7__X"
+      },
+      "members": [
+        "dfrtp_2_45__D",
+        "or4_2_4__D"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__dfrtp_2_45__D",
+        "sky130_fd_sc_hd__or4_2_4__D"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "feedback_is_flop_Q",
+          "ok": true,
+          "detail": "B2=or4_2_4__D"
+        },
+        {
+          "rule": "flop_D_is_Y",
+          "ok": true,
+          "detail": "D=dfrtp_2_45__D"
+        }
+      ],
+      "extra": {
+        "cell_family": "a221o",
+        "instance": "a221oi_2_0",
+        "flop": "dfrtp_2_45",
+        "feedback_pin": "B2"
+      }
+    },
+    {
+      "pattern_id": "sticky_ao_latch",
+      "anchor": "a32o_2_2__X",
+      "anchor_full": "sky130_fd_sc_hd__a32o_2_2__X",
+      "ports": {
+        "Y": "a32o_2_2__X",
+        "Q": "and4_2_3__A",
+        "feedback_pin": "B2",
+        "in_A2": "inv_2_7__A",
+        "in_A3": "and3_2_10__B",
+        "in_A1": "I",
+        "in_B1": "inv_2_10__Y"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__a32o_2_2__X",
+        "Q": "sky130_fd_sc_hd__and4_2_3__A",
+        "feedback_pin": "B2",
+        "in_A2": "sky130_fd_sc_hd__inv_2_7__A",
+        "in_A3": "sky130_fd_sc_hd__and3_2_10__B",
+        "in_A1": "I",
+        "in_B1": "sky130_fd_sc_hd__inv_2_10__Y"
+      },
+      "members": [
+        "a32o_2_2__X",
+        "and4_2_3__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__a32o_2_2__X",
+        "sky130_fd_sc_hd__and4_2_3__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "feedback_is_flop_Q",
+          "ok": true,
+          "detail": "B2=and4_2_3__A"
+        },
+        {
+          "rule": "flop_D_is_Y",
+          "ok": true,
+          "detail": "D=a32o_2_2__X"
+        }
+      ],
+      "extra": {
+        "cell_family": "a32o",
+        "instance": "a32o_2_2",
+        "flop": "dfrtp_2_24",
+        "feedback_pin": "B2"
+      }
+    },
+    {
+      "pattern_id": "sticky_ao_latch",
+      "anchor": "a31o_2_13__X",
+      "anchor_full": "sky130_fd_sc_hd__a31o_2_13__X",
+      "ports": {
+        "Y": "a31o_2_13__X",
+        "Q": "or2_2_11__A",
+        "feedback_pin": "B1",
+        "in_A3": "inv_2_7__A",
+        "in_A1": "inv_2_9__A",
+        "in_A2": "nor2_2_29__Y"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__a31o_2_13__X",
+        "Q": "sky130_fd_sc_hd__or2_2_11__A",
+        "feedback_pin": "B1",
+        "in_A3": "sky130_fd_sc_hd__inv_2_7__A",
+        "in_A1": "sky130_fd_sc_hd__inv_2_9__A",
+        "in_A2": "sky130_fd_sc_hd__nor2_2_29__Y"
+      },
+      "members": [
+        "a31o_2_13__X",
+        "or2_2_11__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__a31o_2_13__X",
+        "sky130_fd_sc_hd__or2_2_11__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "feedback_is_flop_Q",
+          "ok": true,
+          "detail": "B1=or2_2_11__A"
+        },
+        {
+          "rule": "flop_D_is_Y",
+          "ok": true,
+          "detail": "D=a31o_2_13__X"
+        }
+      ],
+      "extra": {
+        "cell_family": "a31o",
+        "instance": "a31o_2_13",
+        "flop": "dfrtp_2_47",
+        "feedback_pin": "B1"
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "and3_2_11__X",
+      "anchor_full": "sky130_fd_sc_hd__and3_2_11__X",
+      "ports": {
+        "Y": "and3_2_11__X",
+        "B": "and4_2_3__B",
+        "A": "and4_2_3__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and3_2_11__X",
+        "B": "sky130_fd_sc_hd__and4_2_3__B",
+        "A": "sky130_fd_sc_hd__and4_2_3__A"
+      },
+      "members": [
+        "and3_2_11__X",
+        "and4_2_3__A",
+        "and4_2_3__B"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and3_2_11__X",
+        "sky130_fd_sc_hd__and4_2_3__A",
+        "sky130_fd_sc_hd__and4_2_3__B"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=2"
+        }
+      ],
+      "extra": {
+        "family": "and3",
+        "instance": "and3_2_11",
+        "n_flop_inputs": 2
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "inv_2_5__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_5__A",
+      "ports": {
+        "Y": "inv_2_5__A",
+        "C": "xor2_2_0__B",
+        "D": "xor2_2_7__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_5__A",
+        "C": "sky130_fd_sc_hd__xor2_2_0__B",
+        "D": "sky130_fd_sc_hd__xor2_2_7__A"
+      },
+      "members": [
+        "inv_2_5__A",
+        "xor2_2_0__B",
+        "xor2_2_7__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_5__A",
+        "sky130_fd_sc_hd__xor2_2_0__B",
+        "sky130_fd_sc_hd__xor2_2_7__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=2"
+        }
+      ],
+      "extra": {
+        "family": "and4",
+        "instance": "and4_2_2",
+        "n_flop_inputs": 2
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "and4_2_3__X",
+      "anchor_full": "sky130_fd_sc_hd__and4_2_3__X",
+      "ports": {
+        "Y": "and4_2_3__X",
+        "C": "and4_2_3__C",
+        "A": "and4_2_3__A",
+        "B": "and4_2_3__B"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and4_2_3__X",
+        "C": "sky130_fd_sc_hd__and4_2_3__C",
+        "A": "sky130_fd_sc_hd__and4_2_3__A",
+        "B": "sky130_fd_sc_hd__and4_2_3__B"
+      },
+      "members": [
+        "and4_2_3__A",
+        "and4_2_3__B",
+        "and4_2_3__C",
+        "and4_2_3__X"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and4_2_3__A",
+        "sky130_fd_sc_hd__and4_2_3__B",
+        "sky130_fd_sc_hd__and4_2_3__C",
+        "sky130_fd_sc_hd__and4_2_3__X"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=3"
+        }
+      ],
+      "extra": {
+        "family": "and4",
+        "instance": "and4_2_3",
+        "n_flop_inputs": 3
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "xor2_2_11__B",
+      "anchor_full": "sky130_fd_sc_hd__xor2_2_11__B",
+      "ports": {
+        "Y": "xor2_2_11__B",
+        "B": "or4_2_4__A",
+        "A": "or4_2_4__B"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__xor2_2_11__B",
+        "B": "sky130_fd_sc_hd__or4_2_4__A",
+        "A": "sky130_fd_sc_hd__or4_2_4__B"
+      },
+      "members": [
+        "or4_2_4__A",
+        "or4_2_4__B",
+        "xor2_2_11__B"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__or4_2_4__A",
+        "sky130_fd_sc_hd__or4_2_4__B",
+        "sky130_fd_sc_hd__xor2_2_11__B"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=2"
+        }
+      ],
+      "extra": {
+        "family": "and3",
+        "instance": "and3_2_14",
+        "n_flop_inputs": 2
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "and4_2_7__X",
+      "anchor_full": "sky130_fd_sc_hd__and4_2_7__X",
+      "ports": {
+        "Y": "and4_2_7__X",
+        "C": "or4_2_4__C",
+        "A": "or4_2_4__B",
+        "B": "or4_2_4__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and4_2_7__X",
+        "C": "sky130_fd_sc_hd__or4_2_4__C",
+        "A": "sky130_fd_sc_hd__or4_2_4__B",
+        "B": "sky130_fd_sc_hd__or4_2_4__A"
+      },
+      "members": [
+        "and4_2_7__X",
+        "or4_2_4__A",
+        "or4_2_4__B",
+        "or4_2_4__C"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and4_2_7__X",
+        "sky130_fd_sc_hd__or4_2_4__A",
+        "sky130_fd_sc_hd__or4_2_4__B",
+        "sky130_fd_sc_hd__or4_2_4__C"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=3"
+        }
+      ],
+      "extra": {
+        "family": "and4",
+        "instance": "and4_2_7",
+        "n_flop_inputs": 3
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "and4_2_4__D",
+      "anchor_full": "sky130_fd_sc_hd__and4_2_4__D",
+      "ports": {
+        "Y": "and4_2_4__D",
+        "B": "and4_2_3__B",
+        "A": "and4_2_3__A",
+        "C": "or3_2_8__B"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and4_2_4__D",
+        "B": "sky130_fd_sc_hd__and4_2_3__B",
+        "A": "sky130_fd_sc_hd__and4_2_3__A",
+        "C": "sky130_fd_sc_hd__or3_2_8__B"
+      },
+      "members": [
+        "and4_2_3__A",
+        "and4_2_3__B",
+        "and4_2_4__D",
+        "or3_2_8__B"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and4_2_3__A",
+        "sky130_fd_sc_hd__and4_2_3__B",
+        "sky130_fd_sc_hd__and4_2_4__D",
+        "sky130_fd_sc_hd__or3_2_8__B"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=3"
+        }
+      ],
+      "extra": {
+        "family": "and3",
+        "instance": "and3_2_8",
+        "n_flop_inputs": 3
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "or2_2_1__A",
+      "anchor_full": "sky130_fd_sc_hd__or2_2_1__A",
+      "ports": {
+        "Y": "or2_2_1__A",
+        "A": "or4_2_4__A",
+        "B": "xor2_2_7__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__or2_2_1__A",
+        "A": "sky130_fd_sc_hd__or4_2_4__A",
+        "B": "sky130_fd_sc_hd__xor2_2_7__A"
+      },
+      "members": [
+        "or2_2_1__A",
+        "or4_2_4__A",
+        "xor2_2_7__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__or2_2_1__A",
+        "sky130_fd_sc_hd__or4_2_4__A",
+        "sky130_fd_sc_hd__xor2_2_7__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=2"
+        }
+      ],
+      "extra": {
+        "family": "and2",
+        "instance": "and2_2_1",
+        "n_flop_inputs": 2
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "and4_2_4__B",
+      "anchor_full": "sky130_fd_sc_hd__and4_2_4__B",
+      "ports": {
+        "Y": "and4_2_4__B",
+        "A": "and4_2_3__C",
+        "B": "nor3_2_2__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and4_2_4__B",
+        "A": "sky130_fd_sc_hd__and4_2_3__C",
+        "B": "sky130_fd_sc_hd__nor3_2_2__A"
+      },
+      "members": [
+        "and4_2_3__C",
+        "and4_2_4__B",
+        "nor3_2_2__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and4_2_3__C",
+        "sky130_fd_sc_hd__and4_2_4__B",
+        "sky130_fd_sc_hd__nor3_2_2__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=2"
+        }
+      ],
+      "extra": {
+        "family": "and2",
+        "instance": "and2_2_9",
+        "n_flop_inputs": 2
+      }
+    },
+    {
+      "pattern_id": "fa_prior_stub_driver",
+      "anchor": "inv_2_5__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_5__A",
+      "ports": {
+        "Y": "inv_2_5__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_5__A"
+      },
+      "members": [
+        "inv_2_5__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_5__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "no_I",
+          "ok": true,
+          "detail": "reaches_I=False"
+        },
+        {
+          "rule": "reaches_FA",
+          "ok": true,
+          "detail": "yes"
+        }
+      ],
+      "extra": {
+        "family": "and4",
+        "instance": "and4_2_2"
+      }
+    },
+    {
+      "pattern_id": "fa_prior_stub_driver",
+      "anchor": "and4_2_7__X",
+      "anchor_full": "sky130_fd_sc_hd__and4_2_7__X",
+      "ports": {
+        "Y": "and4_2_7__X"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and4_2_7__X"
+      },
+      "members": [
+        "and4_2_7__X"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and4_2_7__X"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "no_I",
+          "ok": true,
+          "detail": "reaches_I=False"
+        },
+        {
+          "rule": "reaches_FA",
+          "ok": true,
+          "detail": "yes"
+        }
+      ],
+      "extra": {
+        "family": "and4",
+        "instance": "and4_2_7"
+      }
+    },
+    {
+      "pattern_id": "fa_prior_stub_driver",
+      "anchor": "inv_2_7__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_7__A",
+      "ports": {
+        "Y": "inv_2_7__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_7__A"
+      },
+      "members": [
+        "inv_2_7__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_7__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "no_I",
+          "ok": true,
+          "detail": "reaches_I=False"
+        },
+        {
+          "rule": "reaches_FA",
+          "ok": true,
+          "detail": "yes"
+        }
+      ],
+      "extra": {
+        "family": "and2b",
+        "instance": "and2b_2_11"
+      }
+    },
+    {
+      "pattern_id": "fa_prior_stub_driver",
+      "anchor": "inv_2_5__Y",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_5__Y",
+      "ports": {
+        "Y": "inv_2_5__Y"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_5__Y"
+      },
+      "members": [
+        "inv_2_5__Y"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_5__Y"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "no_I",
+          "ok": true,
+          "detail": "reaches_I=False"
+        },
+        {
+          "rule": "reaches_FA",
+          "ok": true,
+          "detail": "yes"
+        }
+      ],
+      "extra": {
+        "family": "inv",
+        "instance": "inv_2_5"
+      }
+    },
+    {
+      "pattern_id": "fa_prior_stub_driver",
+      "anchor": "inv_2_9__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_9__A",
+      "ports": {
+        "Y": "inv_2_9__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_9__A"
+      },
+      "members": [
+        "inv_2_9__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_9__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "no_I",
+          "ok": true,
+          "detail": "reaches_I=False"
+        },
+        {
+          "rule": "reaches_FA",
+          "ok": true,
+          "detail": "yes"
+        }
+      ],
+      "extra": {
+        "family": "and4bb",
+        "instance": "and4bb_2_6"
+      }
+    }
+  ],
+  "greedy_cover": [
+    {
+      "pattern_id": "sticky_ao_latch",
+      "anchor": "dfrtp_2_45__D",
+      "anchor_full": "sky130_fd_sc_hd__dfrtp_2_45__D",
+      "ports": {
+        "Y": "dfrtp_2_45__D",
+        "Q": "or4_2_4__D",
+        "feedback_pin": "B2",
+        "in_C1": "a41oi_2_0__Y",
+        "in_A2": "inv_2_9__A",
+        "in_A1": "inv_2_7__A",
+        "in_B1": "and4_2_7__X"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__dfrtp_2_45__D",
+        "Q": "sky130_fd_sc_hd__or4_2_4__D",
+        "feedback_pin": "B2",
+        "in_C1": "sky130_fd_sc_hd__a41oi_2_0__Y",
+        "in_A2": "sky130_fd_sc_hd__inv_2_9__A",
+        "in_A1": "sky130_fd_sc_hd__inv_2_7__A",
+        "in_B1": "sky130_fd_sc_hd__and4_2_7__X"
+      },
+      "members": [
+        "dfrtp_2_45__D",
+        "or4_2_4__D"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__dfrtp_2_45__D",
+        "sky130_fd_sc_hd__or4_2_4__D"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "feedback_is_flop_Q",
+          "ok": true,
+          "detail": "B2=or4_2_4__D"
+        },
+        {
+          "rule": "flop_D_is_Y",
+          "ok": true,
+          "detail": "D=dfrtp_2_45__D"
+        }
+      ],
+      "extra": {
+        "cell_family": "a221o",
+        "instance": "a221oi_2_0",
+        "flop": "dfrtp_2_45",
+        "feedback_pin": "B2"
+      }
+    },
+    {
+      "pattern_id": "sticky_ao_latch",
+      "anchor": "a32o_2_2__X",
+      "anchor_full": "sky130_fd_sc_hd__a32o_2_2__X",
+      "ports": {
+        "Y": "a32o_2_2__X",
+        "Q": "and4_2_3__A",
+        "feedback_pin": "B2",
+        "in_A2": "inv_2_7__A",
+        "in_A3": "and3_2_10__B",
+        "in_A1": "I",
+        "in_B1": "inv_2_10__Y"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__a32o_2_2__X",
+        "Q": "sky130_fd_sc_hd__and4_2_3__A",
+        "feedback_pin": "B2",
+        "in_A2": "sky130_fd_sc_hd__inv_2_7__A",
+        "in_A3": "sky130_fd_sc_hd__and3_2_10__B",
+        "in_A1": "I",
+        "in_B1": "sky130_fd_sc_hd__inv_2_10__Y"
+      },
+      "members": [
+        "a32o_2_2__X",
+        "and4_2_3__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__a32o_2_2__X",
+        "sky130_fd_sc_hd__and4_2_3__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "feedback_is_flop_Q",
+          "ok": true,
+          "detail": "B2=and4_2_3__A"
+        },
+        {
+          "rule": "flop_D_is_Y",
+          "ok": true,
+          "detail": "D=a32o_2_2__X"
+        }
+      ],
+      "extra": {
+        "cell_family": "a32o",
+        "instance": "a32o_2_2",
+        "flop": "dfrtp_2_24",
+        "feedback_pin": "B2"
+      }
+    },
+    {
+      "pattern_id": "sticky_ao_latch",
+      "anchor": "a31o_2_13__X",
+      "anchor_full": "sky130_fd_sc_hd__a31o_2_13__X",
+      "ports": {
+        "Y": "a31o_2_13__X",
+        "Q": "or2_2_11__A",
+        "feedback_pin": "B1",
+        "in_A3": "inv_2_7__A",
+        "in_A1": "inv_2_9__A",
+        "in_A2": "nor2_2_29__Y"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__a31o_2_13__X",
+        "Q": "sky130_fd_sc_hd__or2_2_11__A",
+        "feedback_pin": "B1",
+        "in_A3": "sky130_fd_sc_hd__inv_2_7__A",
+        "in_A1": "sky130_fd_sc_hd__inv_2_9__A",
+        "in_A2": "sky130_fd_sc_hd__nor2_2_29__Y"
+      },
+      "members": [
+        "a31o_2_13__X",
+        "or2_2_11__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__a31o_2_13__X",
+        "sky130_fd_sc_hd__or2_2_11__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "feedback_is_flop_Q",
+          "ok": true,
+          "detail": "B1=or2_2_11__A"
+        },
+        {
+          "rule": "flop_D_is_Y",
+          "ok": true,
+          "detail": "D=a31o_2_13__X"
+        }
+      ],
+      "extra": {
+        "cell_family": "a31o",
+        "instance": "a31o_2_13",
+        "flop": "dfrtp_2_47",
+        "feedback_pin": "B1"
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "and4_2_7__X",
+      "anchor_full": "sky130_fd_sc_hd__and4_2_7__X",
+      "ports": {
+        "Y": "and4_2_7__X",
+        "C": "or4_2_4__C",
+        "A": "or4_2_4__B",
+        "B": "or4_2_4__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and4_2_7__X",
+        "C": "sky130_fd_sc_hd__or4_2_4__C",
+        "A": "sky130_fd_sc_hd__or4_2_4__B",
+        "B": "sky130_fd_sc_hd__or4_2_4__A"
+      },
+      "members": [
+        "and4_2_7__X",
+        "or4_2_4__A",
+        "or4_2_4__B",
+        "or4_2_4__C"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and4_2_7__X",
+        "sky130_fd_sc_hd__or4_2_4__A",
+        "sky130_fd_sc_hd__or4_2_4__B",
+        "sky130_fd_sc_hd__or4_2_4__C"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=3"
+        }
+      ],
+      "extra": {
+        "family": "and4",
+        "instance": "and4_2_7",
+        "n_flop_inputs": 3
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "inv_2_5__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_5__A",
+      "ports": {
+        "Y": "inv_2_5__A",
+        "C": "xor2_2_0__B",
+        "D": "xor2_2_7__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_5__A",
+        "C": "sky130_fd_sc_hd__xor2_2_0__B",
+        "D": "sky130_fd_sc_hd__xor2_2_7__A"
+      },
+      "members": [
+        "inv_2_5__A",
+        "xor2_2_0__B",
+        "xor2_2_7__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_5__A",
+        "sky130_fd_sc_hd__xor2_2_0__B",
+        "sky130_fd_sc_hd__xor2_2_7__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=2"
+        }
+      ],
+      "extra": {
+        "family": "and4",
+        "instance": "and4_2_2",
+        "n_flop_inputs": 2
+      }
+    },
+    {
+      "pattern_id": "andN_flopped_inputs",
+      "anchor": "and4_2_4__B",
+      "anchor_full": "sky130_fd_sc_hd__and4_2_4__B",
+      "ports": {
+        "Y": "and4_2_4__B",
+        "A": "and4_2_3__C",
+        "B": "nor3_2_2__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__and4_2_4__B",
+        "A": "sky130_fd_sc_hd__and4_2_3__C",
+        "B": "sky130_fd_sc_hd__nor3_2_2__A"
+      },
+      "members": [
+        "and4_2_3__C",
+        "and4_2_4__B",
+        "nor3_2_2__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__and4_2_3__C",
+        "sky130_fd_sc_hd__and4_2_4__B",
+        "sky130_fd_sc_hd__nor3_2_2__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "ge2_flop_inputs",
+          "ok": true,
+          "detail": "n=2"
+        }
+      ],
+      "extra": {
+        "family": "and2",
+        "instance": "and2_2_9",
+        "n_flop_inputs": 2
+      }
+    },
+    {
+      "pattern_id": "and2b_enable_gate",
+      "anchor": "inv_2_7__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_7__A",
+      "ports": {
+        "A_N": "or2_2_11__A",
+        "B": "enable",
+        "Y": "inv_2_7__A"
+      },
+      "ports_full": {
+        "A_N": "sky130_fd_sc_hd__or2_2_11__A",
+        "B": "enable",
+        "Y": "sky130_fd_sc_hd__inv_2_7__A"
+      },
+      "members": [
+        "inv_2_7__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_7__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "B_is_enable",
+          "ok": true,
+          "detail": "B=enable"
+        }
+      ],
+      "extra": {
+        "instance": "and2b_2_11"
+      }
+    },
+    {
+      "pattern_id": "fa_prior_stub_driver",
+      "anchor": "inv_2_5__Y",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_5__Y",
+      "ports": {
+        "Y": "inv_2_5__Y"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_5__Y"
+      },
+      "members": [
+        "inv_2_5__Y"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_5__Y"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "no_I",
+          "ok": true,
+          "detail": "reaches_I=False"
+        },
+        {
+          "rule": "reaches_FA",
+          "ok": true,
+          "detail": "yes"
+        }
+      ],
+      "extra": {
+        "family": "inv",
+        "instance": "inv_2_5"
+      }
+    },
+    {
+      "pattern_id": "fa_prior_stub_driver",
+      "anchor": "inv_2_9__A",
+      "anchor_full": "sky130_fd_sc_hd__inv_2_9__A",
+      "ports": {
+        "Y": "inv_2_9__A"
+      },
+      "ports_full": {
+        "Y": "sky130_fd_sc_hd__inv_2_9__A"
+      },
+      "members": [
+        "inv_2_9__A"
+      ],
+      "members_full": [
+        "sky130_fd_sc_hd__inv_2_9__A"
+      ],
+      "ok": true,
+      "checks": [
+        {
+          "rule": "no_I",
+          "ok": true,
+          "detail": "reaches_I=False"
+        },
+        {
+          "rule": "reaches_FA",
+          "ok": true,
+          "detail": "yes"
+        }
+      ],
+      "extra": {
+        "family": "and4bb",
+        "instance": "and4bb_2_6"
+      }
+    }
+  ],
+  "raw_coverage": {
+    "cone_nets": 68,
+    "covered_nets": 25,
+    "frac": 0.36764705882352944,
+    "uncovered": [
+      "I",
+      "a21o_2_10__X",
+      "a21o_2_9__X",
+      "a21oi_2_13__Y",
+      "a31o_2_8__X",
+      "a31o_2_9__X",
+      "a41oi_2_0__Y",
+      "and2b_2_9__B",
+      "and2b_2_9__X",
+      "and3_2_10__B",
+      "and3_2_7__C",
+      "and3_2_7__X",
+      "and4_2_4__X",
+      "dfrtp_2_25__D",
+      "dfrtp_2_43__D",
+      "enable",
+      "inv_2_10__A",
+      "inv_2_10__Y",
+      "mux2_1_5__A1",
+      "mux2_1_5__X",
+      "nand3_2_0__Y",
+      "nor2_2_29__Y",
+      "nor2_2_30__B",
+      "nor2_2_30__Y",
+      "nor2_2_31__B",
+      "nor2_2_31__Y",
+      "nor3_2_2__B",
+      "nor3_2_2__Y",
+      "o211a_2_7__X",
+      "o21a_2_11__X",
+      "o21a_2_12__A1",
+      "o21a_2_12__X",
+      "o311a_2_1__X",
+      "or3_2_8__A",
+      "or3_2_8__C",
+      "or3_2_8__X",
+      "xnor2_2_11__B",
+      "xnor2_2_11__Y",
+      "xor2_2_10__X",
+      "xor2_2_11__X",
+      "xor2_2_4__A",
+      "xor2_2_9__A",
+      "xor2_2_9__X"
+    ]
+  },
+  "greedy_coverage": {
+    "cone_nets": 68,
+    "covered_nets": 19,
+    "frac": 0.27941176470588236,
+    "uncovered": [
+      "I",
+      "a21o_2_10__X",
+      "a21o_2_9__X",
+      "a21oi_2_13__Y",
+      "a31o_2_8__X",
+      "a31o_2_9__X",
+      "a41oi_2_0__Y",
+      "and2b_2_9__B",
+      "and2b_2_9__X",
+      "and3_2_10__B",
+      "and3_2_11__X",
+      "and3_2_7__C",
+      "and3_2_7__X",
+      "and4_2_3__B",
+      "and4_2_3__X",
+      "and4_2_4__D",
+      "and4_2_4__X",
+      "dfrtp_2_25__D",
+      "dfrtp_2_43__D",
+      "enable",
+      "inv_2_10__A",
+      "inv_2_10__Y",
+      "mux2_1_5__A1",
+      "mux2_1_5__X",
+      "nand3_2_0__Y",
+      "nor2_2_29__Y",
+      "nor2_2_30__B",
+      "nor2_2_30__Y",
+      "nor2_2_31__B",
+      "nor2_2_31__Y",
+      "nor3_2_2__B",
+      "nor3_2_2__Y",
+      "o211a_2_7__X",
+      "o21a_2_11__X",
+      "o21a_2_12__A1",
+      "o21a_2_12__X",
+      "o311a_2_1__X",
+      "or3_2_8__A",
+      "or3_2_8__B",
+      "or3_2_8__C",
+      "or3_2_8__X",
+      "xnor2_2_11__B",
+      "xnor2_2_11__Y",
+      "xor2_2_10__X",
+      "xor2_2_11__B",
+      "xor2_2_11__X",
+      "xor2_2_4__A",
+      "xor2_2_9__A",
+      "xor2_2_9__X"
+    ]
+  }
+}
